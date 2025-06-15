@@ -13,7 +13,7 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "postinstall": "quasar prepare",
-    "deploy": "cpx CNAME dist/spa && gh-pages -d dist/spa"
+    "deploy": "cpx CNAME dist/spa && cd dist && gh-pages -d spa"
   },
   "dependencies": {
     "@auth/core": "^0.39.1",

@@ -24,8 +24,13 @@ declare module 'vue-i18n' {
 export default defineBoot(({ app }) => {
   const i18n = createI18n({
     locale: 'en-US',
-    legacy: false,
+    fallbackLocale: 'en-US',
+    legacy: false, // Use Composition API
+    runtimeOnly: false, // Allow template usage
     messages,
+    // Ensure stringification works properly
+    warnHtmlMessage: false,
+    escapeValue: false
   });
 
   // Set i18n instance on app

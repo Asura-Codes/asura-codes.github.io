@@ -10,7 +10,4 @@ export default {
   thankYouMessage: 'Thank you for your message!',
   errorMessage: 'An error occurred. Please try again later.',
   redirectInfo: 'Submitting will redirect you to Google Forms to complete your message.',
-  facebookCaption: '@asuracodes.site',
-  linkedinCaption: '/in/asuracodes',
-  githubCaption: '/Asura-Codes'
 };

@@ -10,7 +10,6 @@
             <q-icon name="fab fa-github" size="28px" />
             <div class="social-details">
               <span class="social-title">GitHub</span>
-              <span class="social-caption">{{ $t('contact.githubCaption') }}</span>
             </div>
           </a>
 
@@ -18,7 +17,6 @@
             <q-icon name="fab fa-linkedin" color="blue-8" size="28px" />
             <div class="social-details">
               <span class="social-title">LinkedIn</span>
-              <span class="social-caption">{{ $t('contact.linkedinCaption') }}</span>
             </div>
           </a>
 
@@ -26,7 +24,6 @@
             <q-icon name="fab fa-facebook" color="blue-10" size="28px" />
             <div class="social-details">
               <span class="social-title">Facebook</span>
-              <span class="social-caption">{{ $t('contact.facebookCaption') }}</span>
             </div>
           </a>
         </div>
@@ -35,11 +32,11 @@
 
     <q-card>
       <q-card-section>
-        <div class="text-subtitle1 q-mb-sm">{{ $t('contact.formTitle') }}</div>
+        <div class="text-subtitle1 q-mb-sm">{{ formTitle }}</div>
 
         <q-form @submit.prevent="onSubmit" class="q-gutter-md">
-          <q-input filled v-model="name" :label="$t('contact.nameLabel')" required />
-          <q-input filled v-model="message" :label="$t('contact.messageLabel')" type="textarea" required />
+          <q-input filled v-model="name" :label="nameLabel" required />
+          <q-input filled v-model="message" :label="messageLabel" type="textarea" required />
           <q-banner class="q-mb-sm">
             {{ $t('contact.redirectInfo') }}
           </q-banner>
@@ -56,17 +53,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-// Setup i18n
-useI18n({ useScope: 'global' });
+// Setup i18n - initialize it properly to ensure proper composition API usage
+const { t } = useI18n({ useScope: 'global' });
 
 const name = ref('');
 const message = ref('');
 const sent = ref(false);
 const error = ref(false);
 const loading = ref(false);
+
+// Use computed properties to get i18n values to avoid serialization issues
+const formTitle = computed(() => t('contact.formTitle'));
+const nameLabel = computed(() => t('contact.nameLabel'));
+const messageLabel = computed(() => t('contact.messageLabel'));
 
 function onSubmit() {
   // Build the prefilled Google Form URL
