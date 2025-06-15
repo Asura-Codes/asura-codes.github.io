@@ -56,7 +56,8 @@ export default defineConfig((ctx) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
+      // Set publicPath for GitHub Pages deployment
+      publicPath: '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
@@ -65,7 +66,28 @@ export default defineConfig((ctx) => {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf) {
+        if (!viteConf.build) viteConf.build = {};
+        if (!viteConf.build.rollupOptions) viteConf.build.rollupOptions = {};
+        // Ensure output is an object, not an array
+        if (!viteConf.build.rollupOptions.output || Array.isArray(viteConf.build.rollupOptions.output)) {
+          viteConf.build.rollupOptions.output = {};
+        }
+        // Remove leading underscore from helper files
+        viteConf.build.rollupOptions.output.entryFileNames = (chunkInfo: { name?: string }) => {
+          if (chunkInfo.name && chunkInfo.name.startsWith('_plugin-vue_export-helper')) {
+            return 'assets/plugin-vue_export-helper-[hash].js';
+          }
+          return 'assets/[name]-[hash].js';
+        };
+        viteConf.build.rollupOptions.output.chunkFileNames = (chunkInfo: { name?: string }) => {
+          if (chunkInfo.name && chunkInfo.name.startsWith('_plugin-vue_export-helper')) {
+            return 'assets/plugin-vue_export-helper-[hash].js';
+          }
+          return 'assets/[name]-[hash].js';
+        };
+      },
+
       // viteVuePluginOptions: {},
 
       vitePlugins: [

@@ -3,7 +3,7 @@
     <div class="col text-center">
       <q-avatar size="120px" class="q-mb-md">
         <!-- Replace with your photo in /src/assets/ if available -->
-        <img src="/src/assets/here-i-am.svg" alt="Profile Photo" />
+        <img src="/here-i-am.svg" alt="Profile Photo" />
       </q-avatar>
       <div class="text-h4 q-mb-sm">{{ $t('home.jobTitle') }}</div>
       <div class="text-subtitle1 q-mb-md">{{ $t('home.jobSubtitle') }}</div>
