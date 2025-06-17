@@ -216,76 +216,149 @@ export default {
       id: 'nodePackages',
       title: 'Pakiety Node.js',
       description: 'Kluczowe pakiety i biblioteki Node.js używane do frontendu, backendu, narzędzi, bezpieczeństwa i narzędzi developerskich.',
-      subSkills: [
+      skills: [
         {
           id: 'coreFramework',
           name: 'Podstawowy Framework i Zarządzanie Stanem',
-          description: 'vue, vue-router, pinia: Główne narzędzia do budowy interfejsu, routingu i zarządzania stanem w aplikacjach Vue.'
+          subSkills: [
+            { id: 'vue', name: 'vue', description: 'Progresywny framework JavaScript do budowy interfejsów użytkownika.' },
+            { id: 'vueRouter', name: 'vue-router', description: 'Oficjalny router dla Vue.js, umożliwiający nawigację między stronami.' },
+            { id: 'pinia', name: 'pinia', description: 'Biblioteka do zarządzania stanem w aplikacjach Vue.js.' }
+          ]
         },
         {
           id: 'uiVisualization',
           name: 'UI i Wizualizacja',
-          description: 'bootstrap-vue, vue-sidebar-menu, vue-notification, vue-echarts: Komponenty interfejsu, menu boczne, powiadomienia i zaawansowana wizualizacja danych.'
+          subSkills: [
+            { id: 'bootstrapVue', name: 'bootstrap-vue', description: 'Komponenty Bootstrap dla Vue.js.' },
+            { id: 'vueSidebarMenu', name: 'vue-sidebar-menu', description: 'Menu boczne dla aplikacji Vue.js.' },
+            { id: 'vueNotification', name: 'vue-notification', description: 'System powiadomień dla Vue.js.' },
+            { id: 'vueEcharts', name: 'vue-echarts', description: 'Biblioteka wykresów ECharts dla Vue.js.' }
+          ]
         },
         {
           id: 'utilitiesHttp',
           name: 'Narzędzia i HTTP',
-          description: 'axios, lodash: Klient HTTP oraz biblioteka narzędziowa do pracy na tablicach, obiektach i innych typach danych.'
+          subSkills: [
+            { id: 'axios', name: 'axios', description: 'Klient HTTP oparty na Promise dla przeglądarki i Node.js.' },
+            { id: 'lodash', name: 'lodash', description: 'Biblioteka narzędziowa do manipulacji danymi i programowania funkcyjnego.' }
+          ]
         },
         {
           id: 'buildTools',
           name: 'Narzędzia Build i Pakowanie',
-          description: 'vite, archiver: Nowoczesny system budowania frontendu oraz narzędzie do tworzenia archiwów.'
+          subSkills: [
+            { id: 'vite', name: 'vite', description: 'Nowoczesny system budowania frontendu.' },
+            { id: 'archiver', name: 'archiver', description: 'Moduł do tworzenia archiwów (zip, tar, itp.).' }
+          ]
         },
         {
           id: 'typeSafetyLinting',
           name: 'Bezpieczeństwo Typów i Lintowanie',
-          description: 'typescript, eslint, eslint-plugin-vue: Statyczne typowanie oraz narzędzia do kontroli jakości i stylu kodu.'
+          subSkills: [
+            { id: 'typescript', name: 'typescript', description: 'Typowany nadzbiór JavaScript zapewniający bezpieczeństwo typów.' },
+            { id: 'eslint', name: 'eslint', description: 'Linter JavaScript do kontroli jakości kodu.' },
+            { id: 'eslintPluginVue', name: 'eslint-plugin-vue', description: 'Plugin ESLint dla stylu i dobrych praktyk Vue.js.' }
+          ]
         },
         {
           id: 'coreServer',
           name: 'Podstawowe i Serwerowe Biblioteki',
-          description: 'express, body-parser, cors, morgan, nocache, multer, request-ip: Framework API, middleware, logowanie, obsługa uploadów i bezpieczeństwo.'
+          subSkills: [
+            { id: 'express', name: 'express', description: 'Minimalistyczny framework webowy dla Node.js.' },
+            { id: 'bodyParser', name: 'body-parser', description: 'Middleware do parsowania ciał żądań HTTP.' },
+            { id: 'cors', name: 'cors', description: 'Middleware Express do obsługi CORS.' },
+            { id: 'morgan', name: 'morgan', description: 'Middleware do logowania żądań HTTP.' },
+            { id: 'nocache', name: 'nocache', description: 'Wyłącza cache po stronie klienta w Express.' },
+            { id: 'multer', name: 'multer', description: 'Middleware do obsługi uploadu plików (multipart/form-data).' },
+            { id: 'requestIp', name: 'request-ip', description: 'Middleware do pobierania adresu IP klienta.' }
+          ]
         },
         {
           id: 'securityValidation',
           name: 'Bezpieczeństwo i Walidacja',
-          description: 'ajv, ajv-cli, bcryptjs, express-jwt, express-jwt-permissions, express-unless, express-validator, jsonwebtoken: Walidacja, uwierzytelnianie i autoryzacja.'
+          subSkills: [
+            { id: 'ajv', name: 'ajv', description: 'Walidator schematów JSON dla obiektów JavaScript.' },
+            { id: 'ajvCli', name: 'ajv-cli', description: 'Interfejs CLI dla walidatora Ajv.' },
+            { id: 'bcryptjs', name: 'bcryptjs', description: 'Biblioteka do haszowania haseł.' },
+            { id: 'expressJwt', name: 'express-jwt', description: 'Middleware JWT do autoryzacji w Express.' },
+            { id: 'expressJwtPermissions', name: 'express-jwt-permissions', description: 'Middleware do uprawnień JWT w Express.' },
+            { id: 'expressUnless', name: 'express-unless', description: 'Warunkowe pomijanie middleware w Express.' },
+            { id: 'expressValidator', name: 'express-validator', description: 'Middleware do walidacji danych żądania.' },
+            { id: 'jsonwebtoken', name: 'jsonwebtoken', description: 'Implementacja JSON Web Tokens.' }
+          ]
         },
         {
           id: 'databaseData',
           name: 'Bazy Danych i Przetwarzanie Danych',
-          description: 'better-sqlite3, mongodb, bson, ioredis, rethinkdb-ts: Sterowniki baz danych i narzędzia do serializacji danych.'
+          subSkills: [
+            { id: 'betterSqlite3', name: 'better-sqlite3', description: 'Szybka i prosta biblioteka SQLite3 dla Node.js.' },
+            { id: 'mongodb', name: 'mongodb', description: 'Oficjalny sterownik MongoDB dla Node.js.' },
+            { id: 'bson', name: 'bson', description: 'Parser i serializator BSON.' },
+            { id: 'ioredis', name: 'ioredis', description: 'Zaawansowany klient Redis dla Node.js.' },
+            { id: 'rethinkdbTs', name: 'rethinkdb-ts', description: 'Sterownik RethinkDB dla TypeScript/Node.js.' }
+          ]
         },
         {
           id: 'serializationMessaging',
           name: 'Serializacja i Komunikacja',
-          description: '@msgpack/msgpack, ws, zeromq: Wydajna serializacja binarna i komunikacja w czasie rzeczywistym.'
+          subSkills: [
+            { id: 'msgpack', name: '@msgpack/msgpack', description: 'Szybka implementacja MessagePack dla JavaScript.' },
+            { id: 'ws', name: 'ws', description: 'Prosta biblioteka WebSocket dla Node.js.' },
+            { id: 'zeromq', name: 'zeromq', description: 'Wysokowydajna biblioteka komunikatów asynchronicznych.' }
+          ]
         },
         {
           id: 'utilities',
           name: 'Narzędzia',
-          description: 'axios, bluebird, csv, dotenv, lodash, module-alias, sprintf-js: Praca z obietnicami, CSV, zmiennymi środowiskowymi, narzędzia i formatowanie tekstu.'
+          subSkills: [
+            { id: 'axios', name: 'axios', description: 'Klient HTTP oparty na Promise.' },
+            { id: 'bluebird', name: 'bluebird', description: 'Rozbudowana biblioteka Promise.' },
+            { id: 'csv', name: 'csv', description: 'Parsowanie i generowanie CSV dla Node.js.' },
+            { id: 'dotenv', name: 'dotenv', description: 'Ładowanie zmiennych środowiskowych z pliku .env.' },
+            { id: 'lodash', name: 'lodash', description: 'Biblioteka narzędziowa dla JavaScript.' },
+            { id: 'moduleAlias', name: 'module-alias', description: 'Tworzenie aliasów modułów w Node.js.' },
+            { id: 'sprintfJs', name: 'sprintf-js', description: 'Implementacja sprintf dla formatowania tekstu.' }
+          ]
         },
         {
           id: 'pdfArchive',
           name: 'Generowanie PDF i Archiwów',
-          description: 'archiver, jspdf, jspdf-autotable, pdfkit, pdfkit-table: Tworzenie plików PDF i archiwów.'
+          subSkills: [
+            { id: 'archiver', name: 'archiver', description: 'Moduł do tworzenia archiwów.' },
+            { id: 'jspdf', name: 'jspdf', description: 'Biblioteka do generowania PDF w JavaScript.' },
+            { id: 'jspdfAutotable', name: 'jspdf-autotable', description: 'Plugin do jsPDF do generowania tabel w PDF.' },
+            { id: 'pdfkit', name: 'pdfkit', description: 'Biblioteka do generowania dokumentów PDF dla Node.js.' },
+            { id: 'pdfkitTable', name: 'pdfkit-table', description: 'Plugin do generowania tabel dla PDFKit.' }
+          ]
         },
         {
           id: 'devTools',
           name: 'Narzędzia Developerskie i Skrypty',
-          description: 'copyfiles, http-server, nodemon, rimraf, ts-node, ts-node-dev, tsconfig-paths: Automatyzacja buildów, serwowanie i wsparcie developmentu.'
+          subSkills: [
+            { id: 'copyfiles', name: 'copyfiles', description: 'Łatwe kopiowanie plików w skryptach npm.' },
+            { id: 'httpServer', name: 'http-server', description: 'Prosty serwer HTTP z linii poleceń.' },
+            { id: 'nodemon', name: 'nodemon', description: 'Monitoruje zmiany i automatycznie restartuje aplikacje Node.js.' },
+            { id: 'rimraf', name: 'rimraf', description: 'Głębokie usuwanie plików (rm -rf) dla Node.js.' },
+            { id: 'tsNode', name: 'ts-node', description: 'Środowisko uruchomieniowe TypeScript dla Node.js.' },
+            { id: 'tsNodeDev', name: 'ts-node-dev', description: 'Narzędzie developerskie TypeScript/Node.js z auto-restartem.' },
+            { id: 'tsconfigPaths', name: 'tsconfig-paths', description: 'Ładowanie mapowań ścieżek TypeScript w czasie rzeczywistym.' }
+          ]
         },
         {
           id: 'typescriptTypes',
           name: 'TypeScript i Typy',
-          description: 'typescript, @types/*: Definicje typów dla bezpieczeństwa typowania.'
+          subSkills: [
+            { id: 'typescript', name: 'typescript', description: 'Język TypeScript dla bezpieczeństwa typów.' },
+            { id: 'types', name: '@types/*', description: 'Definicje typów TypeScript dla bibliotek JavaScript.' }
+          ]
         },
         {
           id: 'quasarNode',
           name: 'Quasar Framework',
-          description: 'Framework UI dla aplikacji Vue.js, umożliwiający szybkie tworzenie responsywnych interfejsów webowych i mobilnych.'
+          subSkills: [
+            { id: 'quasar', name: 'quasar', description: 'Framework UI dla Vue.js do responsywnych aplikacji webowych i mobilnych.' }
+          ]
         }
       ]
     },
