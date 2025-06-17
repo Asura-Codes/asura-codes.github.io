@@ -55,13 +55,29 @@ export default {
       ]
     },
     {
-      id: 'frameworks',
+      id: 'cppLibraries',
       title: 'C++ Frameworks & Libraries',
       skills: [
         {
           id: 'qt',
           name: 'Qt (Widgets, Signals/Slots)',
-          description: 'Cross-platform GUI, visualization, and user interaction for industrial control panels'
+          description: 'Cross-platform GUI, visualization, and user interaction for industrial control panels',
+          subSkills: [
+            { id: 'qtCore', name: 'QtCore', description: 'Core non-GUI functionality: event loop, signals/slots, containers, threading' },
+            { id: 'qtGui', name: 'QtGui', description: '2D graphics, imaging, fonts, and windowing system integration' },
+            { id: 'qtWidgets', name: 'QtWidgets', description: 'Traditional desktop widgets and UI controls' },
+            { id: 'qtNetwork', name: 'QtNetwork', description: 'Networking: TCP/UDP sockets, HTTP, SSL, and network protocols' },
+            { id: 'qtTest', name: 'QtTest', description: 'Unit testing framework for Qt applications' },
+            { id: 'qtConcurrent', name: 'QtConcurrent', description: 'High-level APIs for parallel programming' },
+            { id: 'qtSql', name: 'QtSql', description: 'SQL database integration and ORM-like features' },
+            { id: 'qtXml', name: 'QtXml', description: 'XML parsing and manipulation' },
+            { id: 'qtSvg', name: 'QtSvg', description: 'SVG rendering and manipulation' },
+            { id: 'qtMultimedia', name: 'QtMultimedia', description: 'Audio, video, and multimedia support' },
+            { id: 'qtCharts', name: 'QtCharts', description: 'Charting and data visualization' },
+            { id: 'qtSerialPort', name: 'QtSerialPort', description: 'Serial port communication' },
+            { id: 'qtWebSockets', name: 'QtWebSockets', description: 'WebSocket protocol support' },
+            { id: 'qtWebEngine', name: 'QtWebEngine', description: 'Web content rendering using Chromium engine' }
+          ]
         },
         {
           id: 'boost',
@@ -137,7 +153,18 @@ export default {
         {
           id: 'poco',
           name: 'Poco Framework',
-          description: 'Threading, networking, HTTP/WebSocket servers, MQTT integration, and database abstraction'
+          description: 'Threading, networking, HTTP/WebSocket servers, MQTT integration, and database abstraction',
+          subSkills: [
+            { id: 'pocoNet', name: 'Poco::Net', description: 'Networking, HTTP, WebSocket, TCP/UDP, SMTP, FTP, and SSL support' },
+            { id: 'pocoData', name: 'Poco::Data', description: 'Database abstraction and ORM-like features for SQL databases' },
+            { id: 'pocoUtil', name: 'Poco::Util', description: 'Application utilities, configuration, and command-line parsing' },
+            { id: 'pocoJSON', name: 'Poco::JSON', description: 'JSON parsing, serialization, and manipulation' },
+            { id: 'pocoXML', name: 'Poco::XML', description: 'XML parsing and DOM manipulation' },
+            { id: 'pocoMQTT', name: 'Poco::MQTT', description: 'MQTT protocol support for IoT and messaging' },
+            { id: 'pocoFoundation', name: 'Poco::Foundation', description: 'Core classes: threading, file system, logging, events, and utilities' },
+            { id: 'pocoCrypto', name: 'Poco::Crypto', description: 'Cryptography, SSL, and certificate management' },
+            { id: 'pocoZip', name: 'Poco::Zip', description: 'ZIP archive creation and extraction' },
+          ]
         },
         {
           id: 'messaging',
@@ -166,9 +193,9 @@ export default {
           description: 'Secure communication and asynchronous cryptographic operations'
         },
         {
-          id: 'iconvpp',
-          name: 'iconvpp',
-          description: 'Character encoding conversions for legacy systems integration (CP852 to UTF-8)'
+          id: 'libiconv',
+          name: 'libiconv',
+          description: 'Standard C library for character set conversion (encoding transformations, e.g., CP852 to UTF-8)'
         },
         {
           id: 'sqlite',
@@ -183,7 +210,16 @@ export default {
         {
           id: 'bcgControlBar',
           name: 'BCGControlBar Pro',
-          description: 'Advanced UI components for MFC applications including ribbons and dockable panels'
+          description: 'Advanced UI components for MFC applications including ribbons and dockable panels',
+          subSkills: [
+            { id: 'customization', name: 'Customization', description: 'Advanced customization techniques for BCGControlBar components' },
+            { id: 'ribbonIntegration', name: 'Ribbon Integration', description: 'Creating and managing ribbons in MFC applications' },
+            { id: 'dockablePanels', name: 'Dockable Panels', description: 'Implementing and managing dockable panels' },
+            { id: 'controlBar', name: 'Control Bar', description: 'Developing and customizing toolbars and menus' },
+            { id: 'themeCustomization', name: 'Theme Customization', description: 'Creating custom themes for BCG components' },
+            { id: 'eventHandling', name: 'Event Handling', description: 'Managing events and inter-component communication' },
+            { id: 'accessibility', name: 'Accessibility', description: 'Ensuring accessibility compliance for components' }
+          ]
         },
         {
           id: 'objectBox',
@@ -209,6 +245,106 @@ export default {
           id: 'proster',
           name: 'Proster',
           description: 'Custom protocol for industrial hardware integration'
+        },
+        {
+          id: 'arrow',
+          name: 'Apache Arrow',
+          description: 'Columnar in-memory analytics and data interchange format',
+          subSkills: [
+            { id: 'dataTransformation', name: 'Data Transformation', description: 'Transforming data into columnar format' },
+            { id: 'performanceOptimization', name: 'Performance Optimization', description: 'Improving query and data operation performance' },
+            { id: 'integration', name: 'Integration', description: 'Integrating with existing systems and data streams' }
+          ]
+        },
+        {
+          id: 'cppzmq',
+          name: 'cppzmq',
+          description: 'C++ binding for ZeroMQ messaging library'
+        },
+        {
+          id: 'duckdb',
+          name: 'DuckDB',
+          description: 'In-process SQL OLAP database management system',
+          subSkills: [
+            { id: 'sqlQueries', name: 'SQL Queries', description: 'Writing and optimizing SQL queries for DuckDB' },
+            { id: 'dataImportExport', name: 'Data Import/Export', description: 'Importing and exporting data to/from DuckDB' },
+            { id: 'performanceTuning', name: 'Performance Tuning', description: 'Optimizing DuckDB database performance' }
+          ]
+        },
+        {
+          id: 'fmt',
+          name: 'fmt',
+          description: 'Modern formatting library for C++'
+        },
+        {
+          id: 'gtest',
+          name: 'GoogleTest (gtest)',
+          description: 'Unit testing framework for C++'
+        },
+        {
+          id: 'libbson',
+          name: 'libbson',
+          description: 'BSON library for binary JSON serialization'
+        },
+        {
+          id: 'libuv',
+          name: 'libuv',
+          description: 'Cross-platform asynchronous I/O library'
+        },
+        {
+          id: 'libwebsockets',
+          name: 'libwebsockets',
+          description: 'Lightweight C library for WebSockets'
+        },
+        {
+          id: 'mosquitto',
+          name: 'Mosquitto',
+          description: 'MQTT broker and C/C++ client library'
+        },
+        {
+          id: 'protobuf',
+          name: 'Protobuf',
+          description: 'Google Protocol Buffers serialization library'
+        },
+        {
+          id: 'pthreads',
+          name: 'pthreads',
+          description: 'POSIX threads for multithreading support'
+        },
+        {
+          id: 'python3',
+          name: 'Python3 (C++ API)',
+          description: 'Embedding and extending Python in C++ applications'
+        },
+        {
+          id: 'rapidjson',
+          name: 'RapidJSON',
+          description: 'Fast JSON parser/generator for C++'
+        },
+        {
+          id: 'snappy',
+          name: 'Snappy',
+          description: 'Fast compression/decompression library by Google'
+        },
+        {
+          id: 'spdlog',
+          name: 'spdlog',
+          description: 'Fast C++ logging library'
+        },
+        {
+          id: 'utf8proc',
+          name: 'utf8proc',
+          description: 'UTF-8 processing library for Unicode'
+        },
+        {
+          id: 'zlib',
+          name: 'zlib',
+          description: 'Compression library for data streams'
+        },
+        {
+          id: 'zstd',
+          name: 'Zstandard (zstd)',
+          description: 'Fast compression algorithm by Facebook'
         }
       ]
     },

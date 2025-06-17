@@ -55,13 +55,29 @@ export default {
       ]
     },
     {
-      id: 'frameworks',
+      id: 'cppLibraries',
       title: 'Biblioteki i Frameworki C++',
       skills: [
         {
           id: 'qt',
           name: 'Qt (Widgets, Signals/Slots)',
-          description: 'Wieloplatformowy GUI, wizualizacja i interakcja użytkownika dla przemysłowych paneli sterowania'
+          description: 'Wieloplatformowy GUI, wizualizacja i interakcja użytkownika dla przemysłowych paneli sterowania',
+          subSkills: [
+            { id: 'qtCore', name: 'QtCore', description: 'Podstawowa funkcjonalność nie-GUI: pętla zdarzeń, sygnały/sloty, kontenery, wątki' },
+            { id: 'qtGui', name: 'QtGui', description: 'Grafika 2D, obrazowanie, czcionki i integracja z systemem okienkowym' },
+            { id: 'qtWidgets', name: 'QtWidgets', description: 'Tradycyjne widżety desktopowe i kontrolki UI' },
+            { id: 'qtNetwork', name: 'QtNetwork', description: 'Sieci: gniazda TCP/UDP, HTTP, SSL i protokoły sieciowe' },
+            { id: 'qtTest', name: 'QtTest', description: 'Framework do testów jednostkowych aplikacji Qt' },
+            { id: 'qtConcurrent', name: 'QtConcurrent', description: 'Wysokopoziomowe API do programowania równoległego' },
+            { id: 'qtSql', name: 'QtSql', description: 'Integracja z bazami SQL i funkcje podobne do ORM' },
+            { id: 'qtXml', name: 'QtXml', description: 'Parsowanie i manipulacja XML' },
+            { id: 'qtSvg', name: 'QtSvg', description: 'Renderowanie i obsługa SVG' },
+            { id: 'qtMultimedia', name: 'QtMultimedia', description: 'Obsługa audio, wideo i multimediów' },
+            { id: 'qtCharts', name: 'QtCharts', description: 'Wykresy i wizualizacja danych' },
+            { id: 'qtSerialPort', name: 'QtSerialPort', description: 'Komunikacja przez port szeregowy' },
+            { id: 'qtWebSockets', name: 'QtWebSockets', description: 'Obsługa protokołu WebSocket' },
+            { id: 'qtWebEngine', name: 'QtWebEngine', description: 'Renderowanie treści webowych z użyciem silnika Chromium' }
+          ]
         },
         {
           id: 'boost',
@@ -137,7 +153,18 @@ export default {
         {
           id: 'poco',
           name: 'Framework Poco',
-          description: 'Wątki, sieci, serwery HTTP/WebSocket, integracja MQTT i abstrakcja bazy danych'
+          description: 'Wątki, sieci, serwery HTTP/WebSocket, integracja MQTT i abstrakcja bazy danych',
+          subSkills: [
+            { id: 'pocoNet', name: 'Poco::Net', description: 'Sieci, HTTP, WebSocket, TCP/UDP, SMTP, FTP i obsługa SSL' },
+            { id: 'pocoData', name: 'Poco::Data', description: 'Abstrakcja bazy danych i funkcje podobne do ORM dla baz SQL' },
+            { id: 'pocoUtil', name: 'Poco::Util', description: 'Narzędzia aplikacyjne, konfiguracja i parsowanie linii poleceń' },
+            { id: 'pocoJSON', name: 'Poco::JSON', description: 'Parsowanie, serializacja i manipulacja JSON' },
+            { id: 'pocoXML', name: 'Poco::XML', description: 'Parsowanie XML i manipulacja DOM' },
+            { id: 'pocoMQTT', name: 'Poco::MQTT', description: 'Obsługa protokołu MQTT dla IoT i komunikacji' },
+            { id: 'pocoFoundation', name: 'Poco::Foundation', description: 'Klasy podstawowe: wątki, system plików, logowanie, zdarzenia i narzędzia' },
+            { id: 'pocoCrypto', name: 'Poco::Crypto', description: 'Kryptografia, SSL i zarządzanie certyfikatami' },
+            { id: 'pocoZip', name: 'Poco::Zip', description: 'Tworzenie i rozpakowywanie archiwów ZIP' },
+          ]
         },
         {
           id: 'messaging',
@@ -166,9 +193,9 @@ export default {
           description: 'Bezpieczna komunikacja i asynchroniczne operacje kryptograficzne'
         },
         {
-          id: 'iconvpp',
-          name: 'iconvpp',
-          description: 'Konwersje kodowania znaków dla integracji z systemami legacy (CP852 do UTF-8)'
+          id: 'libiconv',
+          name: 'libiconv',
+          description: 'Standardowa biblioteka C do konwersji zestawów znaków (np. CP852 do UTF-8)'
         },
         {
           id: 'sqlite',
@@ -183,7 +210,16 @@ export default {
         {
           id: 'bcgControlBar',
           name: 'BCGControlBar Pro',
-          description: 'Zaawansowane komponenty UI dla aplikacji MFC, w tym wstążki i panele dokowalne'
+          description: 'Zaawansowane komponenty UI dla aplikacji MFC, w tym wstążki i panele dokowalne',
+          subSkills: [
+            { id: 'customization', name: 'Dostosowywanie', description: 'Zaawansowane techniki dostosowywania komponentów BCGControlBar' },
+            { id: 'ribbonIntegration', name: 'Integracja wstążek', description: 'Tworzenie i zarządzanie wstążkami w aplikacjach MFC' },
+            { id: 'dockablePanels', name: 'Panele dokowalne', description: 'Implementacja i zarządzanie panelami dokowalnymi' },
+            { id: 'controlBar', name: 'Control Bar', description: 'Rozwój i dostosowywanie pasków narzędzi i menu' },
+            { id: 'themeCustomization', name: 'Dostosowywanie motywów', description: 'Tworzenie niestandardowych motywów dla komponentów BCG' },
+            { id: 'eventHandling', name: 'Obsługa zdarzeń', description: 'Zarządzanie zdarzeniami i komunikacją między komponentami' },
+            { id: 'accessibility', name: 'Dostępność', description: 'Zapewnienie dostępności komponentów zgodnie z wytycznymi' }
+          ]
         },
         {
           id: 'objectBox',
@@ -209,6 +245,106 @@ export default {
           id: 'proster',
           name: 'Proster',
           description: 'Niestandardowy protokół do integracji sprzętu przemysłowego'
+        },
+        {
+          id: 'arrow',
+          name: 'Apache Arrow',
+          description: 'Kolumnowy format analityki w pamięci i wymiany danych',
+          subSkills: [
+            { id: 'dataTransformation', name: 'Transformacja danych', description: 'Przekształcanie danych do formatu kolumnowego' },
+            { id: 'performanceOptimization', name: 'Optymalizacja wydajności', description: 'Zwiększanie wydajności zapytań i operacji na danych' },
+            { id: 'integration', name: 'Integracja', description: 'Integracja z istniejącymi systemami i strumieniami danych' }
+          ]
+        },
+        {
+          id: 'cppzmq',
+          name: 'cppzmq',
+          description: 'C++ binding do biblioteki komunikatów ZeroMQ'
+        },
+        {
+          id: 'duckdb',
+          name: 'DuckDB',
+          description: 'Wbudowany system zarządzania bazą danych SQL OLAP',
+          subSkills: [
+            { id: 'sqlQueries', name: 'Zapytania SQL', description: 'Pisanie i optymalizacja zapytań SQL dla DuckDB' },
+            { id: 'dataImportExport', name: 'Import/Eksport danych', description: 'Importowanie i eksportowanie danych z/do DuckDB' },
+            { id: 'performanceTuning', name: 'Strojenie wydajności', description: 'Optymalizacja wydajności bazy danych DuckDB' }
+          ]
+        },
+        {
+          id: 'fmt',
+          name: 'fmt',
+          description: 'Nowoczesna biblioteka formatowania dla C++'
+        },
+        {
+          id: 'gtest',
+          name: 'GoogleTest (gtest)',
+          description: 'Framework do testów jednostkowych dla C++'
+        },
+        {
+          id: 'libbson',
+          name: 'libbson',
+          description: 'Biblioteka BSON do binarnej serializacji JSON'
+        },
+        {
+          id: 'libuv',
+          name: 'libuv',
+          description: 'Wieloplatformowa biblioteka asynchronicznego I/O'
+        },
+        {
+          id: 'libwebsockets',
+          name: 'libwebsockets',
+          description: 'Lekka biblioteka C dla WebSockets'
+        },
+        {
+          id: 'mosquitto',
+          name: 'Mosquitto',
+          description: 'Broker MQTT i biblioteka klienta C/C++'
+        },
+        {
+          id: 'protobuf',
+          name: 'Protobuf',
+          description: 'Biblioteka serializacji Google Protocol Buffers'
+        },
+        {
+          id: 'pthreads',
+          name: 'pthreads',
+          description: 'Wątki POSIX do obsługi wielowątkowości'
+        },
+        {
+          id: 'python3',
+          name: 'Python3 (C++ API)',
+          description: 'Osadzanie i rozszerzanie Pythona w aplikacjach C++'
+        },
+        {
+          id: 'rapidjson',
+          name: 'RapidJSON',
+          description: 'Szybki parser/generator JSON dla C++'
+        },
+        {
+          id: 'snappy',
+          name: 'Snappy',
+          description: 'Szybka biblioteka kompresji/dekompresji od Google'
+        },
+        {
+          id: 'spdlog',
+          name: 'spdlog',
+          description: 'Szybka biblioteka logowania dla C++'
+        },
+        {
+          id: 'utf8proc',
+          name: 'utf8proc',
+          description: 'Biblioteka przetwarzania UTF-8 dla Unicode'
+        },
+        {
+          id: 'zlib',
+          name: 'zlib',
+          description: 'Biblioteka kompresji strumieni danych'
+        },
+        {
+          id: 'zstd',
+          name: 'Zstandard (zstd)',
+          description: 'Szybki algorytm kompresji od Facebooka'
         }
       ]
     },
