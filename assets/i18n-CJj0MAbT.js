@@ -1,0 +1,1 @@
+import{d as s}from"./index-FjZNZadH.js";import{m as o}from"./index-Bv3qH-2w.js";import{c as l}from"./vue-i18n-D7sImAu2.js";const r=s(({app:e})=>{const a=l({locale:"en-US",fallbackLocale:"en-US",legacy:!1,messages:o,warnHtmlMessage:!1});e.use(a)});export{r as default};
