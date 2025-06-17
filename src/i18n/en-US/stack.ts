@@ -56,7 +56,7 @@ export default {
     },
     {
       id: 'frameworks',
-      title: 'Key Frameworks & Libraries',
+      title: 'C++ Frameworks & Libraries',
       skills: [
         {
           id: 'qt',
@@ -196,11 +196,6 @@ export default {
           description: 'Optional NoSQL database for real-time applications'
         },
         {
-          id: 'eCharts',
-          name: 'ECharts',
-          description: 'Data visualization library for dashboards'
-        },
-        {
           id: 'snap7',
           name: 'Snap7',
           description: 'Siemens S7 protocol library for industrial communication'
@@ -214,31 +209,83 @@ export default {
           id: 'proster',
           name: 'Proster',
           description: 'Custom protocol for industrial hardware integration'
+        }
+      ]
+    },
+    {
+      id: 'nodePackages',
+      title: 'Node.js Packages',
+      description: 'Key Node.js packages and libraries used for frontend, backend, utilities, security, and development tooling.',
+      subSkills: [
+        {
+          id: 'coreFramework',
+          name: 'Core Framework & State Management',
+          description: 'vue, vue-router, pinia: The foundation for building, routing, and managing state in Vue applications.'
         },
         {
-          id: 'bootstrapVue',
-          name: 'Bootstrap-Vue',
-          description: 'Frontend framework for responsive design in Vue.js applications'
+          id: 'uiVisualization',
+          name: 'UI & Visualization',
+          description: 'bootstrap-vue, vue-sidebar-menu, vue-notification, vue-echarts: UI components, sidebar navigation, notifications, and advanced charting.'
         },
         {
-          id: 'pinia',
-          name: 'Pinia',
-          description: 'State management library for Vue.js applications'
+          id: 'utilitiesHttp',
+          name: 'Utilities & HTTP',
+          description: 'axios, lodash: HTTP client and utility functions for data manipulation.'
         },
         {
-          id: 'expressJs',
-          name: 'Express.js',
-          description: 'Web framework for Node.js, used for building APIs'
+          id: 'buildTools',
+          name: 'Build Tools & Packaging',
+          description: 'vite, archiver: Fast frontend builds and archive creation.'
         },
         {
-          id: 'socketIo',
-          name: 'Socket.IO',
-          description: 'Library for real-time, bidirectional communication'
+          id: 'typeSafetyLinting',
+          name: 'Type Safety & Linting',
+          description: 'typescript, eslint, eslint-plugin-vue: Static typing and code quality enforcement.'
         },
         {
-          id: 'ginGolang',
-          name: 'Gin (Go)',
-          description: 'HTTP web framework for building APIs in Go'
+          id: 'coreServer',
+          name: 'Core & Server-Side Libraries',
+          description: 'express, body-parser, cors, morgan, nocache, multer, request-ip: API, middleware, logging, uploads, and security.'
+        },
+        {
+          id: 'securityValidation',
+          name: 'Security & Validation',
+          description: 'ajv, ajv-cli, bcryptjs, express-jwt, express-jwt-permissions, express-unless, express-validator, jsonwebtoken: Validation, authentication, and authorization.'
+        },
+        {
+          id: 'databaseData',
+          name: 'Database & Data Handling',
+          description: 'better-sqlite3, mongodb, bson, ioredis, rethinkdb-ts: Database drivers and data serialization.'
+        },
+        {
+          id: 'serializationMessaging',
+          name: 'Serialization & Messaging',
+          description: '@msgpack/msgpack, ws, zeromq: Efficient binary serialization and messaging.'
+        },
+        {
+          id: 'utilities',
+          name: 'Utilities',
+          description: 'axios, bluebird, csv, dotenv, lodash, module-alias, sprintf-js: Promises, CSV, env, utilities, and string formatting.'
+        },
+        {
+          id: 'pdfArchive',
+          name: 'PDF & Archive Generation',
+          description: 'archiver, jspdf, jspdf-autotable, pdfkit, pdfkit-table: PDF and archive creation.'
+        },
+        {
+          id: 'devTools',
+          name: 'Dev Tools & Scripts',
+          description: 'copyfiles, http-server, nodemon, rimraf, ts-node, ts-node-dev, tsconfig-paths: Build, serve, and automate development.'
+        },
+        {
+          id: 'typescriptTypes',
+          name: 'TypeScript & Types',
+          description: 'typescript, @types/*: Type definitions for type safety.'
+        },
+        {
+          id: 'quasarNode',
+          name: 'Quasar Framework',
+          description: 'UI framework for Vue.js applications, enabling rapid development of responsive web and mobile interfaces.'
         }
       ]
     },

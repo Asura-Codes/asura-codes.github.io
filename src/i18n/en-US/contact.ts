@@ -1,8 +1,8 @@
 // Contact page translations
 export default {
-  title: 'Contact Me',
+  title: 'Contact',
   resumeTitle: 'Resume',
-  formTitle: 'Get in Touch',
+  formTitle: 'Leave me a message',
   nameLabel: 'Name',
   emailLabel: 'Email',
   messageLabel: 'Message',

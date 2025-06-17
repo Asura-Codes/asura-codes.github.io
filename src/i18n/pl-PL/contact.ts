@@ -2,7 +2,7 @@
 export default {
   title: 'Kontakt',
   resumeTitle: 'CV',
-  formTitle: 'Skontaktuj się',
+  formTitle: 'Zostaw mi wiadomość',
   nameLabel: 'Imię',
   emailLabel: 'Email',
   messageLabel: 'Wiadomość',

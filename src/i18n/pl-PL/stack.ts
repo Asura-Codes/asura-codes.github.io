@@ -56,7 +56,7 @@ export default {
     },
     {
       id: 'frameworks',
-      title: 'Kluczowe Frameworki i Biblioteki',
+      title: 'Biblioteki i Frameworki C++',
       skills: [
         {
           id: 'qt',
@@ -196,11 +196,6 @@ export default {
           description: 'Opcjonalna baza danych NoSQL dla aplikacji czasu rzeczywistego'
         },
         {
-          id: 'eCharts',
-          name: 'ECharts',
-          description: 'Biblioteka wizualizacji danych dla pulpitów nawigacyjnych'
-        },
-        {
           id: 'snap7',
           name: 'Snap7',
           description: 'Biblioteka protokołu Siemens S7 do komunikacji przemysłowej'
@@ -214,41 +209,83 @@ export default {
           id: 'proster',
           name: 'Proster',
           description: 'Niestandardowy protokół do integracji sprzętu przemysłowego'
+        }
+      ]
+    },
+    {
+      id: 'nodePackages',
+      title: 'Pakiety Node.js',
+      description: 'Kluczowe pakiety i biblioteki Node.js używane do frontendu, backendu, narzędzi, bezpieczeństwa i narzędzi developerskich.',
+      subSkills: [
+        {
+          id: 'coreFramework',
+          name: 'Podstawowy Framework i Zarządzanie Stanem',
+          description: 'vue, vue-router, pinia: Główne narzędzia do budowy interfejsu, routingu i zarządzania stanem w aplikacjach Vue.'
         },
         {
-          id: 'fabric',
-          name: 'Fabric (Python)',
-          description: 'Skrypty automatyzacji do wdrażania i zarządzania usługami'
+          id: 'uiVisualization',
+          name: 'UI i Wizualizacja',
+          description: 'bootstrap-vue, vue-sidebar-menu, vue-notification, vue-echarts: Komponenty interfejsu, menu boczne, powiadomienia i zaawansowana wizualizacja danych.'
         },
         {
-          id: 'systemd',
-          name: 'systemd',
-          description: 'Zarządzanie usługami w środowiskach Linux'
+          id: 'utilitiesHttp',
+          name: 'Narzędzia i HTTP',
+          description: 'axios, lodash: Klient HTTP oraz biblioteka narzędziowa do pracy na tablicach, obiektach i innych typach danych.'
         },
         {
-          id: 'bootstrapVue',
-          name: 'Bootstrap-Vue',
-          description: 'Framework frontendowy do responsywnego projektowania w aplikacjach Vue.js'
+          id: 'buildTools',
+          name: 'Narzędzia Build i Pakowanie',
+          description: 'vite, archiver: Nowoczesny system budowania frontendu oraz narzędzie do tworzenia archiwów.'
         },
         {
-          id: 'pinia',
-          name: 'Pinia',
-          description: 'Biblioteka zarządzania stanem dla aplikacji Vue.js'
+          id: 'typeSafetyLinting',
+          name: 'Bezpieczeństwo Typów i Lintowanie',
+          description: 'typescript, eslint, eslint-plugin-vue: Statyczne typowanie oraz narzędzia do kontroli jakości i stylu kodu.'
         },
         {
-          id: 'expressJs',
-          name: 'Express.js',
-          description: 'Framework webowy dla Node.js, używany do budowania API'
+          id: 'coreServer',
+          name: 'Podstawowe i Serwerowe Biblioteki',
+          description: 'express, body-parser, cors, morgan, nocache, multer, request-ip: Framework API, middleware, logowanie, obsługa uploadów i bezpieczeństwo.'
         },
         {
-          id: 'socketIo',
-          name: 'Socket.IO',
-          description: 'Biblioteka do komunikacji dwukierunkowej w czasie rzeczywistym'
+          id: 'securityValidation',
+          name: 'Bezpieczeństwo i Walidacja',
+          description: 'ajv, ajv-cli, bcryptjs, express-jwt, express-jwt-permissions, express-unless, express-validator, jsonwebtoken: Walidacja, uwierzytelnianie i autoryzacja.'
         },
         {
-          id: 'ginGolang',
-          name: 'Gin (Go)',
-          description: 'Framework HTTP dla budowania API w Go'
+          id: 'databaseData',
+          name: 'Bazy Danych i Przetwarzanie Danych',
+          description: 'better-sqlite3, mongodb, bson, ioredis, rethinkdb-ts: Sterowniki baz danych i narzędzia do serializacji danych.'
+        },
+        {
+          id: 'serializationMessaging',
+          name: 'Serializacja i Komunikacja',
+          description: '@msgpack/msgpack, ws, zeromq: Wydajna serializacja binarna i komunikacja w czasie rzeczywistym.'
+        },
+        {
+          id: 'utilities',
+          name: 'Narzędzia',
+          description: 'axios, bluebird, csv, dotenv, lodash, module-alias, sprintf-js: Praca z obietnicami, CSV, zmiennymi środowiskowymi, narzędzia i formatowanie tekstu.'
+        },
+        {
+          id: 'pdfArchive',
+          name: 'Generowanie PDF i Archiwów',
+          description: 'archiver, jspdf, jspdf-autotable, pdfkit, pdfkit-table: Tworzenie plików PDF i archiwów.'
+        },
+        {
+          id: 'devTools',
+          name: 'Narzędzia Developerskie i Skrypty',
+          description: 'copyfiles, http-server, nodemon, rimraf, ts-node, ts-node-dev, tsconfig-paths: Automatyzacja buildów, serwowanie i wsparcie developmentu.'
+        },
+        {
+          id: 'typescriptTypes',
+          name: 'TypeScript i Typy',
+          description: 'typescript, @types/*: Definicje typów dla bezpieczeństwa typowania.'
+        },
+        {
+          id: 'quasarNode',
+          name: 'Quasar Framework',
+          description: 'Framework UI dla aplikacji Vue.js, umożliwiający szybkie tworzenie responsywnych interfejsów webowych i mobilnych.'
         }
       ]
     },
