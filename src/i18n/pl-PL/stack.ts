@@ -621,7 +621,7 @@ export default {
     },
     {
       id: 'architecture',
-      title: 'Umiejętności Architektoniczne i Techniczne',
+      title: 'Umiejętności Architecta i Techniczne',
       skills: [
         {
           id: 'eventDriven',
