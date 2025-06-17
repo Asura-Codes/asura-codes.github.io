@@ -499,6 +499,127 @@ export default {
       ]
     },
     {
+      id: 'pythonPackages',
+      title: 'Python Packages',
+      description: 'Key Python packages and libraries used for backend development, scripting, testing, automation, and hardware integration.',
+      skills: [
+        {
+          id: 'envMgmt',
+          name: 'Environment & Dependency Management',
+          subSkills: [
+            { id: 'pip', name: 'pip', description: 'The Python package installer.' },
+            { id: 'setuptools', name: 'setuptools', description: 'Build system and package management for Python projects.' },
+            { id: 'wheel', name: 'wheel', description: 'Built-package format for Python.' },
+            { id: 'pycWheel', name: 'pyc-wheel', description: 'Wheel support for compiled Python extensions.' },
+            { id: 'virtualenv', name: 'virtualenv', description: 'Tool to create isolated Python environments.' },
+            { id: 'venv', name: 'venv', description: 'Standard library module for creating virtual environments.' }
+          ]
+        },
+        {
+          id: 'lintingFormatting',
+          name: 'Linting & Formatting',
+          subSkills: [
+            { id: 'pylint', name: 'pylint', description: 'Python static code analysis tool.' },
+            { id: 'mypy', name: 'mypy', description: 'Optional static typing for Python.' }
+          ]
+        },
+        {
+          id: 'testing',
+          name: 'Testing & Coverage',
+          subSkills: [
+            { id: 'pytest', name: 'pytest', description: 'Testing framework for Python.' },
+            { id: 'pytestQt', name: 'pytest-qt', description: 'pytest support for PyQt and PySide applications.' },
+            { id: 'coverage', name: 'coverage', description: 'Code coverage measurement for Python.' },
+            { id: 'py', name: 'py', description: 'Library for Python code and test discovery.' }
+          ]
+        },
+        {
+          id: 'webFrameworks',
+          name: 'Web Frameworks',
+          subSkills: [
+            { id: 'flask', name: 'flask', description: 'Micro web framework for Python.' },
+            { id: 'flaskCors', name: 'flask-cors', description: 'CORS support for Flask.' },
+            { id: 'fastapi', name: 'FastAPI', description: 'Modern, fast web framework for building APIs.' },
+            { id: 'gevent', name: 'gevent', description: 'Coroutine-based networking library.' }
+          ]
+        },
+        {
+          id: 'dataScience',
+          name: 'Data Science & Visualization',
+          subSkills: [
+            { id: 'numpy', name: 'numpy', description: 'Fundamental package for scientific computing.' },
+            { id: 'pandas', name: 'pandas', description: 'Data analysis and manipulation tool.' },
+            { id: 'scipy', name: 'scipy', description: 'Scientific and technical computing library.' },
+            { id: 'matplotlib', name: 'matplotlib', description: 'Comprehensive library for creating static, animated, and interactive visualizations.' },
+            { id: 'jupyter', name: 'jupyter', description: 'Interactive computing notebooks.' },
+            { id: 'notebook', name: 'notebook', description: 'Jupyter interactive notebook server.' },
+          ]
+        },
+        {
+          id: 'database',
+          name: 'Database & ORM',
+          subSkills: [
+            { id: 'rethinkdb', name: 'rethinkdb', description: 'Python driver for RethinkDB.' },
+            { id: 'redis', name: 'redis', description: 'Python client for Redis key-value store.' }
+          ]
+        },
+        {
+          id: 'excel',
+          name: 'Excel & Office',
+          subSkills: [
+            { id: 'openpyxl', name: 'openpyxl', description: 'Read/write Excel 2010 xlsx/xlsm/xltx/xltm files.' },
+          ]
+        },
+        {
+          id: 'networking',
+          name: 'Networking & Communication',
+          subSkills: [
+            { id: 'requests', name: 'requests', description: 'HTTP library for Python.' },
+            { id: 'paramiko', name: 'paramiko', description: 'SSH2 protocol library for Python.' },
+            { id: 'ping3', name: 'ping3', description: 'Pure Python3 version of ICMP ping.' }
+          ]
+        },
+        {
+          id: 'hardware',
+          name: 'Hardware & IoT',
+          subSkills: [
+            { id: 'smbus2', name: 'smbus2', description: 'SMBus/I2C interface for Python.' },
+            { id: 'rpiGpio', name: 'rpi.gpio', description: 'GPIO interface for Raspberry Pi.' }
+          ]
+        },
+        {
+          id: 'gui',
+          name: 'GUI & Desktop',
+          subSkills: [
+            { id: 'pyqt5', name: 'pyqt5', description: 'Python bindings for Qt5.' }
+          ]
+        },
+        {
+          id: 'packaging',
+          name: 'Packaging & Distribution',
+          subSkills: [
+            { id: 'pyinstaller', name: 'pyinstaller', description: 'Bundle Python applications into stand-alone executables.' }
+          ]
+        },
+        {
+          id: 'parsing',
+          name: 'Parsing & Web Scraping',
+          subSkills: [
+            { id: 'lxml', name: 'lxml', description: 'Powerful and Pythonic XML and HTML processing library.' },
+            { id: 'htmlgenerator', name: 'htmlgenerator', description: 'HTML generation for Python.' }
+          ]
+        },
+        {
+          id: 'utilities',
+          name: 'Utilities & Misc',
+          subSkills: [
+            { id: 'pythonDateutil', name: 'python-dateutil', description: 'Extensions to the standard datetime module.' },
+            { id: 'invoke', name: 'invoke', description: 'Pythonic task execution tool & library.' }
+          ]
+        }
+      ]
+    },
+    {
       id: 'architecture',
       title: 'Architectural & Technical Skills',
       skills: [

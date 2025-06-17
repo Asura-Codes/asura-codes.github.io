@@ -499,6 +499,127 @@ export default {
       ]
     },
     {
+      id: 'pythonPackages',
+      title: 'Pakiety Pythona',
+      description: 'Kluczowe pakiety i biblioteki Pythona używane do backendu, skryptów, testowania, automatyzacji i integracji sprzętowej.',
+      skills: [
+        {
+          id: 'envMgmt',
+          name: 'Zarządzanie środowiskiem i zależnościami',
+          subSkills: [
+            { id: 'pip', name: 'pip', description: 'Instalator pakietów dla Pythona.' },
+            { id: 'setuptools', name: 'setuptools', description: 'System budowania i zarządzania pakietami dla projektów Pythona.' },
+            { id: 'wheel', name: 'wheel', description: 'Format paczek binarnych dla Pythona.' },
+            { id: 'pycWheel', name: 'pyc-wheel', description: 'Obsługa wheel dla skompilowanych rozszerzeń Pythona.' },
+            { id: 'virtualenv', name: 'virtualenv', description: 'Narzędzie do tworzenia izolowanych środowisk Pythona.' },
+            { id: 'venv', name: 'venv', description: 'Moduł standardowy do tworzenia środowisk wirtualnych.' }
+          ]
+        },
+        {
+          id: 'lintingFormatting',
+          name: 'Lintowanie i formatowanie',
+          subSkills: [
+            { id: 'pylint', name: 'pylint', description: 'Statyczna analiza kodu Python.' },
+            { id: 'mypy', name: 'mypy', description: 'Opcjonalne statyczne typowanie dla Pythona.' }
+          ]
+        },
+        {
+          id: 'testing',
+          name: 'Testowanie i pokrycie',
+          subSkills: [
+            { id: 'pytest', name: 'pytest', description: 'Framework do testowania w Pythonie.' },
+            { id: 'pytestQt', name: 'pytest-qt', description: 'Wsparcie pytest dla aplikacji PyQt i PySide.' },
+            { id: 'coverage', name: 'coverage', description: 'Pomiar pokrycia kodu testami.' },
+            { id: 'py', name: 'py', description: 'Biblioteka do wykrywania kodu i testów w Pythonie.' }
+          ]
+        },
+        {
+          id: 'webFrameworks',
+          name: 'Frameworki webowe',
+          subSkills: [
+            { id: 'flask', name: 'flask', description: 'Mikroframework webowy dla Pythona.' },
+            { id: 'flaskCors', name: 'flask-cors', description: 'Obsługa CORS dla Flask.' },
+            { id: 'fastapi', name: 'FastAPI', description: 'Nowoczesny, szybki framework do budowy API.' },
+            { id: 'gevent', name: 'gevent', description: 'Biblioteka sieciowa oparta na korutynach.' }
+          ]
+        },
+        {
+          id: 'dataScience',
+          name: 'Data science i wizualizacja',
+          subSkills: [
+            { id: 'numpy', name: 'numpy', description: 'Podstawowa biblioteka do obliczeń naukowych.' },
+            { id: 'pandas', name: 'pandas', description: 'Narzędzie do analizy i manipulacji danymi.' },
+            { id: 'scipy', name: 'scipy', description: 'Biblioteka do obliczeń naukowych i technicznych.' },
+            { id: 'matplotlib', name: 'matplotlib', description: 'Biblioteka do tworzenia wykresów i wizualizacji.' },
+            { id: 'jupyter', name: 'jupyter', description: 'Interaktywne notatniki do obliczeń.' },
+            { id: 'notebook', name: 'notebook', description: 'Serwer interaktywnych notatników Jupyter.' },
+          ]
+        },
+        {
+          id: 'database',
+          name: 'Bazy danych i ORM',
+          subSkills: [
+            { id: 'rethinkdb', name: 'rethinkdb', description: 'Sterownik Pythona dla RethinkDB.' },
+            { id: 'redis', name: 'redis', description: 'Klient Pythona dla bazy Redis.' }
+          ]
+        },
+        {
+          id: 'excel',
+          name: 'Excel i Office',
+          subSkills: [
+            { id: 'openpyxl', name: 'openpyxl', description: 'Odczyt/zapis plików Excel xlsx/xlsm/xltx/xltm.' },
+          ]
+        },
+        {
+          id: 'networking',
+          name: 'Sieci i komunikacja',
+          subSkills: [
+            { id: 'requests', name: 'requests', description: 'Biblioteka HTTP dla Pythona.' },
+            { id: 'paramiko', name: 'paramiko', description: 'Biblioteka SSH2 dla Pythona.' },
+            { id: 'ping3', name: 'ping3', description: 'Czysta implementacja ICMP ping w Pythonie 3.' }
+          ]
+        },
+        {
+          id: 'hardware',
+          name: 'Sprzęt i IoT',
+          subSkills: [
+            { id: 'smbus2', name: 'smbus2', description: 'Interfejs SMBus/I2C dla Pythona.' },
+            { id: 'rpiGpio', name: 'rpi.gpio', description: 'Interfejs GPIO dla Raspberry Pi.' }
+          ]
+        },
+        {
+          id: 'gui',
+          name: 'GUI i desktop',
+          subSkills: [
+            { id: 'pyqt5', name: 'pyqt5', description: 'Powiązania Pythona z Qt5.' }
+          ]
+        },
+        {
+          id: 'packaging',
+          name: 'Pakowanie i dystrybucja',
+          subSkills: [
+            { id: 'pyinstaller', name: 'pyinstaller', description: 'Tworzenie samodzielnych plików wykonywalnych z aplikacji Pythona.' }
+          ]
+        },
+        {
+          id: 'parsing',
+          name: 'Parsowanie i web scraping',
+          subSkills: [
+            { id: 'lxml', name: 'lxml', description: 'Wydajna biblioteka do przetwarzania XML i HTML.' },
+            { id: 'htmlgenerator', name: 'htmlgenerator', description: 'Generowanie HTML w Pythonie.' }
+          ]
+        },
+        {
+          id: 'utilities',
+          name: 'Narzędzia i inne',
+          subSkills: [
+            { id: 'pythonDateutil', name: 'python-dateutil', description: 'Rozszerzenia do standardowego modułu datetime.' },
+            { id: 'invoke', name: 'invoke', description: 'Narzędzie i biblioteka do wykonywania zadań w Pythonie.' }
+          ]
+        }
+      ]
+    },
+    {
       id: 'architecture',
       title: 'Umiejętności Architektoniczne i Techniczne',
       skills: [
