@@ -2,7 +2,7 @@
 export default {
   title: 'Witaj w moim portfolio',
   jobTitle: 'Programista Full-Stack',
-  jobSubtitle: 'Tworzę niezawodne rozwiązania w językach C++, TypeScript, Python, Go i .NET. Moim głównym celem zawodowym zawsze była integracja starych systemów przemysłowych z nowymi technologiami.',
+  jobSubtitle: 'Pracuję z systemami, które muszą działać stabilnie pod obciążeniem, w czasie rzeczywistym i często na styku współczesnego oprogramowania i przestarzałej infrastruktury. Chociaż projektuję rozwiązania w Go, TypeScript i .NET, moimi najsilniejszymi językami programowania są C++ i Python. Niezależnie od tego, czy opracowuję przemysłowy system wizualizacji, aplikację internetową czy archiwum danych, interesuje mnie jakość, wydajność i przejrzystość.',
   aboutMe: 'O mnie',
   aboutIntro: 'Jako programista lubię rozwiązywać problemy techniczne i tworzyć rozwiązania, na których ludzie mogą polegać. Moje doświadczenie obejmuje zarówno architekturę systemów niskiego poziomu, jak i nowoczesne technologie internetowe.',
   aboutJourney: 'W trakcie mojej kariery zawodowej miałem okazję pracować nad ważnymi projektami z zakresu automatyki przemysłowej i systemów czasu rzeczywistego. Niezależnie od tego, czy zajmowałem się projektowaniem systemów SCADA, wdrażaniem rozwiązań do gromadzenia danych, czy tworzeniem przyjaznych dla użytkownika interfejsów, każdy projekt nauczył mnie czegoś nowego i pomógł mi się rozwijać.',

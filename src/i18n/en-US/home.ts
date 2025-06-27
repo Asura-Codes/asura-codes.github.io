@@ -2,7 +2,7 @@
 export default {
   title: 'Welcome to My Portfolio',
   jobTitle: 'Full-stack Developer',
-  jobSubtitle: 'I make reliable solutions in C++, TypeScript, Python, Go, and .NET. My main professional goal has always been to integrate old industrial systems with new technologies.',
+  jobSubtitle: 'I work with systems that need to function consistently under load, in real time, and frequently at the nexus of contemporary software and outdated infrastructure. Although I design solutions in Go, TypeScript, and.NET, my strongest programming languages are C++ and Python. Whether I\'m developing an industrial visualization system, web application, or data archive, I\'m interested in quality, performance, and transparency.',
   aboutMe: 'About Me',
   aboutIntro: 'As a software developer, I enjoy solving technical problems and making solutions that people can count on.  My experience ranges from low-level system architecture to modern web technologies.',
   aboutJourney: 'I\'ve had the chance to work on important projects in industrial automation and real-time systems throughout my career. Whether I was designing SCADA systems, implementing data acquisition solutions, or making user-friendly interfaces, each project has taught me something new and helped me grow.',
