@@ -2,7 +2,7 @@
   "name": "asura-codes-github-io",
   "version": "0.0.1",
   "description": "Asura Codes portfolio",
-  "productName": "portfolio",
+  "websiteName": "Asura Codes",
   "author": "Patryk Tomaszewski <patryk.tomaszewski@iase.wroc.pl>",
   "type": "module",
   "private": true,
