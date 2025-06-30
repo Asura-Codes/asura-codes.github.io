@@ -21,7 +21,7 @@
             <span class="text-caption" :class="`text-${getProjectSizeColor(project)}`">{{
               $t(`work.sizes.${project.size}`) }}</span>
             <q-linear-progress :value="getSizeRating(project) / 3" :color="getProjectSizeColor(project)"
-              class="q-ml-md size-progress-card" size="6px" rounded style="width: 40px;" />
+              class="q-ml-sm size-progress-card" size="6px" rounded />
           </div>
           <div class="size-indicator" v-else>
             <q-badge color="grey" text-color="white" class="q-py-xs">
@@ -65,20 +65,21 @@
 
         <q-card-section v-if="selectedProject && selectedProject.technologies">
           <div class="text-subtitle1 q-mb-sm section-title">{{ $t('work.technologiesUsed') }}</div>
-          <div class="text-body2 tech-tags">{{ selectedProject.technologies }}</div>
+          <div class="tech-tags">{{ selectedProject.technologies }}</div>
         </q-card-section>
 
         <q-card-section v-if="selectedProject">
           <div class="text-subtitle1 q-mb-sm section-title">{{ $t('work.projectSize') }}</div>
-          <div class="text-body2 project-size" v-if="selectedProject.size">
+          <div class="project-size" v-if="selectedProject.size">
             <q-icon :name="getProjectSizeIcon(selectedProject)" :color="getProjectSizeColor(selectedProject)"
               class="q-mr-sm">
               <q-tooltip>{{ $t(`work.sizeTooltips.${selectedProject.size}`) }}</q-tooltip>
             </q-icon>
-            {{ $t(`work.sizes.${selectedProject.size}`) }}
+            <span class="text-caption" :class="`text-${getProjectSizeColor(selectedProject)}`">{{
+              $t(`work.sizes.${selectedProject.size}`) }}</span>
             <q-rating :model-value="getSizeRating(selectedProject)" size="1.2em" :max="3" icon="mdi-circle"
               icon-selected="mdi-circle" readonly color="grey-6" :color-selected="getProjectSizeColor(selectedProject)"
-              class="q-ml-md">
+              class="q-ml-md" style="min-width: 58px;">
               <q-tooltip>{{ $t('work.difficultyScale') }}</q-tooltip>
             </q-rating>
 
@@ -86,7 +87,7 @@
             <q-linear-progress :value="getSizeRating(selectedProject) / 3" :color="getProjectSizeColor(selectedProject)"
               class="q-mt-sm size-progress" size="10px" rounded />
           </div>
-          <div class="text-body2 project-size" v-else>
+          <div class="project-size" v-else>
             <q-badge color="grey" text-color="white" class="q-py-xs">
               {{ $t('work.sizeNotSpecified') }}
               <q-tooltip>{{ $t('work.sizeNotSpecifiedTooltip') }}</q-tooltip>
@@ -402,42 +403,12 @@ function getSizeRating(project: Project): number {
 }
 
 .size-progress {
-  width: 100px;
+  /* width: 100px; */
   margin-left: 12px;
 }
 
 .size-progress-card {
   align-self: center;
-}
-
-/* Make the project size indicator more responsive */
-@media (max-width: 599px) {
-  .size-indicator {
-    flex-wrap: wrap;
-  }
-
-  .size-progress {
-    width: 80px;
-    margin-left: 8px;
-  }
-}
-
-/* Enhance mobile responsiveness */
-@media (max-width: 480px) {
-  .project-size {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .project-size .q-rating {
-    margin-left: 0;
-    margin-top: 8px;
-  }
-
-  .size-progress {
-    width: 100%;
-    margin-left: 0;
-  }
 }
 
 /* Add animation to progress bars */
