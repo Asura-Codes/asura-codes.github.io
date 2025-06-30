@@ -1,13 +1,13 @@
 // Stack page translations - Structured version with skillCards array
 export default {
-  title: 'Mój Stos Technologiczny',
+  title: 'Stack Technologiczny',
   frontendTitle: 'Frontend',
   backendTitle: 'Backend',
   databaseTitle: 'Bazy danych',
   toolsTitle: 'Narzędzia i DevOps',
 
   // Szczegóły strony
-  pageTitle: 'Stos Technologiczny i Ekspertyza',
+  pageTitle: 'Stack Technologiczny',
   introduction: 'Jako programista moim głównym celem jest tworzenie niezawodnych, wydajnych rozwiązań. Pracowałem nad tworzeniem wieloplatformowych interfejsów graficznych, architekturą sterowaną zdarzeniami, systemami pamięci współdzielonej oraz nowoczesnym językiem C++ (C++20/17). Miałem okazję wdrożyć skuteczne rozwiązania w zakresie archiwizacji danych oraz stworzyć systemy rozproszone z możliwością komunikacji w czasie rzeczywistym. Poniżej przedstawiam zarys moich kluczowych kompetencji i stosowanych technologii. Umiejętności te doskonaliłem podczas realizacji różnych projektów związanych z tworzeniem oprogramowania, takich jak rozproszone systemy sterowania, aplikacje wieloplatformowe oraz rozwiązania do gromadzenia i archiwizacji danych.',
 
   skillCards: [

@@ -1,13 +1,13 @@
 // Stack page translations - Structured version with skillCards array
 export default {
-  title: 'My Technology Stack',
+  title: 'Technology Stack',
   frontendTitle: 'Frontend',
   backendTitle: 'Backend',
   databaseTitle: 'Databases',
   toolsTitle: 'Tools & DevOps',
 
   // Page details
-  pageTitle: 'Technology Stack & Expertise',
+  pageTitle: 'Technology Stack',
   introduction: 'As a software developer, my main goal is to create reliable, high-performing solutions. I\'ve worked on cross-platform GUI development, event-driven architecture, shared memory systems, and modern C++ (C++20/17). I\'ve had the chance to put effective data archiving solutions into place and create distributed systems with real-time communication capabilities. An outline of my core competencies and technology stack is provided below. These were honed via a variety of software development projects, such as distributed control systems, cross-platform apps, and data acquisition and archiving solutions.',
 
   skillCards: [

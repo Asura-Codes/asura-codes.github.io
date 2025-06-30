@@ -64,7 +64,7 @@
                 <div class="text-h6">{{ app.title }}</div>
                 <div class="text-subtitle2 q-mt-xs">{{ app.description }}</div>
                 <div class="q-mt-sm">
-                  <q-chip v-for="(tech, tIdx) in app.technologies" :key="tIdx" color="secondary" text-color="white"
+                  <q-chip v-for="(tech, tIdx) in app.technologies" :key="tIdx" color="primary" text-color="white"
                     class="q-ma-xs">
                     {{ tech }}
                   </q-chip>

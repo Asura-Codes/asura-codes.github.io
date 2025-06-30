@@ -5,7 +5,7 @@ export default {
   success: 'Action was successful',
 
   // Common UI elements
-  portfolio: 'Portfolio',
+  portfolio: 'Asura Codes',
   darkMode: 'Toggle Dark Mode',
   language: 'Language',
   languageEnglish: 'English',
