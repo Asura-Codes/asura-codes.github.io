@@ -6,7 +6,7 @@ export default {
 
   // Page details
   pageTitle: 'Industrial Software Development',
-  pageSubtitle: 'Sturdy software for data systems, automation, and critical infrastructure',
+  pageSubtitle: 'Software for data systems, automation, and critical infrastructure',
   btnDetails: 'Details',
   btnClose: 'Close',
   keyFeatures: 'Key Features:',
@@ -51,13 +51,16 @@ export default {
       title: "SCADA System",
       tech: "C++20, Qt 6, Event-Driven Architecture",
       keywords: "Real-Time Control, MQTT, ZeroMQ, Alarm Management, Thread Safety",
-      description: "I helped create a modular industrial automation control and monitoring system. The system reliably handles binary and analog signals thanks to its event-driven architecture. It has tools for managing alarms, dynamic configuration, and industrial process visualization.",
+      description: "I participated in the development of a modular industrial automation control and monitoring system. The system reliably handles binary and analog signals thanks to its event-driven architecture. It has tools for managing alarms, dynamic configuration, and industrial process visualization.",
       size: "large",
       keyFeatures: [
         { title: "Event-Driven Architecture", desc: "To help guarantee dependable system responses, I worked on signal processing using validation, parsing, and queuing." },
-        { title: "Real-Time Communication", desc: "MQTT and ZeroMQ were implemented to facilitate communication between field devices and backend servers." },
+        { title: "Real-Time Communication", desc: "I implemented MQTT and ZeroMQ protocols to facilitate communication between field devices and back-end servers." },
         { title: "Dynamic Configuration", desc: "Contributed to the development of the ability to load configuration without system interruption from shared memory and project files." },
-        { title: "Alarm Management", desc: "Developed logic that uses configurable thresholds and state changes to identify and alert users to abnormal conditions." }
+        { title: "Alarm Management", desc: "I developed logic that uses configurable thresholds and state changes to identify and alert users to abnormal conditions." },
+        { title: "Thread Safety", desc: "I implemented synchronization mechanisms and lock-free algorithms to ensure data integrity in multi-threaded environments." },
+        { title: "Modular Design", desc: "The system was designed to be extensible, allowing for easy addition of new protocols and features." }
+
       ],
       technologies: "C++20, Qt 6 (Widgets, Core, Network, SQL, Charts), BCGControlBar Pro, Boost (asio, serialization, fusion, interprocess, thread), Poco, MQTT (mosquitto), ZeroMQ, nlohmann::json, MongoDB C++ Driver, CMake, vcpkg"
     },
@@ -68,10 +71,17 @@ export default {
       description: "I contributed to the creation of a C++20-based system for gathering and storing power plant measurement data. For both real-time and historical access, the system was made to function well while preserving data integrity.",
       size: "large",
       keyFeatures: [
-        { title: "Data Acquisition", desc: "Interfaces with plant sensors and control systems were developed in order to effectively gather analog and digital measurements." },
-        { title: "Shared Memory Architecture", desc: "Shared memory to enable simultaneous access to data by several processes (acquisition, archiving, and visualization)." },
-        { title: "Archiving Solution", desc: "Time-series data was stored using a file-mapped method to facilitate speedy retrieval by time period." },
-        { title: "Data Integrity", desc: "Recovery capabilities and additional validation procedures have been added to help safeguard vital operational data." }
+        { title: "Efficient Storage Design", desc: "I designed a high-performance storage system that optimizes read/write operations while maintaining data integrity for historical measurements." },
+        { title: "Data Acquisition", desc: "I developed connectivity to Siemens, Modbus TCP, and other control systems to effectively gather analog and digital measurements." },
+        { title: "Shared Memory Architecture", desc: "To enable simultaneous access to data by several processes (acquisition, archiving, and visualization), I use shared memory." },
+        { title: "Archiving Solution", desc: "I store time-series data using a file-mapped approach to facilitate speedy retrieval by time period." },
+        { title: "Data Integrity", desc: "I included additional validation procedures and recovery capabilities to help safeguard crucial operational data." },
+        { title: "Modular Design", desc: "The system was designed to be extensible, allowing for easy addition of new protocols and features." },
+        { title: "Performance Optimization", desc: "I implemented custom indexing and caching strategies to maintain sub-millisecond data retrieval speeds even with millions of archived measurements." },
+        { title: "Real-Time and Historical Access", desc: "The system supports both real-time data acquisition and historical data retrieval, ensuring comprehensive monitoring capabilities." },
+        { title: "Cross-Platform Compatibility", desc: "The system is designed to run on both Windows and Linux platforms, ensuring flexibility in deployment." },
+        { title: "Extensive Logging", desc: "I implemented detailed logging mechanisms to track data acquisition processes and system performance." },
+        { title: "Self-Healing Services", desc: "I implemented a watchdog mechanism that automatically restarts services when they fail, ensuring continuous data acquisition even during unexpected errors." },
       ],
       technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Custom file-mapped storage, CMake"
     },
@@ -82,10 +92,17 @@ export default {
       description: "I contributed to the development of an operations communication platform that links contemporary and legacy systems. This included a Poco-based backend and a C++ service to handle legacy data, with an emphasis on ensuring the components functioned well together.",
       size: "large",
       keyFeatures: [
-        { title: "Legacy Data Handling", desc: "Developed a C++20 program to translate character encoding in older industrial data files and convert them into more contemporary formats." },
+        { title: "Legacy Data Handling", desc: "I developed a C++20 program to translate character encoding in older industrial data files and convert them into more contemporary formats." },
         { title: "Microservice Approach", desc: "Assisting in the division of the platform into distinct containerized services for communication, storage, and core functions." },
-        { title: "API Development", desc: "Developed RESTful APIs with WebSocket support for real-time updates and authentication using JWT and API keys." },
-        { title: "Storage Solutions", desc: "To strike a balance between flexibility and performance requirements, ObjectBox was used for event logging and SQLite for configuration settings." }
+        { title: "API Development", desc: "I developed RESTful APIs with WebSocket support for real-time updates and authentication using JWT and API keys." },
+        { title: "Storage Solutions", desc: "To strike a balance between flexibility and performance requirements, I used ObjectBox for event logging and SQLite for configuration settings." },
+        { title: "Real-Time Data", desc: "I implemented WebSocket-based live data streaming to provide operators with immediate visibility into system changes and critical events." },
+        { title: "Security Implementation", desc: "I developed a comprehensive security model with role-based access control, encrypted communication channels, and audit logging to protect sensitive industrial data." },
+        { title: "Containerization", desc: "I implemented Docker-based deployment solutions to ensure consistent operation across development, testing, and production environments while simplifying scaling." },
+        { title: "Cross-System Integration", desc: "I built adapters to connect with multiple industrial control systems, enabling unified monitoring and control across previously isolated operational technology environments." },
+        { title: "Configuration Management", desc: "I developed a centralized configuration system that allows administrators to manage settings across distributed components from a single interface." },
+        { title: "Monitoring Dashboard", desc: "I created visualization components that provide real-time status updates and historical trend analysis for operational metrics." },
+        { title: "Fault Tolerance", desc: "I implemented redundancy mechanisms and failover protocols to ensure continuous operation even when individual services experience problems." },
       ],
       technologies: "Go (Gin), C++20, Docker, SQLite, ObjectBox, REST APIs, WebSockets, JWT, Poco, nlohmann::json, OpenAPI/Swagger"
     },

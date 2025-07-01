@@ -6,7 +6,7 @@ export default {
 
   // Page details
   pageTitle: 'Tworzenie Oprogramowania Przemysłowego',
-  pageSubtitle: 'Solidne oprogramowanie dla systemów danych, automatyki i infrastruktury krytycznej',
+  pageSubtitle: 'Oprogramowanie dla systemów danych, automatyki i infrastruktury krytycznej',
   btnDetails: 'Szczegóły',
   btnClose: 'Zamknij',
   keyFeatures: 'Kluczowe funkcje:',
@@ -51,13 +51,15 @@ export default {
       title: "System SCADA",
       tech: "C++20, Qt 6, Architektura Sterowana Zdarzeniami",
       keywords: "Sterowanie w Czasie Rzeczywistym, MQTT, ZeroMQ, Zarządzanie Alarmami, Bezpieczeństwo Wątków",
-      description: "Pomogłem stworzyć modułowy system sterowania i monitorowania automatyki przemysłowej. System niezawodnie obsługuje sygnały binarne i analogowe dzięki architekturze opartej na zdarzeniach. Posiada narzędzia do zarządzania alarmami, dynamicznej konfiguracji i wizualizacji procesów przemysłowych.",
+      description: "Brałem udział w opracowaniu modułowego systemu sterowania i monitorowania automatyki przemysłowej. System niezawodnie obsługuje sygnały binarne i analogowe dzięki architekturze opartej na zdarzeniach. Posiada narzędzia do zarządzania alarmami, dynamicznej konfiguracji i wizualizacji procesów przemysłowych.",
       size: "large",
       keyFeatures: [
         { title: "Architektura Sterowana Zdarzeniami", desc: "Aby zapewnić niezawodność systemu, pracowałem nad przetwarzaniem sygnałów przy użyciu walidacji, parsowania i kolejkowania." },
-        { title: "Komunikacja w Czasie Rzeczywistym", desc: "Wdrożenie protokołów MQTT i ZeroMQ w celu ułatwienia komunikacji między urządzeniami terenowymi a serwerami zaplecza." },
+        { title: "Komunikacja w Czasie Rzeczywistym", desc: "Wdrożyłem protokoły MQTT i ZeroMQ w celu ułatwienia komunikacji między urządzeniami terenowymi a serwerami zaplecza." },
         { title: "Dynamiczna Konfiguracja", desc: "Przyczyniłem się do opracowania funkcji umożliwiającej ładowanie konfiguracji bez przerywania pracy systemu z pamięci współdzielonej i plików projektu." },
-        { title: "Zarządzanie Alarmami", desc: "Opracowałem logikę wykorzystującą konfigurowalne progi i zmiany stanu do identyfikowania nieprawidłowych warunków i ostrzegania użytkowników." }
+        { title: "Zarządzanie Alarmami", desc: "Opracowałem logikę wykorzystującą konfigurowalne progi i zmiany stanu do identyfikowania nieprawidłowych warunków i ostrzegania użytkowników." },
+        { title: "Bezpieczeństwo wątków", desc: "Wdrożyłem mechanizmy synchronizacji i algorytmy bez blokad, aby zapewnić integralność danych w środowiskach wielowątkowych." },
+        { title: "Modułowa konstrukcja", desc: "System został zaprojektowany jako rozszerzalny, co pozwala na łatwe dodawanie nowych protokołów i funkcji." }
       ],
       technologies: "C++20, Qt 6 (Widgets, Core, Network, SQL, Charts), BCGControlBar Pro, Boost (asio, serialization, fusion, interprocess, thread), Poco, MQTT (mosquitto), ZeroMQ, nlohmann::json, MongoDB C++ Driver, CMake, vcpkg"
     },
@@ -68,10 +70,17 @@ export default {
       description: "Przyczyniłem się do stworzenia systemu opartego na C++20 do gromadzenia i przechowywania danych pomiarowych z elektrowni. System został zaprojektowany tak, aby działał dobrze zarówno w trybie czasu rzeczywistego, jak i historycznym, zachowując integralność danych.",
       size: "large",
       keyFeatures: [
-        { title: "Akwizycja Danych", desc: "Opracowano interfejsy z czujnikami elektrowni i systemami sterowania w celu skutecznego gromadzenia pomiarów analogowych i cyfrowych." },
-        { title: "Architektura Pamięci Współdzielonej", desc: "Współdzielona pamięć umożliwia jednoczesny dostęp do danych przez kilka procesów (pozyskiwanie, archiwizacja i wizualizacja)." },
-        { title: "Rozwiązanie Archiwizacji", desc: "Dane szeregów czasowych były przechowywane przy użyciu metody mapowania plików, aby ułatwić szybkie wyszukiwanie według okresu czasu." },
-        { title: "Integralność Danych", desc: "Dodano funkcje odzyskiwania danych i dodatkowe procedury walidacji, aby pomóc w ochronie ważnych danych operacyjnych." }
+        { title: "Wydajne Składowanie Danych", desc: "Zaprojektowałem wysokowydajny system pamięci masowej, który optymalizuje operacje odczytu/zapisu przy zachowaniu integralności danych dotyczących pomiarów historycznych." },
+        { title: "Akwizycja Danych", desc: "Opracowałem łączność z systemami Siemens, Modbus TCP i innymi systemami sterowania w celu skutecznego gromadzenia pomiarów analogowych i cyfrowych." },
+        { title: "Architektura Pamięci Współdzielonej", desc: "Aby umożliwić jednoczesny dostęp do danych przez kilka procesów (pozyskiwanie, archiwizacja i wizualizacja), używam pamięci współdzielonej." },
+        { title: "Rozwiązanie Archiwizacji", desc: "Dane szeregów czasowych przechowuję przy użyciu podejścia opartego na mapowaniu plików, aby ułatwić szybkie wyszukiwanie według okresu czasu." },
+        { title: "Integralność Danych", desc: "Wprowadziłem dodatkowe procedury walidacji i funkcje odzyskiwania danych, aby pomóc chronić kluczowe dane operacyjne." },
+        { title: "Modułowa konstrukcja", desc: "System został zaprojektowany jako rozszerzalny, co pozwala na łatwe dodawanie nowych protokołów i funkcji." },
+        { title: "Optymalizacja wydajności", desc: "Wdrożyłem niestandardowe strategie indeksowania i buforowania, aby utrzymać prędkość pobierania danych poniżej milisekundy, nawet w przypadku milionów zarchiwizowanych pomiarów." },
+        { title: "Dostęp do danych historycznych i real-time", desc: "Dostęp w czasie rzeczywistym i dostęp do danych historycznych”, desc: „System obsługuje zarówno pozyskiwanie danych w czasie rzeczywistym, jak i pobieranie danych historycznych, zapewniając kompleksowe możliwości monitorowania." },
+        { title: "Kompatybilność między platformami", desc: "System został zaprojektowany do działania zarówno na platformach Windows, jak i Linux, zapewniając elastyczność wdrożenia." },
+        { title: "Rozbudowane logowanie", desc: "Wdrożyłem szczegółowe mechanizmy logowania w celu śledzenia procesów pozyskiwania danych i wydajności systemu." },
+        { title: "Usługi samonaprawiające się", desc: "Wdrożyłem mechanizm nadzorujący, który automatycznie restartuje usługi w przypadku ich awarii, zapewniając ciągłe pozyskiwanie danych nawet podczas nieoczekiwanych błędów." },
       ],
       technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Niestandardowa pamięć mapowana w pliku, CMake"
     },
@@ -84,8 +93,15 @@ export default {
       keyFeatures: [
         { title: "Obsługa Starszych Danych", desc: "Opracowałem program C++20 do tłumaczenia kodowania znaków w starszych plikach danych przemysłowych i konwersji ich do bardziej współczesnych formatów." },
         { title: "Podejście Mikroserwisowe", desc: "Pomoc w podziale platformy na odrębne usługi kontenerowe do komunikacji, przechowywania i funkcji podstawowych." },
-        { title: "Rozwój API", desc: "Opracowanie interfejsów API RESTful z obsługą WebSocket do aktualizacji w czasie rzeczywistym i uwierzytelniania przy użyciu JWT i kluczy API." },
-        { title: "Rozwiązania Przechowywania", desc: "Aby osiągnąć równowagę między wymaganiami dotyczącymi elastyczności i wydajności, do rejestrowania zdarzeń użyto ObjectBox, a do ustawień konfiguracyjnych SQLite." }
+        { title: "Rozwój API", desc: "Opracowałem interfejs RESTful API z obsługą WebSocket do aktualizacji w czasie rzeczywistym i uwierzytelniania przy użyciu JWT i kluczy API." },
+        { title: "Rozwiązania Przechowywania Danych", desc: "Aby osiągnąć równowagę między elastycznością a wymaganiami dotyczącymi wydajności, użyłem ObjectBox do rejestrowania zdarzeń i SQLite do ustawień konfiguracyjnych." },
+        { title: "Real-Time", desc: "Wdrożyłem strumieniowanie danych na żywo oparte na protokole WebSocket, aby zapewnić operatorom natychmiastowy wgląd w zmiany w systemie i zdarzenia krytyczne." },
+        { title: "Wdrożenie zabezpieczeń", desc: "Opracowałem kompleksowy model bezpieczeństwa z kontrolą dostępu opartą na rolach, szyfrowanymi kanałami komunikacji i rejestrowaniem audytowym w celu ochrony wrażliwych danych przemysłowych." },
+        { title: "Konteneryzacja", desc: "Wdrożyłem rozwiązania wdrożeniowe oparte na Dockerze, aby zapewnić spójne działanie w środowiskach programistycznych, testowych i produkcyjnych, jednocześnie upraszczając skalowanie." },
+        { title: "Integracja między systemami", desc: "Zbudowałem adaptery umożliwiające połączenie z wieloma przemysłowymi systemami sterowania, co pozwoliło na ujednolicenie monitorowania i sterowania w środowiskach technologii operacyjnej, które wcześniej były odizolowane." },
+        { title: "Zarządzanie konfiguracją", desc: "Opracowałem scentralizowany system konfiguracji, który umożliwia administratorom zarządzanie ustawieniami rozproszonych komponentów z poziomu jednego interfejsu." },
+        { title: "Pulpit monitorowania", desc: "Stworzyłem komponenty wizualizacyjne, które zapewniają aktualizacje statusu w czasie rzeczywistym oraz analizę trendów historycznych dla wskaźników operacyjnych." },
+        { title: "Odporność na awarie", desc: "Wdrożyłem mechanizmy redundancji i protokoły przełączania awaryjnego, aby zapewnić ciągłość działania nawet w przypadku wystąpienia problemów z poszczególnymi usługami." },
       ],
       technologies: "Go (Gin), C++20, Docker, SQLite, ObjectBox, REST API, WebSockets, JWT, Poco, nlohmann::json, OpenAPI/Swagger"
     },

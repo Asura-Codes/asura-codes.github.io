@@ -77,15 +77,9 @@
             </q-icon>
             <span class="text-caption" :class="`text-${getProjectSizeColor(selectedProject)}`">{{
               $t(`work.sizes.${selectedProject.size}`) }}</span>
-            <q-rating :model-value="getSizeRating(selectedProject)" size="1.2em" :max="3" icon="mdi-circle"
-              icon-selected="mdi-circle" readonly color="grey-6" :color-selected="getProjectSizeColor(selectedProject)"
-              class="q-ml-md" style="min-width: 58px;">
-              <q-tooltip>{{ $t('work.difficultyScale') }}</q-tooltip>
-            </q-rating>
-
             <!-- Progress bar visualization -->
             <q-linear-progress :value="getSizeRating(selectedProject) / 3" :color="getProjectSizeColor(selectedProject)"
-              class="q-mt-sm size-progress" size="10px" rounded />
+              class="q-ml-sm size-progress" size="10px" rounded />
           </div>
           <div class="project-size" v-else>
             <q-badge color="grey" text-color="white" class="q-py-xs">

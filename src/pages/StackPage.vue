@@ -94,11 +94,6 @@ const skillCards = computed<SkillCard[]>(() => {
   box-shadow: 0 2px 8px rgba(144, 202, 249, 0.08);
 }
 
-.q-card:hover {
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.12);
-  transform: translateY(-2px) scale(1.01);
-}
-
 h1,
 h2,
 h3,
