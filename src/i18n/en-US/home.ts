@@ -30,7 +30,7 @@ export default {
     {
       id: 'systemArchitecture',
       title: 'System Architecture',
-      description: 'I\'ve worked on scalable, modular power plant systems. I work with distributed systems, microservices, and event-driven architectures that prioritize dependability and performance in mission-critical environments.',
+      description: 'I worked on scalable, modular systems for power plants. I work with distributed systems, microservices, and event-driven architectures that prioritize dependability and performance in mission-critical environments.',
       benefits: 'Technical Skills:',
       benefitsDesc: 'C++17/20, Go, event-driven programming, microservice design, concurrent programming, shared memory architectures, Docker containerization',
       icon: 'mdi-hexagon-multiple'
@@ -38,7 +38,7 @@ export default {
     {
       id: 'dataEngineering',
       title: 'Data Management',
-      description: 'Created and put into action systems for gathering, processing, and storing industrial time-series data. My solutions include effective storage methods for both current and past data access, along with strong guarantees of data integrity.',
+      description: 'I have developed and put into action systems for gathering, processing, and storing industrial time-series data. My solutions include effective storage methods for both current and past data access, along with strong guarantees of data integrity.',
       benefits: 'Technical Skills:',
       benefitsDesc: 'Database design (SQL & NoSQL), custom file-mapped storage, time-series data handling, multi-threaded data access patterns, MongoDB, SQLite, ObjectBox, RethinkDB, PostgreSQL',
       icon: 'mdi-database'

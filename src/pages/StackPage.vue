@@ -14,7 +14,7 @@
         <ul>
           <li v-for="skill in card.skills" :key="skill.id">
             <div>
-              <strong>{{ skill.name }}</strong> – {{ skill.description }}
+              <strong>{{ skill.name }}</strong><template v-if="skill.description"> – {{ skill.description }}</template>
             </div>
             <!-- Render subskills if present -->
             <ul v-if="skill.subSkills && skill.subSkills.length > 0" class="q-pl-md">

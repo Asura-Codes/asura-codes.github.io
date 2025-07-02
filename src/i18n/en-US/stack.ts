@@ -82,6 +82,7 @@ export default {
         {
           id: 'boost',
           name: 'Boost Libraries',
+          description: 'A collection of high-quality, peer-reviewed C++ libraries for a wide range of tasks, including asynchronous I/O, serialization, multithreading, and metaprogramming.',
           subSkills: [
             {
               id: 'asio',

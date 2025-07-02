@@ -82,6 +82,7 @@ export default {
         {
           id: 'boost',
           name: 'Biblioteki Boost',
+          description: 'Zbiór wysokiej jakości, recenzowanych bibliotek C++ do szerokiego zakresu zadań, w tym asynchronicznych operacji wejścia/wyjścia, serializacji, wielowątkowości i metaprogramowania.',
           subSkills: [
             {
               id: 'asio',
@@ -169,6 +170,7 @@ export default {
         {
           id: 'messaging',
           name: 'Systemy Komunikacyjne',
+          description: '',
           subSkills: [
             {
               id: 'zeromq',

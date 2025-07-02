@@ -30,7 +30,7 @@ export default {
     {
       id: 'systemArchitecture',
       title: 'Architektura Systemów',
-      description: 'Pracowałem nad skalowalnymi, modułowymi systemami elektrowni. Zajmuję się systemami rozproszonymi, mikrousługami i architekturą sterowaną zdarzeniami, które stawiają na pierwszym miejscu niezawodność i wydajność w środowiskach o znaczeniu krytycznym.',
+      description: 'Pracowałem nad skalowalnymi, modułowymi systemami dla elektrowni. Zajmuję się systemami rozproszonymi, mikrousługami i architekturą sterowaną zdarzeniami, które stawiają na pierwszym miejscu niezawodność i wydajność w środowiskach o znaczeniu krytycznym.',
       benefits: 'Umiejętności Techniczne:',
       benefitsDesc: 'C++17/20, Go, programowanie sterowane zdarzeniami, projektowanie mikroserwisów, programowanie współbieżne, architektury pamięci współdzielonej, konteneryzacja Docker',
       icon: 'mdi-hexagon-multiple'
@@ -38,7 +38,7 @@ export default {
     {
       id: 'dataEngineering',
       title: 'Zarządzanie Danymi',
-      description: 'Stworzyłem i wdrożyłem systemy do gromadzenia, przetwarzania i przechowywania danych przemysłowych z seriami czasowymi. Moje rozwiązania obejmują efektywne metody przechowywania zarówno bieżących, jak i historycznych danych, a także zapewniają wysoką integralność danych.',
+      description: 'Opracowałem i wdrożyłem systemy do gromadzenia, przetwarzania i przechowywania danych szeregów czasowych dotyczących przemysłu. Moje rozwiązania obejmują efektywne metody przechowywania zarówno bieżących, jak i historycznych danych, a także zapewniają wysoką integralność danych.',
       benefits: 'Umiejętności Techniczne:',
       benefitsDesc: 'Projektowanie baz danych (SQL i NoSQL), niestandardowe mechanizmy pamięci mapowanej w plikach, obsługa danych szeregów czasowych, wielowątkowe wzorce dostępu do danych, MongoDB, SQLite, ObjectBox',
       icon: 'mdi-database'
