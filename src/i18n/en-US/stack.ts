@@ -513,7 +513,8 @@ export default {
             { id: 'wheel', name: 'wheel', description: 'Built-package format for Python.' },
             { id: 'pycWheel', name: 'pyc-wheel', description: 'Wheel support for compiled Python extensions.' },
             { id: 'virtualenv', name: 'virtualenv', description: 'Tool to create isolated Python environments.' },
-            { id: 'venv', name: 'venv', description: 'Standard library module for creating virtual environments.' }
+            { id: 'venv', name: 'venv', description: 'Standard library module for creating virtual environments.' },
+            { id: 'fabric', name: 'fabric', description: 'Automation of deployments and administrative tasks over SSH.' }
           ]
         },
         {

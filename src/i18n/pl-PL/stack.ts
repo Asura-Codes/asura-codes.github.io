@@ -515,6 +515,7 @@ export default {
             { id: 'pycWheel', name: 'pyc-wheel', description: 'Obsługa wheel dla skompilowanych rozszerzeń Pythona.' },
             { id: 'virtualenv', name: 'virtualenv', description: 'Narzędzie do tworzenia izolowanych środowisk Pythona.' },
             { id: 'venv', name: 'venv', description: 'Moduł standardowy do tworzenia środowisk wirtualnych.' }
+            , { id: 'fabric', name: 'fabric', description: 'Automatyzacja wdrożeń i zadań administracyjnych przez SSH.' }
           ]
         },
         {
