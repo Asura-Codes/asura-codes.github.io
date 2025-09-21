@@ -1,7 +1,3 @@
-# portfolio (asura-codes-github-io)
-
-Asura Codes portfolio
-
 ## Project Description
 
 This is a personal portfolio website built with the Quasar Framework (Vue.js) to showcase projects, skills, and work experience. The site features a modern responsive design, multi-language support (English and Polish), and integrates with GitHub for project highlights. It is intended as both a professional showcase and a playground for experimenting with modern web technologies.
