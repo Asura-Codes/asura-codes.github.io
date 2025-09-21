@@ -1,22 +1,40 @@
 <template>
-  <q-page class="column items-center q-pa-md">
-    <div class="col text-center">
-      <q-avatar size="120px" class="q-mb-md">
-        <!-- Replace with your photo in /src/assets/ if available -->
-        <img src="/here-i-am.svg" alt="Profile Photo" />
-      </q-avatar>
-      <div class="text-h4 q-mb-sm">{{ $t('home.jobTitle') }}</div>
-      <div class="text-subtitle1 q-mb-md">{{ $t('home.jobSubtitle') }}</div>
-      <div class="row justify-center q-gutter-md q-mb-md">
-        <div v-for="icon in technologyIcons" :key="icon.name" class="cursor-pointer">
-          <q-icon :name="icon.name" size="32px">
-            <q-tooltip>{{ icon.title }}</q-tooltip>
-          </q-icon>
+  <q-page class="q-pa-md">
+    <div class="column items-center">
+      <!-- Profile section with photo on the left and content on the right -->
+      <div class="row q-mb-lg full-width">
+
+        <!-- Profile content -->
+        <div class="col-12 col-md-6 column justify-center q-pa-xl">
+          <div class="text-h4 q-mb-sm text-center">{{ $t('home.jobTitle') }}</div>
+          <div class="text-subtitle1 q-mb-md text-center">{{ $t('home.jobSubtitle') }}</div>
+          <div class="row justify-center q-gutter-md q-mb-md">
+            <div v-for="icon in technologyIcons" :key="icon.name" class="cursor-pointer">
+              <q-icon :name="icon.name" size="32px">
+                <q-tooltip>{{ icon.title }}</q-tooltip>
+              </q-icon>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile photo with light/dark mode switching -->
+        <div class="col-12 col-md-6 flex flex-center">
+          <q-img :src="$q.dark.isActive ? '/Dark.jpg' : '/Light.jpg'"
+            :alt="$q.dark.isActive ? 'Profile Photo - Dark Mode' : 'Profile Photo - Light Mode'" fit="cover"
+            class="profile-photo">
+            <template v-slot:loading>
+              <q-spinner color="primary" size="30px" />
+            </template>
+            <template v-slot:error>
+              <div class="text-red text-center">Image failed to load</div>
+            </template>
+          </q-img>
         </div>
       </div>
 
-      <div class="row q-mb-xl">
-        <div class="col-xs-12 col-md-10 col-lg-8 q-mx-auto">
+      <!-- About section -->
+      <div class="row q-mb-lg full-width">
+        <div class="col-12 col-md-10 col-lg-8 q-mx-auto">
           <q-card class="about-card q-pa-md">
             <q-card-section>
               <div class="text-h5 q-mb-md">{{ $t('home.aboutMe') }}</div>
@@ -33,10 +51,10 @@
 
       <div class="text-h5 q-mb-lg text-center">{{ $t('home.areasTitle') }}</div>
 
-      <div class="row q-col-gutter-md justify-center q-mb-xl">
+      <div class="row q-col-gutter-md justify-center q-mb-lg full-width">
         <!-- Knowledge Cards - Loop through the array -->
-        <div v-for="card in knowledgeCards" :key="card.id" class="col-xs-12 col-sm-6 col-md-4">
-          <q-card class="my-card">
+        <div v-for="card in knowledgeCards" :key="card.id" class="col-12 col-sm-4">
+          <q-card class="my-card full-height">
             <q-card-section>
               <div class="row items-center no-wrap">
                 <div class="col">
@@ -137,11 +155,12 @@ const knowledgeCards = computed<KnowledgeCard[]>(() => {
   color: #23272f;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .about-card:hover {
   box-shadow: 0 4px 16px rgba(25, 118, 210, 0.1);
+  transform: translateY(-2px);
 }
 
 .body--dark .about-card,
@@ -156,5 +175,62 @@ const knowledgeCards = computed<KnowledgeCard[]>(() => {
 .about-card p {
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 640px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(142, 128, 119, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  box-shadow: 0 6px 30px rgba(142, 128, 119, 0.6);
+}
+
+.body--dark .profile-photo {
+  box-shadow: 0 4px 20px rgba(144, 202, 249, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.body--dark .profile-photo:hover {
+  box-shadow: 0 6px 30px rgba(144, 202, 249, 0.2);
+}
+
+/* Mobile styles */
+.q-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .profile-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 599px) {
+  .q-page {
+    padding: 8px !important;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .q-col-gutter-lg>.col-12:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  /* Reduce padding on mobile for profile content */
+  .col-12.col-md-6.q-pa-xl {
+    padding: 16px !important;
+  }
 }
 </style>

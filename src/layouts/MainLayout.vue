@@ -33,26 +33,28 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" :show-if-above="$q.screen.gt.md" :breakpoint="$q.screen.sizes.lg" bordered>
       <q-list>
         <q-item-label header>{{ $t('nav.navigation') }}</q-item-label>
-        <q-item clickable to="/" tag="router-link">
+        <q-item clickable to="/" tag="router-link" :active="$route.path === '/'" active-class="text-primary">
           <q-item-section avatar><q-icon name="home" /></q-item-section>
           <q-item-section>{{ $t('nav.home') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/github">
+        <q-item clickable to="/github" tag="router-link" :active="$route.path === '/github'"
+          active-class="text-primary">
           <q-item-section avatar><q-icon name="mdi-github" /></q-item-section>
           <q-item-section>{{ $t('nav.github') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/work" tag="router-link">
+        <q-item clickable to="/work" tag="router-link" :active="$route.path === '/work'" active-class="text-primary">
           <q-item-section avatar><q-icon name="work" /></q-item-section>
           <q-item-section>{{ $t('nav.work') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/stack">
+        <q-item clickable to="/stack" tag="router-link" :active="$route.path === '/stack'" active-class="text-primary">
           <q-item-section avatar><q-icon name="layers" /></q-item-section>
           <q-item-section>{{ $t('nav.stack') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/contact">
+        <q-item clickable to="/contact" tag="router-link" :active="$route.path === '/contact'"
+          active-class="text-primary">
           <q-item-section avatar><q-icon name="contact_mail" /></q-item-section>
           <q-item-section>{{ $t('nav.contact') }}</q-item-section>
         </q-item>
@@ -79,9 +81,11 @@
 import { ref } from 'vue';
 import { useQuasar } from 'quasar';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 
 const $q = useQuasar();
 const { locale } = useI18n({ useScope: 'global' });
+const $route = useRoute();
 const leftDrawerOpen = ref(false);
 
 // Enable dark mode by default unless user has set a preference
