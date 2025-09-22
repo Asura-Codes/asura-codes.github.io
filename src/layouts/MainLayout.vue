@@ -69,9 +69,6 @@
         <div>
           {{ $t('footer.builtWith', { version: $q.version }) }}
         </div>
-        <div>
-          {{ $t('footer.stackTech') }}
-        </div>
       </div>
     </q-footer>
   </q-layout>
