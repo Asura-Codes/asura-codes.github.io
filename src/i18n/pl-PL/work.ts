@@ -84,7 +84,7 @@ export default {
         { title: "Rozbudowane logowanie", desc: "Wdrożyłem szczegółowe mechanizmy logowania w celu śledzenia procesów pozyskiwania danych i wydajności systemu." },
         { title: "Usługi samonaprawiające się", desc: "Wdrożyłem mechanizm nadzorujący, który automatycznie restartuje usługi w przypadku ich awarii, zapewniając ciągłe pozyskiwanie danych nawet podczas nieoczekiwanych błędów." },
       ],
-      technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Niestandardowa pamięć mapowana w pliku, CMake"
+      technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Niestandardowa pamięć mapowana w pliku, ZSTD, CMake"
     },
     {
       title: "Rozproszony System SCADA",
@@ -102,7 +102,7 @@ export default {
         { title: "Konteneryzacja", desc: "Wdrożyłem rozwiązania wdrożeniowe oparte na Dockerze, aby zapewnić spójne działanie w środowiskach programistycznych, testowych i produkcyjnych, jednocześnie upraszczając skalowanie." },
         { title: "Integracja między systemami", desc: "Zbudowałem adaptery umożliwiające połączenie z wieloma przemysłowymi systemami sterowania, co pozwoliło na ujednolicenie monitorowania i sterowania w środowiskach technologii operacyjnej, które wcześniej były odizolowane." },
         { title: "Zarządzanie konfiguracją", desc: "Opracowałem scentralizowany system konfiguracji, który umożliwia administratorom zarządzanie ustawieniami rozproszonych komponentów z poziomu jednego interfejsu." },
-        { title: "Pulpit monitorowania", desc: "Stworzyłem komponenty wizualizacyjne, które zapewniają aktualizacje statusu w czasie rzeczywistym oraz analizę trendów historycznych dla wskaźników operacyjnych." },
+        { title: "Pulpit monitorowania", desc: "Opracowałem komponenty wizualizacyjne, które zapewniają aktualizacje statusu w czasie rzeczywistym oraz analizę trendów historycznych dla wskaźników operacyjnych." },
         { title: "Odporność na awarie", desc: "Wdrożyłem mechanizmy redundancji i protokoły przełączania awaryjnego, aby zapewnić ciągłość działania nawet w przypadku wystąpienia problemów z poszczególnymi usługami." },
       ],
       technologies: "Go (Gin), C++20, Docker, SQLite, ObjectBox, REST API, WebSockets, JWT, Poco, nlohmann::json, OpenAPI/Swagger"
@@ -174,13 +174,13 @@ export default {
       size: "large",
       keyFeatures: [
         { title: "Projekt Rozproszony", desc: "Wdrożyłem interoperacyjny system usług kontenerowych, który wykorzystuje ZeroMQ do komunikacji między sobą." },
-        { title: "Integracja ze Sprzętem", desc: "Aby połączyć się z różnymi rodzajami urządzeń przemysłowych przy użyciu zarówno protokołów wspólnych, jak i zastrzeżonych, stworzyłem adaptery protokołów C++." },
+        { title: "Integracja ze Sprzętem", desc: "Aby połączyć się z różnymi rodzajami urządzeń przemysłowych przy użyciu zarówno protokołów wspólnych, jak i zastrzeżonych, opracowałem adaptery protokołów C++." },
         { title: "Usługi Backendowe", desc: "Opracowałem serwer Node.js, który zapewnia dostęp do danych i API konfiguracyjne z odpowiednimi zabezpieczeniami." },
         { title: "Interfejs Użytkownika", desc: "Korzystam z Vue.js, przeglądarkowego pulpitu nawigacyjnego zaprojektowanego w celu ułatwienia zarządzania systemem i wyświetlania danych w czasie rzeczywistym." },
         { title: "Zarządzanie konfiguracją", desc: "Aby umożliwić dynamiczne aktualizacje i ponowne ładowanie usług bez przestojów, opracowałem scentralizowany system konfiguracji kontrolowany przez REST API." },
         { title: "Środowisko symulacyjne", desc: "Aby umożliwić niezawodne tworzenie, testowanie i procesy CI/CD bez konieczności stosowania sprzętu fizycznego, opracowałem usługę symulacyjną, która naśladuje rzeczywiste zachowanie sprzętu." },
         { title: "DevOps i wdrażanie", desc: "Zapewniłem spójne i powtarzalne wdrożenia w różnych środowiskach poprzez wdrożenie konteneryzacji opartej na Dockerze i zautomatyzowanych skryptów kompilacji dla wszystkich usług." },
-        { title: "Import/eksport danych", desc: "Za pomocą API stworzyłem wszechstronny system zarządzania danymi, który umożliwia importowanie i eksportowanie konfiguracji oraz danych pomiarowych w różnych formatach." },
+        { title: "Import/eksport danych", desc: "Za pomocą API zbudowałem wszechstronny system zarządzania danymi, który umożliwia importowanie i eksportowanie konfiguracji oraz danych pomiarowych w różnych formatach." },
         { title: "Wysokodostępny moduł równoważenia obciążenia", desc: "Dzięki automatycznemu przekierowywaniu ruchu z nieaktywnych węzłów udało mi się rozdzielić żądania między wiele serwerów za pomocą modułu równoważenia obciążenia Node.js, co zapewnia wysoką dostępność i odporność na awarie." },
         { title: "Serwery protokołów przemysłowych", desc: "Aby umożliwić systemowi udostępnianie danych zewnętrznym sterownikom PLC i systemom sterowania, opracowałem implementacje serwerowe dla Siemens S7, Modbus TCP i protokołów zastrzeżonych." },
         { title: "Wymiana danych o niskim opóźnieniu", desc: "W celu ułatwienia wymiany danych o bardzo niskim opóźnieniu między kluczowymi usługami C++ i Node.js, wykorzystałem pamięć współdzieloną do komunikacji międzyprocesowej." },
@@ -192,11 +192,54 @@ export default {
         { title: "Usługa automatycznego wykonywania zadań", desc: "W celu zautomatyzowania uruchamiania systemu zaprojektowałem usługę opartą na języku Python, która zarządzała bazami danych za pomocą narzędzi do tworzenia kopii zapasowych i przywracania danych, ładowała konfiguracje i inicjowała moduły sprzętowe." },
         { title: "Wtyczki Node.js C++", desc: "Aby wypełnić lukę między zasobami systemowymi niskiego poziomu a językiem JavaScript wysokiego poziomu, opracowałem natywne dodatki C++ dla Node.js przy użyciu `node-gyp`. Znacznie poprawiło to wydajność operacji wymagających intensywnego przetwarzania danych, umożliwiając bezpośredni, szybki dostęp do bibliotek protokołów przemysłowych i pamięci współdzielonej z back-endu Node.js." },
         { title: "Rozszerzenia Python C++ do automatyzacji", desc: "Aby udostępnić podstawowe funkcje usług C++ skryptom automatyzacji i zarządzania, opracowałem rozszerzenia C++ dla języka Python. Połączenie łatwości obsługi języka Python z szybkością języka C++ pozwoliło skryptom Python na skuteczną komunikację z pamięcią współdzieloną systemu i wykonywanie zadań konfiguracyjnych." },
-        { title: "System kompilacji międzyplatformowej", desc: "Korzystając z CMake i skryptów powłoki, stworzyłem kompletny system kompilacji, który ułatwia kompilację krzyżową dla architektur ARM. Dzięki temu proces kompilacji jest spójny na wszystkich platformach i umożliwia wdrażanie usług C++ o krytycznym znaczeniu dla wydajności na urządzeniach wbudowanych." },
+        { title: "System kompilacji międzyplatformowej", desc: "Korzystając z CMake i skryptów powłoki, zbudowałem kompletny system kompilacji, który ułatwia kompilację krzyżową dla architektur ARM. Dzięki temu proces kompilacji jest spójny na wszystkich platformach i umożliwia wdrażanie usług C++ o krytycznym znaczeniu dla wydajności na urządzeniach wbudowanych." },
         { title: "Serializacja danych w wielu formatach", desc: "Wykorzystałem różne formaty, aby zaimplementować skuteczną serializację danych, takie jak MessagePack do małej, szybkiej komunikacji sieciowej, BSON do przechowywania baz danych oraz nlohmann/json do konfiguracji czytelnej dla człowieka. Ta elastyczność poprawiła wydajność i interoperacyjność całego systemu." },
         { title: "Dynamiczne generowanie raportów PDF", desc: "Korzystając z bibliotek takich jak `pdfkit`, opracowałem funkcję serwera, która umożliwia dynamiczne generowanie raportów PDF zawierających dane pomiarowe i stan systemu. Dzięki temu użytkownicy mogą eksportować profesjonalnie sformatowane dokumenty bezpośrednio z interfejsu internetowego w celu analizy i dokumentacji." }
       ],
       technologies: "C++17/20, Node.js (TypeScript, Express), Python3, Vue.js, Pinia, Bootstrap-Vue, ECharts, SQLite, MongoDB, RethinkDB, ZeroMQ, Docker, Snap7, libmodbus, JWT, WebSockets, Flask, Fabric, CMake"
+    },
+    {
+      title: "System Monitorowania Zdarzeń Stacji Automatyki",
+      tech: "C++, MQTT, Serwisy Windows, MariaDB",
+      keywords: "Monitoring Przemysłowy, MQTT, Serwisy Windows, Wysoka Dostępność, Deduplikacja",
+      description: "Opracowałem rozproszony system do monitorowania i dokumentowania istotnych dla operatorów zdarzeń procesowych w stacjach automatyki przemysłowej. System cyklicznie odpytuje kontrolery stacji przy użyciu zastrzeżonego protokołu TCP/IP, kieruje wykryte zdarzenia przez broker MQTT do niezawodnego przetwarzania i udostępnia interfejs webowy umożliwiający operatorom przeglądanie oraz opisywanie zarejestrowanych zdarzeń.",
+      size: "medium",
+      keyFeatures: [
+        { title: "Integracja z Protokołem Zastrzeżonym", desc: "Opracowałem usługę Windows, która cyklicznie odpytuje kontrolery stacji automatyki przemysłowej przy użyciu zastrzeżonego protokołu TCP/IP w celu ciągłego wykrywania i raportowania aktywnych zdarzeń procesowych." },
+        { title: "Magistrala Komunikacyjna MQTT", desc: "Zastosowałem broker MQTT jako centralną warstwę komunikacyjną między usługami skanującymi, przetwarzającymi i prezentującymi dane, rozdzielając komponenty w celu zwiększenia niezawodności i skalowalności." },
+        { title: "Deduplikacja Wiadomości", desc: "Wdrożyłem logikę automatycznego wykrywania i odrzucania zduplikowanych wiadomości MQTT, zapewniając spójność rekordów w bazie danych bez powtarzających się wpisów." },
+        { title: "Redundancja i Przełączanie Awaryjne", desc: "Zaprojektowałem system z równoległymi strumieniami MQTT i automatycznym przełączaniem awaryjnym, aby zapewnić ciągłe monitorowanie nawet w przypadku zakłóceń w pracy poszczególnych komponentów." },
+        { title: "Niezawodna Trwałość Danych", desc: "Opracowałem usługę subskrybującą, która przetwarza przychodzące zdarzenia MQTT i zapisuje je do relacyjnej bazy danych z gwarancjami transakcyjnymi, zapobiegając utracie danych podczas szczytowego obciążenia." },
+        { title: "Archiwizacja Zdarzeń", desc: "Wdrożyłem automatyczne przenoszenie rozwiązanych zdarzeń do tabeli historycznej, utrzymując aktywny zestaw danych w rozsądnych rozmiarach przy zachowaniu pełnej historii audytu." },
+        { title: "Interfejs Webowy dla Operatorów", desc: "Przyczyniłem się do stworzenia frontendu webowego umożliwiającego operatorom przeglądanie bieżących i historycznych zdarzeń, dodawanie opisów oraz śledzenie statusu rozwiązania każdego zdarzenia." },
+        { title: "Kontrola Dostępu Oparta na Rolach", desc: "Wdrożyłem warstwę uwierzytelniania i autoryzacji z zróżnicowanymi poziomami uprawnień, ograniczając dostęp do wrażliwych operacji wyłącznie do uprawnionych użytkowników." },
+        { title: "Rejestrowanie Operacji", desc: "Wszystkie operacje systemowe, w tym skany, zapisy do bazy danych i działania operatorów, są rejestrowane w strukturalnych logach i bazie danych w celu zapewnienia możliwości śledzenia i zgodności z wymaganiami." },
+      ],
+      technologies: "C++, MQTT (Mosquitto), MariaDB, REST API, Vue 3, TypeScript, Axios, Vite"
+    },
+    {
+      title: "Aplikacja Webowa do Zarządzania Danymi Pomiarowymi",
+      tech: "Python, Django, Vue 3, TypeScript, MongoDB",
+      keywords: "Import Plików, REST API, SPA, MongoDB, GridFS",
+      description: "Opracowałem pełnostackową aplikację webową automatycznie importującą i zarządzającą ustrukturyzowanymi plikami danych i powiązanymi wykresami z lokalnych katalogów do bazy danych MongoDB, udostępniając je przez zabezpieczone REST API. System zawiera frontend Vue 3 do przeglądania, filtrowania i wizualizacji zebranych rekordów.",
+      size: "medium",
+      keyFeatures: [
+        { title: "Silnik Importu Danych", desc: "Opracowałem skaner monitorujący wiele katalogów źródłowych w poszukiwaniu nowych, zmodyfikowanych i usuniętych plików CSV z danymi oraz obrazów PNG/JPG z wykresami, automatycznie importując je do MongoDB jako ustrukturyzowane dokumenty." },
+        { title: "Parsowanie CSV Wielu Formatów", desc: "Wdrożyłem automatyczne wykrywanie formatu w celu poprawnego parsowania plików CSV z różnych urządzeń pomiarowych, każde z odrębnymi separatorami kolumn i konwencjami nazewnictwa plików." },
+        { title: "Przechowywanie Obrazów w GridFS", desc: "Wykresy pomiarowe przechowuję w MongoDB GridFS zamiast w systemie plików, co poprawia przenośność danych i upraszcza procedury backupu oraz wdrożenia." },
+        { title: "RESTful API", desc: "Opracowałem zabezpieczone REST API z paginacją, filtrowaniem po atrybutach, uwierzytelnianiem sesyjnym, ochroną CSRF i ograniczaniem zapytań per-użytkownik w celu ochrony dostępu do danych pomiarowych." },
+        { title: "Automatyczny Harmonogram Importu", desc: "Wdrożyłem harmonogram działający w tle, który uruchamia import danych w konfigurowalnych odstępach czasu, z obsługą graceful shutdown poprzez sygnały systemowe." },
+        { title: "Interfejs Konfiguracyjny w Panelu Admina", desc: "Zaprojektowałem panel administracyjny do zarządzania konfiguracjami importu, w tym katalogami źródłowymi, docelowymi kolekcjami i progami wykrywania zmian, z walidacją danych wejściowych wymuszającą poprawne ustawienia." },
+        { title: "Uwierzytelnianie Sesyjne", desc: "Zbudowałem system logowania i zarządzania sesjami z ochroną CSRF, automatycznym przedłużaniem sesji przy aktywności użytkownika i uwzględniającą środowisko konfiguracją bezpiecznych cookies dla wdrożeń deweloperskich i produkcyjnych." },
+        { title: "Monitoring Zdrowia Systemu", desc: "Wdrożyłem endpoint health check raportujący stan serwera aplikacji, połączenia z bazą danych i harmonogramu importu, wykorzystywany zarówno przez wskaźnik połączenia we frontendzie, jak i zewnętrzne narzędzia monitorujące." },
+        { title: "Aplikacja SPA w Vue 3", desc: "Zbudowałem frontend przy użyciu Vue 3 Composition API z TypeScript, zapewniając typowo bezpieczny, oparty na komponentach interfejs z routingiem po stronie klienta dla płynnego doświadczenia użytkownika." },
+        { title: "Zaawansowana Przeglądarka Danych", desc: "Opracowałem przeglądarkę danych z filtrowaniem po atrybutach, wyszukiwaniem tekstowym i stronicowaniem po stronie serwera, umożliwiającą efektywne przeglądanie dużych zestawów rekordów pomiarowych." },
+        { title: "Przeglądarka Obrazów Pomiarowych", desc: "Wdrożyłem komponent wyświetlający powiązane wykresy z podglądem w pełnym rozmiarze w oknie modalnym, leniwym ładowaniem i automatycznym buforowaniem w celu ograniczenia zbędnych żądań sieciowych." },
+        { title: "Odporny Klient API", desc: "Opracowałem scentralizowany serwis API z automatyczną logiką ponawiania z wykładniczym cofaniem, zarządzaniem tokenami CSRF i globalnym przechwytywaniem błędów, zapewniając spójną i niezawodną warstwę komunikacyjną." },
+        { title: "Samodzielne Wdrożenie na Windows", desc: "Spakowałem aplikację do samodzielnego pliku wykonywalnego Windows zawierającego środowisko uruchomieniowe Python, wszystkie zależności i skompilowany frontend, eliminując konieczność instalacji Pythona na docelowych maszynach." },
+        { title: "Integracja z Serwisem Windows", desc: "Wdrożyłem polecenie zarządzania do instalacji i uruchamiania aplikacji jako usługi Windows z automatycznym startem, logowaniem zarówno do Windows Event Log, jak i lokalnych plików." },
+      ],
+      technologies: "Python, Django, Django REST Framework, Vue 3, TypeScript, MongoDB, GridFS, Waitress, PyInstaller, Axios, Vite, win32serviceutil"
     }
   ]
 };

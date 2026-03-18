@@ -84,7 +84,7 @@ export default {
         { title: "Extensive Logging", desc: "I implemented detailed logging mechanisms to track data acquisition processes and system performance." },
         { title: "Self-Healing Services", desc: "I implemented a watchdog mechanism that automatically restarts services when they fail, ensuring continuous data acquisition even during unexpected errors." },
       ],
-      technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Custom file-mapped storage, CMake"
+      technologies: "C++20, Boost (Interprocess, Asio, DateTime), Poco (Net, Util), ZeroMQ (cppzmq), MQTT (Paho), nlohmann::json, Custom file-mapped storage, ZSTD, CMake"
     },
     {
       title: "Distributed SCADA Platform",
@@ -197,6 +197,49 @@ export default {
         { title: "Dynamic PDF Report Generation", desc: "Using libraries like `pdfkit`, I developed a feature that allows it to dynamically generate PDF reports of measurement data and system status. This made it possible for users to export expertly formatted documents straight from the web interface for analysis and documentation." }
       ],
       technologies: "C++17/20, Node.js (TypeScript, Express), Python3, Vue.js, Pinia, Bootstrap-Vue, ECharts, SQLite, MongoDB, RethinkDB, ZeroMQ, Docker, Snap7, libmodbus, JWT, WebSockets, Flask, Fabric, CMake"
+    },
+    {
+      title: "Automation Station Event Monitoring System",
+      tech: "C++, MQTT, Windows Services, MariaDB",
+      keywords: "Industrial Monitoring, MQTT, Windows Services, High Availability, Deduplication",
+      description: "I developed a distributed system for monitoring and documenting operator-relevant process events across industrial automation stations. The system continuously polls station controllers using a proprietary TCP/IP protocol, routes detected events through an MQTT message broker for reliable processing, and provides a web interface for operators to review and annotate recorded events.",
+      size: "medium",
+      keyFeatures: [
+        { title: "Proprietary Protocol Integration", desc: "I developed a Windows service that polls industrial automation station controllers using a proprietary TCP/IP protocol to continuously detect and report active process signal events." },
+        { title: "MQTT Message Bus", desc: "I used an MQTT broker as the central communication layer between the scanning, processing, and presentation services, decoupling components for improved reliability and scalability." },
+        { title: "Message Deduplication", desc: "I implemented logic to automatically detect and discard duplicate MQTT messages, ensuring database records remain consistent without repeated entries." },
+        { title: "Redundancy and Failover", desc: "I designed the system with parallel MQTT streams and automatic failover to maintain continuous monitoring even when individual components experience disruptions." },
+        { title: "Reliable Data Persistence", desc: "I developed a subscriber service that processes incoming MQTT events and persists them to a relational database with transactional guarantees, preventing data loss during high-load periods." },
+        { title: "Event Archiving", desc: "I implemented automatic archival of resolved events to a historical table, keeping the active dataset manageable while preserving a full audit trail." },
+        { title: "Operator Web Interface", desc: "I contributed to a web frontend allowing operators to browse current and historical events, add descriptions, and track the resolution status of each event." },
+        { title: "Role-Based Access Control", desc: "I implemented an authentication and authorization layer with differentiated permission levels, restricting sensitive operations to personnel with the appropriate access rights." },
+        { title: "Audit Logging", desc: "All system operations, including scans, database writes, and operator actions, are recorded to structured logs and the database to support traceability and compliance requirements." },
+      ],
+      technologies: "C++, MQTT (Mosquitto), MariaDB, REST API, Vue 3, TypeScript, Axios, Vite"
+    },
+    {
+      title: "Measurement Data Management Web Application",
+      tech: "Python, Django, Vue 3, TypeScript, MongoDB",
+      keywords: "File Import, REST API, SPA, MongoDB, GridFS",
+      description: "I developed a full-stack web application that automatically imports and manages structured data files and associated chart images from local directories into a MongoDB database, exposing them through a secured REST API. The system includes a Vue 3 frontend for browsing, filtering, and visualizing the collected records.",
+      size: "medium",
+      keyFeatures: [
+        { title: "Data Import Engine", desc: "I developed a scanner that monitors multiple source directories for new, modified, and deleted CSV data files and PNG/JPG chart images, automatically importing them into MongoDB as structured documents." },
+        { title: "Multi-Format CSV Parsing", desc: "I implemented automatic format detection to correctly parse CSV files produced by different measurement devices, each using distinct column separators and file naming conventions." },
+        { title: "GridFS Image Storage", desc: "I stored measurement chart images in MongoDB GridFS rather than the file system, improving data portability and simplifying backup and deployment procedures." },
+        { title: "RESTful API", desc: "I developed a secured REST API with pagination, attribute-based filtering, session authentication, CSRF protection, and per-user request throttling to protect access to measurement data." },
+        { title: "Automated Import Scheduler", desc: "I implemented a background scheduling process that runs data imports at configurable intervals, with graceful shutdown support via system signals." },
+        { title: "Admin Configuration Interface", desc: "I created an admin panel for managing import configurations, including source directories, target collections, and change detection thresholds, with input validation to enforce correct settings." },
+        { title: "Session-Based Authentication", desc: "I built a login and session management system with CSRF protection, automatic session extension on user activity, and environment-aware secure cookie configuration for development and production deployments." },
+        { title: "System Health Monitoring", desc: "I implemented a health check endpoint that reports the status of the application server, database connection, and import scheduler, used by both the frontend connection indicator and external monitoring tools." },
+        { title: "Vue 3 Single-Page Application", desc: "I built the frontend using Vue 3 Composition API with TypeScript, providing a type-safe, component-based interface with client-side routing for a smooth user experience." },
+        { title: "Advanced Data Browser", desc: "I created a data browser with attribute-based filtering, text search, and server-side pagination, allowing operators to efficiently navigate large sets of measurement records." },
+        { title: "Measurement Image Viewer", desc: "I implemented a component that displays associated chart images with a full-size modal preview, lazy loading, and automatic caching to minimize unnecessary network requests." },
+        { title: "Resilient API Client", desc: "I developed a centralized API service with automatic exponential-backoff retry logic, CSRF token management, and global error interception to provide a consistent and robust communication layer." },
+        { title: "Standalone Windows Deployment", desc: "I packaged the application into a self-contained Windows executable containing the Python runtime, all dependencies, and the compiled frontend, eliminating the need to install Python on target machines." },
+        { title: "Windows Service Integration", desc: "I implemented a management command to install and run the application as a Windows service with automatic startup, logging to both the Windows Event Log and local files." },
+      ],
+      technologies: "Python, Django, Django REST Framework, Vue 3, TypeScript, MongoDB, GridFS, Waitress, PyInstaller, Axios, Vite, win32serviceutil"
     }
   ]
 };

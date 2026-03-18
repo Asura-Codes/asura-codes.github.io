@@ -77,6 +77,72 @@ export default {
           'Zoptymalizowane pod kątem druku 3D FDM'
         ],
         link: 'https://www.thingiverse.com/asuracodes/designs'
+      },
+      {
+        title: 'Seria Laboratoriów MQTT z Mosquitto i Go',
+        description: 'Ustrukturyzowana seria 18 samodzielnych laboratoriów do nauki MQTT przy użyciu brokera Eclipse Mosquitto i języka Go. Laboratoria stopniowo obejmują podstawy wymiany wiadomości, jakość usługi (QoS), trwałość sesji, mostkowanie brokerów, bezpieczeństwo TLS, topologie wysokiej dostępności oraz integrację zewnętrznego uwierzytelniania.',
+        technologies: [
+          'Go',
+          'Eclipse Mosquitto',
+          'Paho MQTT',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'Wzorce komunikacji MQTT',
+          'Jakość usługi (QoS)',
+          'Trwałość sesji',
+          'Bezpieczeństwo TLS/SSL',
+          'Mostkowanie i topologie brokerów',
+          'Uwierzytelnianie i listy ACL',
+          'MQTT v5',
+          'WebSockets'
+        ],
+        link: 'https://github.com/Asura-Codes/mosquitto-go-explorations'
+      },
+      {
+        title: 'Laboratorium NATS i JetStream',
+        description: 'Kolekcja 30 samodzielnych laboratoriów eksplorujących NATS i JetStream wykraczając poza podstawowe zastosowania. Tematy obejmują rozproszone transakcje, źródłowanie zdarzeń, odtwarzanie po awarii, wielodostosowalność, obserwowalność oraz interoperacyjność z MQTT.',
+        technologies: [
+          'Go',
+          'NATS',
+          'JetStream',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'Trwałość i deduplikacja w JetStream',
+          'Rozproszone transakcje (wzorzec Saga)',
+          'Źródłowanie zdarzeń',
+          'Odtwarzanie po awarii i replikacja strumieni',
+          'Wielodostosowalność i bezpieczeństwo',
+          'Rozproszone śledzenie (OpenTelemetry)',
+          'Interoperacyjność z MQTT'
+        ],
+        link: 'https://github.com/Asura-Codes/nats-jetstream-laboratory'
+      },
+      {
+        title: 'Zaawansowane Systemy Rozproszone z ZeroMQ i Go',
+        description: 'Zbiór 24 samodzielnych laboratoriów eksplorujących zaawansowane wzorce systemów rozproszonych z ZeroMQ i Go, obejmujący rzeczywiste scenariusze: od potoków danych o wysokiej częstotliwości i orkiestracji mikroserwisów po bezpieczeństwo transportu i konsensus rozproszony.',
+        technologies: [
+          'Go',
+          'ZeroMQ',
+          'libzmq',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'Zaawansowane wzorce komunikacji (XPUB/XSUB, ROUTER-DEALER)',
+          'Niezawodność i przerywnik obwodu',
+          'Bezpieczeństwo transportu (Curve25519 / Ironhouse)',
+          'Konsensus rozproszony i wybór lidera',
+          'Sieciowanie bez kopiowania (Zero-Copy)',
+          'Równoważenie obciążenia i przełączanie awaryjne'
+        ],
+        link: 'https://github.com/Asura-Codes/go-zeromq-labs'
       }
     ]
   },

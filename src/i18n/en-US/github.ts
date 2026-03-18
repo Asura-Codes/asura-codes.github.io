@@ -77,6 +77,72 @@ export default {
           'Optimized for FDM 3D printing'
         ],
         link: 'https://www.thingiverse.com/asuracodes/designs'
+      },
+      {
+        title: 'MQTT Lab Series with Mosquitto & Go',
+        description: 'A structured series of 18 standalone laboratories for mastering MQTT using the Eclipse Mosquitto broker and Go. Labs progress from basic messaging through QoS, session persistence, broker bridging, TLS security, high availability topologies, and external authentication integration.',
+        technologies: [
+          'Go',
+          'Eclipse Mosquitto',
+          'Paho MQTT',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'MQTT Messaging Patterns',
+          'Quality of Service (QoS)',
+          'Session Persistence',
+          'TLS/SSL Security',
+          'Broker Bridging & Topologies',
+          'Authentication & ACLs',
+          'MQTT v5',
+          'WebSockets'
+        ],
+        link: 'https://github.com/Asura-Codes/mosquitto-go-explorations'
+      },
+      {
+        title: 'NATS & JetStream Laboratory',
+        description: 'A collection of 30 standalone laboratories exploring NATS and JetStream beyond basic usage. Topics include distributed transactions, event sourcing, disaster recovery, multi-tenancy, observability, and MQTT interoperability.',
+        technologies: [
+          'Go',
+          'NATS',
+          'JetStream',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'JetStream Persistence & Deduplication',
+          'Distributed Transactions (Saga Pattern)',
+          'Event Sourcing',
+          'Disaster Recovery & Stream Mirroring',
+          'Multi-Tenancy & Security',
+          'Distributed Tracing (OpenTelemetry)',
+          'MQTT Interoperability'
+        ],
+        link: 'https://github.com/Asura-Codes/nats-jetstream-laboratory'
+      },
+      {
+        title: 'Advanced Distributed Systems with ZeroMQ & Go',
+        description: 'A curriculum of 24 standalone laboratories exploring advanced distributed system patterns with ZeroMQ and Go, covering real-world scenarios from high-frequency data pipelines and microservices orchestration to transport security and distributed consensus.',
+        technologies: [
+          'Go',
+          'ZeroMQ',
+          'libzmq',
+          'Docker',
+          'Docker Compose',
+          'PowerShell'
+        ],
+        topics: [
+          'Advanced Messaging Patterns (XPUB/XSUB, ROUTER-DEALER)',
+          'Reliability & Circuit Breaking',
+          'Transport Security (Curve25519 / Ironhouse)',
+          'Distributed Consensus & Leader Election',
+          'Zero-Copy Networking',
+          'Load Balancing & Active-Passive Failover'
+        ],
+        link: 'https://github.com/Asura-Codes/go-zeromq-labs'
       }
     ]
   },

@@ -1,7 +1,6 @@
 // Contact page translations
 export default {
   title: 'Contact',
-  resumeTitle: 'Resume',
   formTitle: 'Leave me a message',
   nameLabel: 'Name',
   emailLabel: 'Email',

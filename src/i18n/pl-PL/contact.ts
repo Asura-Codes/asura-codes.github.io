@@ -1,7 +1,6 @@
 // Tłumaczenia strony kontaktowej
 export default {
   title: 'Kontakt',
-  resumeTitle: 'CV',
   formTitle: 'Zostaw mi wiadomość',
   nameLabel: 'Imię',
   emailLabel: 'Email',
