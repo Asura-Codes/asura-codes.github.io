@@ -143,6 +143,50 @@ export default {
           'Równoważenie obciążenia i przełączanie awaryjne'
         ],
         link: 'https://github.com/Asura-Codes/go-zeromq-labs'
+      },
+      {
+        title: 'Laboratorium MCU',
+        description: 'Wieloplatformowe środowisko do tworzenia oprogramowania mikrokontrolerów z szablonami budowania, przestrzeniami roboczymi VS Code oraz DevContainerem zawierającym preinstalowane toolchainy (ESP-IDF, Pico SDK, Zephyr). Buduj w kontenerze, programuj na Windows i korzystaj z zadań, skryptów i wariantów OpenOCD.',
+        technologies: [
+          'C',
+          'C++',
+          'ESP-IDF',
+          'Pico SDK',
+          'Zephyr',
+          'PlatformIO',
+          'CMake',
+          'OpenOCD',
+          'Docker'
+        ],
+        topics: [
+          'Szablony firmware (ESP32, RP2040, STM32, nRF)',
+          'Budowanie w DevContainer i powtarzalne toolchainy',
+          'Flashowanie i przepływy pracy OpenOCD',
+          'Monitor szeregowy i debugowanie (GDB)',
+          'Zadania specyficzne dla platformy'
+        ],
+        link: 'https://github.com/Asura-Codes/mcu-lab'
+      },
+      {
+        title: 'Analizator protokołu FT232RL (Synchronous Bit-Bang)',
+        description: 'Narzędzie w C++, które zamienia breakout FT232RL w analizator protokołów. Używa synchronizowanego trybu bit-bang dla deterministycznego taktowania i obsługuje I2C, SPI, UART oraz protokoły wyższego poziomu. Zawiera CLI, REST API, automatyczne wykrywanie pinów oraz narzędzia do przechwytywania i dekodowania.',
+        technologies: [
+          'C++',
+          'POCO Framework',
+          'libftdi1',
+          'CMake',
+          'vcpkg',
+          'USB',
+          'UART'
+        ],
+        topics: [
+          'Synchronizowany tryb bit-bang',
+          'Automatyczne wykrywanie pinów',
+          'Przechwytywanie i dekodowanie SPI/I2C/UART',
+          'CLI i REST API',
+          'Budowanie z vcpkg i wieloplatformowe konfiguracje'
+        ],
+        link: 'https://github.com/Asura-Codes/ft232rl-protocol-probe'
       }
     ]
   },

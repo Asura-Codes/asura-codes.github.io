@@ -2,7 +2,7 @@
 export default {
   navigation: 'Navigation',
   home: 'Home',
-  github: 'Works',
+  github: 'Open Source',
   work: 'Work experience',
   stack: 'Technology stack',
   contact: 'Contact'

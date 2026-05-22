@@ -18,17 +18,17 @@ export default {
         {
           id: 'cpp',
           name: 'C++20 / C++17',
-          description: 'High-performance, type-safe, contemporary systems programming'
+          description: 'High-performance, type-safe, contemporary systems programming.'
         },
         {
           id: 'csharp',
           name: 'C#',
-          description: 'Native interop, API design, and integration',
+          description: 'Native interop, API design, and integration.',
           subSkills: [
             {
               id: 'aspNetWebApi',
               name: 'ASP.NET Web API',
-              description: 'Building RESTful services'
+              description: 'Building RESTful services.'
             }
           ]
         },
@@ -61,22 +61,22 @@ export default {
         {
           id: 'qt',
           name: 'Qt (Widgets, Signals/Slots)',
-          description: 'Cross-platform GUI, visualization, and user interaction for industrial control panels',
+          description: 'Cross-platform GUI, visualization, and user interaction for industrial control panels.',
           subSkills: [
-            { id: 'qtCore', name: 'QtCore', description: 'Core non-GUI functionality: event loop, signals/slots, containers, threading' },
-            { id: 'qtGui', name: 'QtGui', description: '2D graphics, imaging, fonts, and windowing system integration' },
-            { id: 'qtWidgets', name: 'QtWidgets', description: 'Traditional desktop widgets and UI controls' },
-            { id: 'qtNetwork', name: 'QtNetwork', description: 'Networking: TCP/UDP sockets, HTTP, SSL, and network protocols' },
-            { id: 'qtTest', name: 'QtTest', description: 'Unit testing framework for Qt applications' },
-            { id: 'qtConcurrent', name: 'QtConcurrent', description: 'High-level APIs for parallel programming' },
-            { id: 'qtSql', name: 'QtSql', description: 'SQL database integration and ORM-like features' },
-            { id: 'qtXml', name: 'QtXml', description: 'XML parsing and manipulation' },
-            { id: 'qtSvg', name: 'QtSvg', description: 'SVG rendering and manipulation' },
-            { id: 'qtMultimedia', name: 'QtMultimedia', description: 'Audio, video, and multimedia support' },
-            { id: 'qtCharts', name: 'QtCharts', description: 'Charting and data visualization' },
-            { id: 'qtSerialPort', name: 'QtSerialPort', description: 'Serial port communication' },
-            { id: 'qtWebSockets', name: 'QtWebSockets', description: 'WebSocket protocol support' },
-            { id: 'qtWebEngine', name: 'QtWebEngine', description: 'Web content rendering using Chromium engine' }
+            { id: 'qtCore', name: 'QtCore', description: 'Core non-GUI functionality: event loop, signals/slots, containers, threading.' },
+            { id: 'qtGui', name: 'QtGui', description: '2D graphics, imaging, fonts, and windowing system integration.' },
+            { id: 'qtWidgets', name: 'QtWidgets', description: 'Traditional desktop widgets and UI controls.' },
+            { id: 'qtNetwork', name: 'QtNetwork', description: 'Networking: TCP/UDP sockets, HTTP, SSL, and network protocols.' },
+            { id: 'qtTest', name: 'QtTest', description: 'Unit testing framework for Qt applications.' },
+            { id: 'qtConcurrent', name: 'QtConcurrent', description: 'High-level APIs for parallel programming.' },
+            { id: 'qtSql', name: 'QtSql', description: 'SQL database integration and ORM-like features.' },
+            { id: 'qtXml', name: 'QtXml', description: 'XML parsing and manipulation.' },
+            { id: 'qtSvg', name: 'QtSvg', description: 'SVG rendering and manipulation.' },
+            { id: 'qtMultimedia', name: 'QtMultimedia', description: 'Audio, video, and multimedia support.' },
+            { id: 'qtCharts', name: 'QtCharts', description: 'Charting and data visualization.' },
+            { id: 'qtSerialPort', name: 'QtSerialPort', description: 'Serial port communication.' },
+            { id: 'qtWebSockets', name: 'QtWebSockets', description: 'WebSocket protocol support.' },
+            { id: 'qtWebEngine', name: 'QtWebEngine', description: 'Web content rendering using Chromium engine.' }
           ]
         },
         {
@@ -87,84 +87,84 @@ export default {
             {
               id: 'asio',
               name: 'boost::asio',
-              description: 'Asynchronous I/O, networking, and coroutines'
+              description: 'Asynchronous I/O, networking, and coroutines.'
             },
             {
               id: 'serialization',
               name: 'boost::serialization',
-              description: 'Object serialization and STL container stack construction'
+              description: 'Object serialization and STL container stack construction.'
             },
             {
               id: 'interprocess',
               name: 'boost::interprocess',
-              description: 'Shared memory and interprocess synchronization'
+              description: 'Shared memory and interprocess synchronization.'
             },
             {
               id: 'fusion',
               name: 'boost::fusion, boost::mpl',
-              description: 'Heterogeneous containers and metaprogramming'
+              description: 'Heterogeneous containers and metaprogramming.'
             },
             {
               id: 'thread',
               name: 'boost::thread / boost::mutex',
-              description: 'Threading and synchronization primitives'
+              description: 'Threading and synchronization primitives.'
             },
             {
               id: 'container',
               name: 'boost::container',
-              description: 'STL-compatible specialized containers'
+              description: 'STL-compatible specialized containers.'
             },
             {
               id: 'bimap',
               name: 'Boost.Bimap',
-              description: 'Bidirectional maps for efficient key-value lookups'
+              description: 'Bidirectional maps for efficient key-value lookups.'
             },
             {
               id: 'lexicalCast',
               name: 'Boost.Lexical_Cast',
-              description: 'Type-safe conversions between strings and other types'
+              description: 'Type-safe conversions between strings and other types.'
             },
             {
               id: 'algorithm',
               name: 'Boost.Algorithm',
-              description: 'Collection of generic algorithms for C++'
+              description: 'Collection of generic algorithms for C++.'
             },
             {
               id: 'multiIndex',
               name: 'boost::multi_index',
-              description: 'Containers with multiple search and sorting criteria'
+              description: 'Containers with multiple search and sorting criteria.'
             },
             {
               id: 'propertyTree',
               name: 'Boost.PropertyTree',
-              description: 'Storing and manipulating hierarchical data, especially XML serialization'
+              description: 'Storing and manipulating hierarchical data, especially XML serialization.'
             },
             {
               id: 'dateTime',
               name: 'Boost.DateTime',
-              description: 'Date and time manipulation and calculations'
+              description: 'Date and time manipulation and calculations.'
             }
           ]
         },
         {
           id: 'json',
           name: 'nlohmann::json',
-          description: 'Modern C++ JSON parsing and serialization'
+          description: 'Modern C++ JSON parsing and serialization.'
         },
         {
           id: 'poco',
           name: 'Poco Framework',
-          description: 'Threading, networking, HTTP/WebSocket servers, MQTT integration, and database abstraction',
+          description: 'Threading, networking, HTTP/WebSocket servers, MQTT integration, and database abstraction.',
           subSkills: [
-            { id: 'pocoNet', name: 'Poco::Net', description: 'Networking, HTTP, WebSocket, TCP/UDP, SMTP, FTP, and SSL support' },
-            { id: 'pocoData', name: 'Poco::Data', description: 'Database abstraction and ORM-like features for SQL databases' },
-            { id: 'pocoUtil', name: 'Poco::Util', description: 'Application utilities, configuration, and command-line parsing' },
-            { id: 'pocoJSON', name: 'Poco::JSON', description: 'JSON parsing, serialization, and manipulation' },
-            { id: 'pocoXML', name: 'Poco::XML', description: 'XML parsing and DOM manipulation' },
-            { id: 'pocoMQTT', name: 'Poco::MQTT', description: 'MQTT protocol support for IoT and messaging' },
-            { id: 'pocoFoundation', name: 'Poco::Foundation', description: 'Core classes: threading, file system, logging, events, and utilities' },
-            { id: 'pocoCrypto', name: 'Poco::Crypto', description: 'Cryptography, SSL, and certificate management' },
-            { id: 'pocoZip', name: 'Poco::Zip', description: 'ZIP archive creation and extraction' },
+            { id: 'pocoNet', name: 'Poco::Net', description: 'Networking, HTTP, WebSocket, TCP/UDP, SMTP, FTP, and SSL support.' },
+            { id: 'pocoData', name: 'Poco::Data', description: 'Database abstraction and ORM-like features for SQL databases.' },
+            { id: 'pocoUtil', name: 'Poco::Util', description: 'Application utilities, configuration, and command-line parsing.' },
+            { id: 'pocoJSON', name: 'Poco::JSON', description: 'JSON parsing, serialization, and manipulation.' },
+            { id: 'pocoXML', name: 'Poco::XML', description: 'XML parsing and DOM manipulation.' },
+            { id: 'pocoMQTT', name: 'Poco::MQTT', description: 'MQTT protocol support for IoT and messaging.' },
+            { id: 'pocoFoundation', name: 'Poco::Foundation', description: 'Core classes: threading, file system, logging, events, and utilities.' },
+            { id: 'pocoCrypto', name: 'Poco::Crypto', description: 'Cryptography, SSL, and certificate management.' },
+            { id: 'pocoZip', name: 'Poco::Zip', description: 'ZIP archive creation and extraction.' },
           ]
         },
         {
@@ -174,178 +174,239 @@ export default {
             {
               id: 'zeromq',
               name: 'ZeroMQ (zmq, cppzmq)',
-              description: 'High-performance asynchronous messaging with patterns like DEALER/ROUTER'
+              description: 'High-performance asynchronous messaging with patterns like DEALER/ROUTER.'
             },
             {
               id: 'mqtt',
               name: 'MQTT (mosqpp, Paho)',
-              description: 'Publish/subscribe messaging protocol with Mosquitto C++ integration'
+              description: 'Publish/subscribe messaging protocol with Mosquitto C++ integration.'
             }
           ]
         },
         {
           id: 'mongodb',
           name: 'MongoDB C++ Driver (mongocxx)',
-          description: 'NoSQL database integration'
+          description: 'NoSQL database integration.'
         },
         {
           id: 'openssl',
           name: 'OpenSSL',
-          description: 'Secure communication and asynchronous cryptographic operations'
+          description: 'Secure communication and asynchronous cryptographic operations.'
         },
         {
           id: 'libiconv',
           name: 'libiconv',
-          description: 'Standard C library for character set conversion (encoding transformations, e.g., CP852 to UTF-8)'
+          description: 'Standard C library for character set conversion (encoding transformations, e.g., CP852 to UTF-8).'
         },
         {
           id: 'sqlite',
           name: 'SQLite with Poco Data',
-          description: 'Embedded database with ORM-like features for configuration management'
+          description: 'Embedded database with ORM-like features for configuration management.'
         },
         {
           id: 'mfc',
           name: 'MFC (Microsoft Foundation Classes)',
-          description: 'Windows desktop application development with MDI architecture'
+          description: 'Windows desktop application development with MDI architecture.'
         },
         {
           id: 'bcgControlBar',
           name: 'BCGControlBar Pro',
-          description: 'Advanced UI components for MFC applications including ribbons and dockable panels',
+          description: 'Advanced UI components for MFC applications including ribbons and dockable panels.',
           subSkills: [
-            { id: 'customization', name: 'Customization', description: 'Advanced customization techniques for BCGControlBar components' },
-            { id: 'ribbonIntegration', name: 'Ribbon Integration', description: 'Creating and managing ribbons in MFC applications' },
-            { id: 'dockablePanels', name: 'Dockable Panels', description: 'Implementing and managing dockable panels' },
-            { id: 'controlBar', name: 'Control Bar', description: 'Developing and customizing toolbars and menus' },
-            { id: 'themeCustomization', name: 'Theme Customization', description: 'Creating custom themes for BCG components' },
-            { id: 'eventHandling', name: 'Event Handling', description: 'Managing events and inter-component communication' },
-            { id: 'accessibility', name: 'Accessibility', description: 'Ensuring accessibility compliance for components' }
+            { id: 'customization', name: 'Customization', description: 'Advanced customization techniques for BCGControlBar components.' },
+            { id: 'ribbonIntegration', name: 'Ribbon Integration', description: 'Creating and managing ribbons in MFC applications.' },
+            { id: 'dockablePanels', name: 'Dockable Panels', description: 'Implementing and managing dockable panels.' },
+            { id: 'controlBar', name: 'Control Bar', description: 'Developing and customizing toolbars and menus.' },
+            { id: 'themeCustomization', name: 'Theme Customization', description: 'Creating custom themes for BCG components.' },
+            { id: 'eventHandling', name: 'Event Handling', description: 'Managing events and inter-component communication.' },
+            { id: 'accessibility', name: 'Accessibility', description: 'Ensuring accessibility compliance for components.' }
           ]
         },
         {
           id: 'objectBox',
           name: 'ObjectBox',
-          description: 'High-performance event logging and embedded database'
+          description: 'High-performance event logging and embedded database.'
         },
         {
           id: 'rethinkDb',
           name: 'RethinkDB',
-          description: 'Optional NoSQL database for real-time applications'
+          description: 'Optional NoSQL database for real-time applications.'
         },
         {
           id: 'snap7',
           name: 'Snap7',
-          description: 'Siemens S7 protocol library for industrial communication'
+          description: 'Siemens S7 protocol library for industrial communication.'
         },
         {
           id: 'libmodbus',
           name: 'libmodbus',
-          description: 'Modbus TCP protocol library for industrial devices'
+          description: 'Modbus TCP protocol library for industrial devices.'
         },
         {
           id: 'proster',
           name: 'Proster',
-          description: 'Custom protocol for industrial hardware integration'
+          description: 'Custom protocol for industrial hardware integration.'
         },
         {
           id: 'arrow',
           name: 'Apache Arrow',
-          description: 'Columnar in-memory analytics and data interchange format',
+          description: 'Columnar in-memory analytics and data interchange format.',
           subSkills: [
-            { id: 'dataTransformation', name: 'Data Transformation', description: 'Transforming data into columnar format' },
-            { id: 'performanceOptimization', name: 'Performance Optimization', description: 'Improving query and data operation performance' },
-            { id: 'integration', name: 'Integration', description: 'Integrating with existing systems and data streams' }
+            { id: 'dataTransformation', name: 'Data Transformation', description: 'Transforming data into columnar format.' },
+            { id: 'performanceOptimization', name: 'Performance Optimization', description: 'Improving query and data operation performance.' },
+            { id: 'integration', name: 'Integration', description: 'Integrating with existing systems and data streams.' }
           ]
         },
         {
           id: 'cppzmq',
           name: 'cppzmq',
-          description: 'C++ binding for ZeroMQ messaging library'
+          description: 'C++ binding for ZeroMQ messaging library.'
         },
         {
           id: 'duckdb',
           name: 'DuckDB',
-          description: 'In-process SQL OLAP database management system',
+          description: 'In-process SQL OLAP database management system.',
           subSkills: [
-            { id: 'sqlQueries', name: 'SQL Queries', description: 'Writing and optimizing SQL queries for DuckDB' },
-            { id: 'dataImportExport', name: 'Data Import/Export', description: 'Importing and exporting data to/from DuckDB' },
-            { id: 'performanceTuning', name: 'Performance Tuning', description: 'Optimizing DuckDB database performance' }
+            { id: 'sqlQueries', name: 'SQL Queries', description: 'Writing and optimizing SQL queries for DuckDB.' },
+            { id: 'dataImportExport', name: 'Data Import/Export', description: 'Importing and exporting data to/from DuckDB.' },
+            { id: 'performanceTuning', name: 'Performance Tuning', description: 'Optimizing DuckDB database performance.' }
           ]
         },
         {
           id: 'fmt',
           name: 'fmt',
-          description: 'Modern formatting library for C++'
+          description: 'Modern formatting library for C++.'
         },
         {
           id: 'gtest',
           name: 'GoogleTest (gtest)',
-          description: 'Unit testing framework for C++'
+          description: 'Unit testing framework for C++.'
         },
         {
           id: 'libbson',
           name: 'libbson',
-          description: 'BSON library for binary JSON serialization'
+          description: 'BSON library for binary JSON serialization.'
         },
         {
           id: 'libuv',
           name: 'libuv',
-          description: 'Cross-platform asynchronous I/O library'
+          description: 'Cross-platform asynchronous I/O library.'
         },
         {
           id: 'libwebsockets',
           name: 'libwebsockets',
-          description: 'Lightweight C library for WebSockets'
+          description: 'Lightweight C library for WebSockets.'
         },
         {
           id: 'mosquitto',
           name: 'Mosquitto',
-          description: 'MQTT broker and C/C++ client library'
+          description: 'MQTT broker and C/C++ client library.'
         },
         {
           id: 'protobuf',
           name: 'Protobuf',
-          description: 'Google Protocol Buffers serialization library'
+          description: 'Google Protocol Buffers serialization library.'
         },
         {
           id: 'pthreads',
           name: 'pthreads',
-          description: 'POSIX threads for multithreading support'
+          description: 'POSIX threads for multithreading support.'
         },
         {
           id: 'python3',
           name: 'Python3 (C++ API)',
-          description: 'Embedding and extending Python in C++ applications'
+          description: 'Embedding and extending Python in C++ applications.'
         },
         {
           id: 'rapidjson',
           name: 'RapidJSON',
-          description: 'Fast JSON parser/generator for C++'
+          description: 'Fast JSON parser/generator for C++.'
         },
         {
           id: 'snappy',
           name: 'Snappy',
-          description: 'Fast compression/decompression library by Google'
+          description: 'Fast compression/decompression library by Google.'
         },
         {
           id: 'spdlog',
           name: 'spdlog',
-          description: 'Fast C++ logging library'
+          description: 'Fast C++ logging library.'
         },
         {
           id: 'utf8proc',
           name: 'utf8proc',
-          description: 'UTF-8 processing library for Unicode'
+          description: 'UTF-8 processing library for Unicode.'
         },
         {
           id: 'zlib',
           name: 'zlib',
-          description: 'Compression library for data streams'
+          description: 'Compression library for data streams.'
+        },
+        {
+          id: 'libftdi1',
+          name: 'libftdi1',
+          description: 'FTDI USB device access library (libftdi1) used for direct FTDI chip control.'
         },
         {
           id: 'zstd',
           name: 'Zstandard (zstd)',
-          description: 'Fast compression algorithm by Facebook'
+          description: 'Fast compression algorithm by Facebook.'
+        }
+      ]
+    },
+    {
+      id: 'embeddedToolchains',
+      title: 'Embedded SDKs & Toolchains',
+      skills: [
+        {
+          id: 'espIdf',
+          name: 'ESP-IDF',
+          description: 'Espressif IoT Development Framework for ESP32 (idf.py, CMake-based).'
+        },
+        {
+          id: 'picoSdk',
+          name: 'Pico SDK',
+          description: 'Raspberry Pi Pico CMake-based SDK (pico-sdk).'
+        },
+        {
+          id: 'zephyr',
+          name: 'Zephyr RTOS',
+          description: 'Real-time operating system for embedded devices.'
+        },
+        {
+          id: 'zephyrSdk',
+          name: 'Zephyr SDK',
+          description: 'Zephyr toolchain and SDK for building Zephyr applications.'
+        },
+        {
+          id: 'armGcc',
+          name: 'ARM GCC (arm-none-eabi)',
+          description: 'Cross-compiler toolchain for embedded ARM targets.'
+        },
+        {
+          id: 'west',
+          name: 'west',
+          description: 'Zephyr meta-tool and workspace manager.'
+        },
+        {
+          id: 'esptool',
+          name: 'esptool.py',
+          description: 'Python utility for flashing ESP32/ESP8266 devices.'
+        },
+        {
+          id: 'picotool',
+          name: 'picotool',
+          description: 'Utility for flashing and interacting with Raspberry Pi Pico (RP2040).'
+        },
+        {
+          id: 'openocd',
+          name: 'OpenOCD',
+          description: 'On-chip debugging (JTAG/SWD) and GDB server for embedded targets.'
+        },
+        {
+          id: 'arduinoCli',
+          name: 'Arduino CLI',
+          description: 'Command-line interface for building and uploading Arduino sketches.'
         }
       ]
     },
@@ -628,77 +689,77 @@ export default {
         {
           id: 'eventDriven',
           name: 'Event-Driven Architecture',
-          description: 'Designing and implementing systems that effectively handle, filter, and process analog and binary signals is known as event-driven architecture'
+          description: 'Designing and implementing systems that effectively handle, filter, and process analog and binary signals is known as event-driven architecture.'
         },
         {
           id: 'realTime',
           name: 'Real-Time Communication',
-          description: 'Using messaging protocols to quickly gather data, send commands, and receive event notifications'
+          description: 'Using messaging protocols to quickly gather data, send commands, and receive event notifications.'
         },
         {
           id: 'multithreading',
           name: 'Multithreading & Concurrency',
-          description: 'Using mutexes, scoped locks, condition variables, and atomic operations to manage resources thread-safely'
+          description: 'Using mutexes, scoped locks, condition variables, and atomic operations to manage resources thread-safely.'
         },
         {
           id: 'sharedMemory',
           name: 'Shared Memory Architecture',
-          description: ' Implementing high-performance shared memory segments to enable multiple processes to quickly and concurrently access real-time data is known as shared memory architecture'
+          description: ' Implementing high-performance shared memory segments to enable multiple processes to quickly and concurrently access real-time data is known as shared memory architecture.'
         },
         {
           id: 'fileMapped',
           name: 'File-Mapped Storage',
-          description: 'Custom file-mapped indexing for effective archiving of substantial amounts of time-series data is known as file-mapped storage'
+          description: 'Custom file-mapped indexing for effective archiving of substantial amounts of time-series data is known as file-mapped storage.'
         },
         {
           id: 'dynamicConfig',
           name: 'Dynamic Configuration',
-          description: 'The ability to load and manage configuration information from project files and shared memory'
+          description: 'The ability to load and manage configuration information from project files and shared memory.'
         },
         {
           id: 'eventManagement',
           name: 'Event & Alarm Management',
-          description: 'Using sophisticated logic to identify alarm states based on thresholds and state transitions is known as event and alarm management'
+          description: 'Using sophisticated logic to identify alarm states based on thresholds and state transitions is known as event and alarm management.'
         },
         {
           id: 'serialization',
           name: 'Serialization & Data Conversion',
-          description: 'Data conversion and serialization, including binary deserialization and C-struct mapping, are processes that convert old binary data into contemporary structured data'
+          description: 'Data conversion and serialization, including binary deserialization and C-struct mapping, are processes that convert old binary data into contemporary structured data.'
         },
         {
           id: 'protocol',
           name: 'Protocol Integration',
-          description: ' Support for multiple protocols (Modbus, Siemens, IEC104, SNMP, OPC UA) and the creation of custom protocols are examples of protocol integration'
+          description: ' Support for multiple protocols (Modbus, Siemens, IEC104, SNMP, OPC UA) and the creation of custom protocols are examples of protocol integration.'
         },
         {
           id: 'dataIntegrity',
           name: 'Data Integrity & Recovery',
-          description: 'Data Recovery & Integrity Methods for mission-critical applications\' data recovery, backup, and validation'
+          description: 'Data Recovery & Integrity Methods for mission-critical applications\' data recovery, backup, and validation.'
         },
         {
           id: 'crossPlatform',
           name: 'Cross-Platform Development',
-          description: 'Writing code for embedded platforms (Compute Module), Linux, and Windows'
+          description: 'Writing code for embedded platforms (Compute Module), Linux, and Windows.'
         },
         {
           id: 'microservices',
           name: 'Microservices Architecture',
-          description: 'Designing loosely coupled services that are each Docker-contained for scalability and maintainability is known as microservices architecture'
+          description: 'Designing loosely coupled services that are each Docker-contained for scalability and maintainability is known as microservices architecture.'
         },
         {
           id: 'secureApis',
           name: 'Secure API Design',
-          description: 'Implementing RESTful APIs with JWT authentication and API key security is known as "secure API design"'
+          description: 'Implementing RESTful APIs with JWT authentication and API key security is known as "secure API design".'
         },
         {
           id: 'modelView',
           name: 'Model-View Architecture',
-          description: 'Data models, views, and controller logic are separated in a model-view architecture to improve maintainability'
+          description: 'Data models, views, and controller logic are separated in a model-view architecture to improve maintainability.'
         },
         {
           id: 'nativeInterop',
           name: 'Native Interoperability',
-          description: 'Calling native C++ functions from managed C# code using P/Invoke (DllImport)'
+          description: 'Calling native C++ functions from managed C# code using P/Invoke (DllImport).'
         }
       ]
     },
@@ -709,62 +770,62 @@ export default {
         {
           id: 'cmake',
           name: 'CMake',
-          description: 'Cross-platform build system and project configuration'
+          description: 'Cross-platform build system and project configuration.'
         },
         {
           id: 'vcpkg',
           name: 'vcpkg',
-          description: 'C++ package manager for dependency installation and management'
+          description: 'C++ package manager for dependency installation and management.'
         },
         {
           id: 'vs',
           name: 'Visual Studio 2022',
-          description: 'Primary IDE for C++/C# development'
+          description: 'Primary IDE for C++/C# development.'
         },
         {
           id: 'platformSpecific',
           name: 'Platform-Specific Integration',
-          description: 'Experience with Windows API for file and process management, threading, and event logging'
+          description: 'Experience with Windows API for file and process management, threading, and event logging.'
         },
         {
           id: 'docker',
           name: 'Docker',
-          description: 'Containerization for consistent deployment and service isolation'
+          description: 'Containerization for consistent deployment and service isolation.'
         },
         {
           id: 'fabric',
           name: 'Fabric (Python)',
-          description: 'Automation scripts for deployment and service management'
+          description: 'Automation scripts for deployment and service management.'
         },
         {
           id: 'systemd',
           name: 'systemd',
-          description: 'Service management for Linux environments'
+          description: 'Service management for Linux environments.'
         },
         {
           id: 'devcontainers',
           name: 'VS Code Devcontainers',
-          description: 'Consistent and reproducible development environments using Docker'
+          description: 'Consistent and reproducible development environments using Docker.'
         },
         {
           id: 'swagger',
           name: 'Swagger/OpenAPI',
-          description: 'API documentation and specification'
+          description: 'API documentation and specification.'
         },
         {
           id: 'cicd',
           name: 'CI/CD Pipelines',
-          description: 'Continuous integration and deployment workflows'
+          description: 'Continuous integration and deployment workflows.'
         },
         {
           id: 'powershell',
           name: 'PowerShell',
-          description: 'Scripting for Windows environments and automation'
+          description: 'Scripting for Windows environments and automation.'
         },
         {
           id: 'make',
           name: 'Make',
-          description: 'Build automation tool for Linux/Unix environments'
+          description: 'Build automation tool for Linux/Unix environments.'
         }
       ]
     },
@@ -775,17 +836,17 @@ export default {
         {
           id: 'softwareArch',
           name: 'Software Architecture',
-          description: 'Creating dependable, modular systems for real-time control and monitoring'
+          description: 'Creating dependable, modular systems for real-time control and monitoring.'
         },
         {
           id: 'dataAcquisition',
           name: 'Data Acquisition',
-          description: 'Designing high-performance systems for dependable measurement data collection, processing, and long-term archiving is known as data acquisition'
+          description: 'Designing high-performance systems for dependable measurement data collection, processing, and long-term archiving is known as data acquisition.'
         },
         {
           id: 'appDev',
           name: 'Application Development',
-          description: 'Application development is the process of putting solutions in place'
+          description: 'Application development is the process of putting solutions in place.'
         },
         {
           id: 'legacy',
@@ -795,32 +856,32 @@ export default {
         {
           id: 'visualization',
           name: 'Visualization Tools',
-          description: 'Development of graphical editors for data visualization, control panels, and process diagrams'
+          description: 'Development of graphical editors for data visualization, control panels, and process diagrams.'
         },
         {
           id: 'secure',
           name: 'Secure Systems',
-          description: 'Putting in place tamper-evident, secure storage to meet audit and compliance standards'
+          description: 'Putting in place tamper-evident, secure storage to meet audit and compliance standards.'
         },
         {
           id: 'crossPlatformDev',
           name: 'Cross-Platform Development',
-          description: 'Creating cross-platform visualization and control systems'
+          description: 'Creating cross-platform visualization and control systems.'
         },
         {
           id: 'dataManagement',
           name: 'Data Management',
-          description: 'Specialized systems for gathering and tracking data'
+          description: 'Specialized systems for gathering and tracking data.'
         },
         {
           id: 'industrialProtocols',
           name: 'Industrial Protocol Integration',
-          description: 'Experience with hardware integration and industrial communication protocols'
+          description: 'Experience with hardware integration and industrial communication protocols.'
         },
         {
           id: 'databaseSystems',
           name: 'Database Systems Design',
-          description: 'Designing database systems includes creating query interfaces and tools for database exploration'
+          description: 'Designing database systems includes creating query interfaces and tools for database exploration.'
         }
       ]
     },
@@ -831,37 +892,37 @@ export default {
         {
           id: 'scada',
           name: 'SCADA System',
-          description: 'used C++20 to create a modular, real-time industrial automation control and monitoring system. Features include thread-safe data handling, dynamic configuration, alarm management, event-driven signal processing architecture, real-time communication through MQTT and ZeroMQ, and a Qt-based graphical user interface (GUI) with visualization capabilities'
+          description: 'Used C++20 to create a modular, real-time industrial automation control and monitoring system. Features include thread-safe data handling, dynamic configuration, alarm management, event-driven signal processing architecture, real-time communication through MQTT and ZeroMQ, and a Qt-based graphical user interface (GUI) with visualization capabilities.'
         },
         {
           id: 'dataAcquisition',
           name: 'Data Acquisition & Archiving System',
-          description: 'developed a C++20 system for gathering, analyzing, and storing power plant measurement data over an extended period of time. robust data integrity procedures, file-mapped storage for time-series data archiving, shared memory architecture for concurrent data access, and thorough indexing for quick time-range queries'
+          description: 'Developed a C++20 system for gathering, analyzing, and storing power plant measurement data over an extended period of time. robust data integrity procedures, file-mapped storage for time-series data archiving, shared memory architecture for concurrent data access, and thorough indexing for quick time-range queries.'
         },
         {
           id: 'distributed',
           name: 'Distributed SCADA Platform',
-          description: 'designed a scalable platform using a Go backend and a C++20 data ingestion service. Binary deserialization for modernizing legacy data, Docker containerization for microservices architecture, JWT for secure APIs, SQLite and ObjectBox for embedded storage, and OpenAPI/Swagger for automated documentation are some of the salient features'
+          description: 'Designed a scalable platform using a Go backend and a C++20 data ingestion service. Binary deserialization for modernizing legacy data, Docker containerization for microservices architecture, JWT for secure APIs, SQLite and ObjectBox for embedded storage, and OpenAPI/Swagger for automated documentation are some of the salient features.'
         },
         {
           id: 'visualization',
           name: 'Graphical Editor for SCADA Schematics',
-          description: 'a cross-platform C++17 graphical editor for industrial control interfaces was created. The program comes with a model editor for making process diagrams and control panels, as well as Boost for XML serialization.Model-View architecture, PropertyTree, and cross-platform compatibility'
+          description: 'A cross-platform C++17 graphical editor for industrial control interfaces was created. The program comes with a model editor for making process diagrams and control panels, as well as Boost for XML serialization.Model-View architecture, PropertyTree, and cross-platform compatibility.'
         },
         {
           id: 'middleware',
           name: 'Middleware API for Protocol Bridging',
-          description: 'a .NET Web API middleware between RESTful interfaces and proprietary protocols was developed as a middleware API for protocol bridging. Among the features are dynamic configuration, data structure marshalling, optimized batch processing, robust resource management, and native C++ interoperability through P/Invoke'
+          description: 'A .NET Web API middleware between RESTful interfaces and proprietary protocols was developed as a middleware API for protocol bridging. Among the features are dynamic configuration, data structure marshalling, optimized batch processing, robust resource management, and native C++ interoperability through P/Invoke.'
         },
         {
           id: 'databaseTool',
           name: 'Database Exploration Tool',
-          description: 'using MFC, a C++20 Windows desktop application for SQLite database administration was created. Data visualization features, database connection management, an integrated SQL editor, a Multi-Document Interface for multiple views, and sophisticated UI elements via BCGControlBar Pro are all included in the tool'
+          description: 'Using MFC, a C++20 Windows desktop application for SQLite database administration was created. Data visualization features, database connection management, an integrated SQL editor, a Multi-Document Interface for multiple views, and sophisticated UI elements via BCGControlBar Pro are all included in the tool.'
         },
         {
           id: 'modularPlatform',
           name: 'Modular Data Acquisition Platform',
-          description: 'designed a microservices-based industrial data collection system. Multiple protocol integrations (S7, Modbus, Proster), a TypeScript/Express.js API layer, MongoDB and SQLite storage, C++, Node.js, and Python services, and a Vue.js dashboard with real-time visualization are all included in the solution'
+          description: 'Designed a microservices-based industrial data collection system. Multiple protocol integrations (S7, Modbus, Proster), a TypeScript/Express.js API layer, MongoDB and SQLite storage, C++, Node.js, and Python services, and a Vue.js dashboard with real-time visualization are all included in the solution.'
         }
       ]
     },
@@ -872,42 +933,42 @@ export default {
         {
           id: 'cleanCode',
           name: 'Clean, Maintainable Code',
-          description: 'The codebase is divided into distinct modules in accordance with best practices for concern separation'
+          description: 'The codebase is divided into distinct modules in accordance with best practices for concern separation.'
         },
         {
           id: 'modernCpp',
           name: 'Modern C++ Features',
-          description: 'Proficiency in utilizing smart pointers, type safety, constexpr, and other contemporary C++ features to enhance code security'
+          description: 'Proficiency in utilizing smart pointers, type safety, constexpr, and other contemporary C++ features to enhance code security.'
         },
         {
           id: 'modular',
           name: 'Modular Architecture',
-          description: 'Designing extensible systems that can change to meet new needs is known as modular architecture'
+          description: 'Designing extensible systems that can change to meet new needs is known as modular architecture.'
         },
         {
           id: 'reliability',
           name: 'Reliability Focus',
-          description: 'Implementing thorough error handling, logging, and system recovery procedures is the focus of reliability'
+          description: 'Implementing thorough error handling, logging, and system recovery procedures is the focus of reliability.'
         },
         {
           id: 'performance',
           name: 'Performance Optimization',
-          description: 'Proficiency in low-latency, high-performance systems for real-time applications'
+          description: 'Proficiency in low-latency, high-performance systems for real-time applications.'
         },
         {
           id: 'ux',
           name: 'User Experience',
-          description: 'Developing user-friendly interfaces for sophisticated software programs'
+          description: 'Developing user-friendly interfaces for sophisticated software programs.'
         },
         {
           id: 'learning',
           name: 'Continuous Learning',
-          description: 'Adapting to best practices and new technologies in quickly changing ecosystems'
+          description: 'Adapting to best practices and new technologies in quickly changing ecosystems.'
         },
         {
           id: 'crossDisciplinary',
           name: 'Cross-Disciplinary Integration',
-          description: 'The capacity to collaborate across various platforms and programming languages to produce coherent solutions is known as cross-disciplinary integration'
+          description: 'The capacity to collaborate across various platforms and programming languages to produce coherent solutions is known as cross-disciplinary integration.'
         }
       ]
     }

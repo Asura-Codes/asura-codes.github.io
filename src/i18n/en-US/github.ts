@@ -143,6 +143,50 @@ export default {
           'Load Balancing & Active-Passive Failover'
         ],
         link: 'https://github.com/Asura-Codes/go-zeromq-labs'
+      },
+      {
+        title: 'MCU Lab',
+        description: 'Multi-platform microcontroller workspace with build templates, VS Code workspaces and a DevContainer containing preinstalled toolchains (ESP-IDF, Pico SDK, Zephyr). Build in-container, flash on Windows and use provided tasks, scripts and OpenOCD variants.',
+        technologies: [
+          'C',
+          'C++',
+          'ESP-IDF',
+          'Pico SDK',
+          'Zephyr',
+          'PlatformIO',
+          'CMake',
+          'OpenOCD',
+          'Docker'
+        ],
+        topics: [
+          'Firmware templates (ESP32, RP2040, STM32, nRF)',
+          'DevContainer builds & reproducible toolchains',
+          'Flashing & OpenOCD workflows',
+          'Serial monitor and debugging (GDB)',
+          'Platform-specific build tasks'
+        ],
+        link: 'https://github.com/Asura-Codes/mcu-lab'
+      },
+      {
+        title: 'FT232RL Protocol Probe (Synchronous Bit-Bang)',
+        description: 'C++ tool that turns an FT232RL breakout into a protocol probe. Uses synchronous bit-bang mode for deterministic timing and supports I2C, SPI, UART and higher-level protocols. Includes CLI, REST API, pin discovery and capture/decoding utilities.',
+        technologies: [
+          'C++',
+          'POCO Framework',
+          'libftdi1',
+          'CMake',
+          'vcpkg',
+          'USB',
+          'UART'
+        ],
+        topics: [
+          'Synchronous Bit-Bang probing',
+          'Automated pin discovery',
+          'SPI/I2C/UART capture & decoding',
+          'CLI and REST API',
+          'Building with vcpkg & cross-platform setups'
+        ],
+        link: 'https://github.com/Asura-Codes/ft232rl-protocol-probe'
       }
     ]
   },
