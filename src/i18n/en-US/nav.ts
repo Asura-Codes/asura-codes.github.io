@@ -5,5 +5,5 @@ export default {
   github: 'Open Source',
   work: 'Work experience',
   stack: 'Technology stack',
-  contact: 'Contact'
+  about: 'About me',
 };

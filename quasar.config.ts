@@ -1,7 +1,7 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
-import { defineConfig } from '#q-app/wrappers';
+import { defineConfig } from '#q-app';
 import { fileURLToPath } from 'node:url';
 
 export default defineConfig((ctx) => {
@@ -12,21 +12,16 @@ export default defineConfig((ctx) => {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: [
-      'i18n',
-      'axios'
-    ],
+    boot: ['i18n', 'axios'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
-    css: [
-      'app.scss'
-    ],
+    css: ['app.scss'],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
       'mdi-v7',
-      'fontawesome-v6',
+      'fontawesome-v7',
       // 'eva-icons',
       // 'themify',
       // 'line-awesome',
@@ -40,16 +35,16 @@ export default defineConfig((ctx) => {
     build: {
       target: {
         browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
-        node: 'node20'
+        node: 'node20',
       },
 
       typescript: {
         strict: true,
-        vueShim: true
+        vueShim: true,
         // extendTsConfig (tsConfig) {}
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -66,11 +61,17 @@ export default defineConfig((ctx) => {
       // polyfillModulePreload: true,
       // distDir
 
-      extendViteConf(viteConf) {
+      extendViteConf(viteConf, { isServer }) {
+        // Only tweak client output file names; SSR/SSG server builds have their own naming requirements
+        if (isServer) return;
+
         if (!viteConf.build) viteConf.build = {};
         if (!viteConf.build.rollupOptions) viteConf.build.rollupOptions = {};
         // Ensure output is an object, not an array
-        if (!viteConf.build.rollupOptions.output || Array.isArray(viteConf.build.rollupOptions.output)) {
+        if (
+          !viteConf.build.rollupOptions.output ||
+          Array.isArray(viteConf.build.rollupOptions.output)
+        ) {
           viteConf.build.rollupOptions.output = {};
         }
         // Remove leading underscore from helper files
@@ -91,42 +92,49 @@ export default defineConfig((ctx) => {
       // viteVuePluginOptions: {},
 
       vitePlugins: [
-        ['@intlify/unplugin-vue-i18n/vite', {
-          // You need to set compositionOnly to false to use legacy API
-          compositionOnly: false,
+        [
+          '@intlify/unplugin-vue-i18n/vite',
+          {
+            // You need to set compositionOnly to false to use legacy API
+            compositionOnly: false,
 
-          // Set runtimeOnly to false to support named tokens in messages
-          runtimeOnly: false,
+            // Set runtimeOnly to false to support named tokens in messages
+            runtimeOnly: false,
 
-          ssr: ctx.modeName === 'ssr',
+            ssr: ctx.modeName === 'ssr' || ctx.modeName === 'ssg',
 
-          // Ensure proper path to i18n resources
-          include: [fileURLToPath(new URL('./src/i18n', import.meta.url))],
+            // Ensure proper path to i18n resources
+            include: [fileURLToPath(new URL('./src/i18n', import.meta.url))],
 
-          // Add strictMessage false to avoid potential serialization issues
-          strictMessage: false
-        }],
+            // Add strictMessage false to avoid potential serialization issues
+            strictMessage: false,
+          },
+        ],
 
-        ['vite-plugin-checker', {
-          vueTsc: true,
-          eslint: {
-            lintCommand: 'eslint -c ./eslint.config.js "./src*/**/*.{ts,js,mjs,cjs,vue}"',
-            useFlatConfig: true
-          }
-        }, { server: false }]
-      ]
+        [
+          'vite-plugin-checker',
+          {
+            vueTsc: true,
+            eslint: {
+              lintCommand: 'eslint -c ./eslint.config.js "./src*/**/*.{ts,js,mjs,cjs,vue}"',
+              useFlatConfig: true,
+            },
+          },
+          { server: false },
+        ],
+      ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#devserver
     devServer: {
       // https: true,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
     framework: {
       config: {
-        dark: true // Enable dark mode globally
+        dark: true, // Enable dark mode globally
       },
 
       // iconSet: 'material-icons', // Quasar icon set
@@ -140,7 +148,7 @@ export default defineConfig((ctx) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [],
     },
 
     // animations: 'all', // --- includes all animations
@@ -166,7 +174,7 @@ export default defineConfig((ctx) => {
       // (gets superseded if process.env.PORT is specified at runtime)
 
       middlewares: [
-        'render' // keep this as last one
+        'render', // keep this as last one
       ],
 
       // extendPackageJson (json) {},
@@ -177,16 +185,25 @@ export default defineConfig((ctx) => {
       // manualStoreHydration: true,
       // manualPostHydrationTrigger: true,
 
-      pwa: false
+      pwa: false,
       // pwaOfflineHtmlFilename: 'offline.html', // do NOT use index.html as name!
 
       // pwaExtendGenerateSWOptions (cfg) {},
       // pwaExtendInjectManifestOptions (cfg) {}
     },
 
+    // https://v2.quasar.dev/quasar-cli-vite/developing-ssg/configuring-ssg
+    ssg: {
+      // Keep PWA takeover disabled
+      pwa: false,
+
+      // Use the default 404.html generation
+      error404HtmlFilename: '404.html',
+    },
+
     // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
     pwa: {
-      workboxMode: 'GenerateSW' // 'GenerateSW' or 'InjectManifest'
+      workboxMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       // swFilename: 'sw.js',
       // manifestFilename: 'manifest.json',
       // extendManifestJson (json) {},
@@ -204,7 +221,7 @@ export default defineConfig((ctx) => {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor
     capacitor: {
-      hideSplashscreen: true
+      hideSplashscreen: true,
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-electron-apps/configuring-electron
@@ -224,13 +241,11 @@ export default defineConfig((ctx) => {
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
-
         // OS X / Mac App Store
         // appBundleId: '',
         // appCategoryType: '',
         // osxSign: '',
         // protocol: 'myapp://path',
-
         // Windows only
         // win32metadata: { ... }
       },
@@ -238,8 +253,8 @@ export default defineConfig((ctx) => {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'asura-codes-github-io'
-      }
+        appId: 'asura-codes-github-io',
+      },
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-browser-extensions/configuring-bex
@@ -255,7 +270,7 @@ export default defineConfig((ctx) => {
        *
        * @example [ 'my-script.ts', 'sub-folder/my-other-script.js' ]
        */
-      extraScripts: []
-    }
-  }
+      extraScripts: [],
+    },
+  };
 });

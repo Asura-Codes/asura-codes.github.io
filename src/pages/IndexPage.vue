@@ -1,236 +1,104 @@
 <template>
-  <q-page class="q-pa-md">
-    <div class="column items-center">
-      <!-- Profile section with photo on the left and content on the right -->
-      <div class="row q-mb-lg full-width">
+  <q-page class="page-container">
+    <!-- Hero -->
+    <div class="page-header">
+      <div class="page-title">{{ $t('home.heroTitle') }}</div>
+      <p class="page-subtitle">{{ $t('home.heroSubtitle') }}</p>
+      <p class="signature text-right">{{ $t('home.heroSignature') }}</p>
+      <div class="row justify-center q-gutter-md q-mt-lg">
+        <q-btn
+          color="primary"
+          icon="mdi-github"
+          :label="$t('home.viewProject')"
+          href="https://github.com/Asura-Codes"
+          target="_blank"
+          rel="noopener"
+        />
+        <q-btn outline color="primary" :label="$t('home.moreProjects')" to="/github" />
+      </div>
+    </div>
 
-        <!-- Profile content -->
-        <div class="col-12 col-md-6 column justify-center q-pa-xl">
-          <div class="text-h4 q-mb-sm text-center">{{ $t('home.jobTitle') }}</div>
-          <div class="text-subtitle1 q-mb-md text-center">{{ $t('home.jobSubtitle') }}</div>
-          <div class="row justify-center q-gutter-md q-mb-md">
-            <div v-for="icon in technologyIcons" :key="icon.name" class="cursor-pointer">
-              <q-icon :name="icon.name" size="32px">
-                <q-tooltip>{{ icon.title }}</q-tooltip>
-              </q-icon>
+    <!-- Interests -->
+    <div class="section-title">{{ $t('home.interestsTitle') }}</div>
+
+    <div class="card-grid q-mb-xl">
+      <q-card v-for="interest in interests" :key="interest.id" class="content-card full-height">
+        <q-card-section>
+          <div class="row items-center no-wrap">
+            <div class="col">
+              <div class="text-h6">{{ interest.title }}</div>
+            </div>
+            <div class="col-auto">
+              <q-icon :name="interest.icon" color="primary" size="32px" />
             </div>
           </div>
-        </div>
+        </q-card-section>
+        <q-card-section class="q-pt-none">
+          <p class="prose">{{ interest.description }}</p>
+        </q-card-section>
+      </q-card>
+    </div>
 
-        <!-- Profile photo with light/dark mode switching -->
-        <div class="col-12 col-md-6 flex flex-center">
-          <q-img :src="$q.dark.isActive ? '/Dark.jpg' : '/Light.jpg'"
-            :alt="$q.dark.isActive ? 'Profile Photo - Dark Mode' : 'Profile Photo - Light Mode'" fit="cover"
-            class="profile-photo">
-            <template v-slot:loading>
-              <q-spinner color="primary" size="30px" />
-            </template>
-            <template v-slot:error>
-              <div class="text-red text-center">Image failed to load</div>
-            </template>
-          </q-img>
-        </div>
-      </div>
+    <!-- Projects -->
+    <div class="section-title">{{ $t('home.projectsTitle') }}</div>
 
-      <!-- About section -->
-      <div class="row q-mb-lg full-width">
-        <div class="col-12 col-md-10 col-lg-8 q-mx-auto">
-          <q-card class="about-card q-pa-md">
-            <q-card-section>
-              <div class="text-h5 q-mb-md">{{ $t('home.aboutMe') }}</div>
-              <p>
-                {{ $t('home.aboutIntro') }}
-              </p>
-              <p>
-                {{ $t('home.aboutJourney') }}
-              </p>
-            </q-card-section>
-          </q-card>
-        </div>
-      </div>
+    <div class="card-grid card-grid--two q-mb-xl">
+      <q-card v-for="project in projects" :key="project.id" class="content-card full-height">
+        <q-card-section>
+          <div class="text-h6 q-mb-xs">{{ project.title }}</div>
+          <p class="prose q-mb-sm">{{ project.description }}</p>
+          <div class="q-mb-sm">
+            <q-chip
+              v-for="(tag, idx) in project.tags"
+              :key="idx"
+              color="primary"
+              text-color="white"
+              size="sm"
+              class="q-ma-xs"
+            >
+              {{ tag }}
+            </q-chip>
+          </div>
+          <q-btn
+            flat
+            color="primary"
+            :label="$t('home.viewProject')"
+            :href="project.link"
+            target="_blank"
+            rel="noopener"
+            icon-right="launch"
+          />
+        </q-card-section>
+      </q-card>
+    </div>
 
-      <div class="text-h5 q-mb-lg text-center">{{ $t('home.areasTitle') }}</div>
-
-      <div class="row q-col-gutter-md justify-center q-mb-lg full-width">
-        <!-- Knowledge Cards - Loop through the array -->
-        <div v-for="card in knowledgeCards" :key="card.id" class="col-12 col-sm-4">
-          <q-card class="my-card full-height">
-            <q-card-section>
-              <div class="row items-center no-wrap">
-                <div class="col">
-                  <div class="text-h6">{{ card.title }}</div>
-                </div>
-                <div class="col-auto">
-                  <q-icon :name="card.icon" color="primary" size="36px" />
-                </div>
-              </div>
-            </q-card-section>
-
-            <q-card-section class="q-pt-none">
-              <p>
-                {{ card.description }}
-              </p>
-              <div class="text-bold q-mb-xs">{{ card.benefits }}</div>
-              <p class="text-caption">
-                {{ card.benefitsDesc }}
-              </p>
-            </q-card-section>
-          </q-card>
-        </div>
-      </div>
-
-      <div class="text-center q-mb-xl">
-        <q-btn outline color="primary" :label="$t('home.contactMe')" to="/contact" size="lg" />
-      </div>
-
-      <q-separator spaced />
+    <div class="text-center q-mb-xl">
+      <q-btn outline color="primary" :label="$t('home.moreProjects')" to="/github" size="lg" />
     </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
 import { computed } from 'vue';
-import messagesSource from 'src/i18n';
-import type { MessageLanguages } from 'src/boot/i18n';
+import { useI18n } from 'vue-i18n';
 
-// Setup i18n for this component
-const { locale } = useI18n({ useScope: 'global' });
+const i18n = useI18n({ useScope: 'global' });
 
-// Define interface for technology icon
-interface TechnologyIcon {
-  name: string;
-  title: string;
-}
-
-// Define interface for knowledge card
-interface KnowledgeCard {
+interface Interest {
   id: string;
   title: string;
   description: string;
-  benefits: string;
-  benefitsDesc: string;
   icon: string;
 }
 
-// Get the technology icons from translations
-const technologyIcons = computed<TechnologyIcon[]>(() => {
-  const currentLocale = locale.value as MessageLanguages;
-  return messagesSource[currentLocale].home.technologyIcons as TechnologyIcon[];
-});
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+}
 
-// Get the knowledge cards array from translations
-const knowledgeCards = computed<KnowledgeCard[]>(() => {
-  const currentLocale = locale.value as MessageLanguages;
-  return messagesSource[currentLocale].home.knowledgeCards as KnowledgeCard[];
-});
+const interests = computed<Interest[]>(() => i18n.tm('home.interests') ?? []);
+const projects = computed<Project[]>(() => i18n.tm('home.projects') ?? []);
 </script>
-
-<style scoped>
-.my-card {
-  background: #fff;
-  color: #23272f;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.2s, transform 0.2s;
-  height: 100%;
-}
-
-.my-card:hover {
-  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.1);
-  transform: translateY(-2px);
-}
-
-.body--dark .my-card,
-.my-card.q-dark,
-.my-card.q-dark\:bg-dark {
-  background: #23272f !important;
-  color: #e3f2fd !important;
-  box-shadow: 0 2px 8px rgba(144, 202, 249, 0.08);
-}
-
-.about-card {
-  border-left: 4px solid #1976d2;
-  background: #fff;
-  color: #23272f;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.about-card:hover {
-  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.1);
-  transform: translateY(-2px);
-}
-
-.body--dark .about-card,
-.about-card.q-dark,
-.about-card.q-dark\:bg-dark {
-  background: #23272f !important;
-  color: #e3f2fd !important;
-  border-left: 4px solid #90caf9;
-  box-shadow: 0 2px 8px rgba(144, 202, 249, 0.08);
-}
-
-.about-card p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.profile-photo {
-  width: 100%;
-  height: 640px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(142, 128, 119, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo:hover {
-  box-shadow: 0 6px 30px rgba(142, 128, 119, 0.6);
-}
-
-.body--dark .profile-photo {
-  box-shadow: 0 4px 20px rgba(144, 202, 249, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.body--dark .profile-photo:hover {
-  box-shadow: 0 6px 30px rgba(144, 202, 249, 0.2);
-}
-
-/* Mobile styles */
-.q-page {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1023px) {
-  .profile-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 599px) {
-  .q-page {
-    padding: 8px !important;
-  }
-
-  .profile-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-  }
-
-  .q-col-gutter-lg>.col-12:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
-  /* Reduce padding on mobile for profile content */
-  .col-12.col-md-6.q-pa-xl {
-    padding: 16px !important;
-  }
-}
-</style>

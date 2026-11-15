@@ -1,0 +1,1 @@
+This repository is my 'pisanie.dev' page. Its purpose is to showcase my skills and projects, both proprietary and open source, to every visitor. I am not trying to show off or regurgitate information. I am straightforward, concise and humble.

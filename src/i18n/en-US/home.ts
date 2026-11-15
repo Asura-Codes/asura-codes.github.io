@@ -1,71 +1,128 @@
-// Home page translations
+// Home page translations - open source focused landing
 export default {
-  title: 'Welcome to My Portfolio',
-  jobTitle: 'Full-stack Developer',
-  jobSubtitle: 'I work with systems that need to function consistently under load, in real time, and frequently at the nexus of contemporary software and outdated infrastructure. Although I design solutions in Go, and.NET, my strongest programming languages are C++, TypeScript and Python. Whether I\'m developing an industrial visualization system, web application, or data archive, I\'m interested in quality, performance, and transparency.',
-  aboutMe: 'About Me',
-  aboutIntro: 'As a software developer, I enjoy solving technical problems and making solutions that people can count on.  My experience ranges from low-level system architecture to modern web technologies.',
-  aboutJourney: 'I\'ve had the chance to work on important projects in industrial automation and real-time systems throughout my career. Whether I was designing SCADA systems, implementing data acquisition solutions, or making user-friendly interfaces, each project has taught me something new and helped me grow.',
-  areasTitle: 'Areas I\'ve Had the Opportunity to Work In',
-  contactMe: 'Contact Me',
+  title: 'Open source labs & tools',
 
-  // Technology icons shown in the header
-  technologyIcons: [
-    { name: 'mdi-language-cpp', title: 'C++17/20' },
-    { name: 'mdi-widgets', title: 'Qt 6 Framework' },
-    { name: 'mdi-language-go', title: 'Go' },
-    { name: 'mdi-docker', title: 'Docker' },
-    { name: 'mdi-language-python', title: 'Python' },
-    { name: 'mdi-nodejs', title: 'Node.js' },
-    { name: 'mdi-vuejs', title: 'Vue.js' },
-    { name: 'mdi-database', title: 'MongoDB, SQLite' },
-    { name: 'mdi-code-json', title: 'JSON/APIs' },
-    { name: 'mdi-lightning-bolt', title: 'MQTT, ZeroMQ' },
-    { name: 'mdi-memory', title: 'Low-Level Systems' },
-    { name: 'mdi-cogs', title: 'CMake, vcpkg' }
+  heroTitle: 'Open source labs & tools',
+  heroSubtitle:
+    'I publish experiments on GitHub: small labs and tools in Go, C++, Python, and TypeScript. They cover messaging, embedded systems, data pipelines, protocol tooling, and local LLMs.',
+  heroSignature: '— Asura Codes',
+
+  interestsTitle: 'What I explore',
+  interests: [
+    {
+      id: 'distributedMessaging',
+      title: 'Distributed messaging',
+      description:
+        'I run labs with MQTT, NATS JetStream, and ZeroMQ to study how resilient messaging behaves under load.',
+      icon: 'mdi-swap-horizontal',
+    },
+    {
+      id: 'embeddedSystems',
+      title: 'Embedded systems',
+      description:
+        'ESP32, RP2040, STM32, nRF. A containerized MCU workspace with reproducible toolchains so setup does not get in the way.',
+      icon: 'mdi-chip',
+    },
+    {
+      id: 'dataPipelines',
+      title: 'Data pipelines',
+      description:
+        'PostgreSQL, Fluent Bit, and time-series patterns for understanding how data moves and where it fails.',
+      icon: 'mdi-database',
+    },
+    {
+      id: 'protocolTooling',
+      title: 'Protocol tooling',
+      description:
+        'Small utilities for Modbus, SPI/I2C/UART, and other protocols used by embedded and industrial hardware.',
+      icon: 'mdi-console-network',
+    },
+    {
+      id: 'agenticApps',
+      title: 'Agentic apps',
+      description:
+        'agentic-lab is a full-stack playground for integrating LLMs into real workflows: Django, Vue 3, WebSockets, and local models.',
+      icon: 'mdi-robot',
+    },
   ],
 
-  // Knowledge Cards as an array
-  knowledgeCards: [
+  projectsTitle: 'Featured projects',
+  projects: [
     {
-      id: 'systemArchitecture',
-      title: 'System Architecture',
-      description: 'I worked on scalable, modular systems for power plants. I work with distributed systems, microservices, and event-driven architectures that prioritize dependability and performance in mission-critical environments.',
-      benefits: 'Technical Skills:',
-      benefitsDesc: 'C++17/20, Go, event-driven programming, microservice design, concurrent programming, shared memory architectures, Docker containerization',
-      icon: 'mdi-hexagon-multiple'
+      id: 'agentic-lab',
+      title: 'agentic-lab',
+      description:
+        'A lab for wiring LLMs into real workflows. Django + Vue 3, WebSocket streaming, ChromaDB for RAG, LangGraph patterns, and multi-provider support.',
+      tags: ['Python', 'Django', 'Vue 3', 'LLM', 'RAG'],
+      link: 'https://github.com/Asura-Codes/agentic-lab',
     },
     {
-      id: 'dataEngineering',
-      title: 'Data Management',
-      description: 'I have developed and put into action systems for gathering, processing, and storing industrial time-series data. My solutions include effective storage methods for both current and past data access, along with strong guarantees of data integrity.',
-      benefits: 'Technical Skills:',
-      benefitsDesc: 'Database design (SQL & NoSQL), custom file-mapped storage, time-series data handling, multi-threaded data access patterns, MongoDB, SQLite, ObjectBox, RethinkDB, PostgreSQL',
-      icon: 'mdi-database'
+      id: 'small-models-lab',
+      title: 'small-models-lab',
+      description:
+        'Evaluate small language models on CPU for RAG, function calling, and safety — no GPU needed. Python with llama.cpp/ONNX, FastAPI, and pytest.',
+      tags: ['Python', 'llama.cpp', 'ONNX', 'FastAPI', 'pytest'],
+      link: 'https://github.com/Asura-Codes/small-models-lab',
     },
     {
-      id: 'uiDevelopment',
-      title: 'Interface Development',
-      description: 'Used both desktop and web technologies to make graphical interfaces for industrial systems. These interfaces let operators see complicated processes, set up systems, and work with data from equipment.',
-      benefits: 'Technical Skills:',
-      benefitsDesc: 'Qt, MFC, Vue.js, Model-View-Controller implementations, cross-platform development, BCGControlBar Pro, internationalization',
-      icon: 'mdi-monitor-dashboard'
+      id: 'ft232rl-protocol-probe',
+      title: 'ft232rl-protocol-probe',
+      description:
+        'Turn an FT232RL breakout into a synchronous bit-bang protocol probe for I2C, SPI, UART, Modbus, and more via CLI or REST API.',
+      tags: ['C++', 'POCO', 'libftdi1', 'USB', 'CMake'],
+      link: 'https://github.com/Asura-Codes/ft232rl-protocol-probe',
     },
     {
-      id: 'communicationProtocols',
-      title: 'Communication Systems',
-      description: 'Used different messaging and communication protocols to send and receive data in real time in industrial settings. I make sure that field devices, backend services, and user interfaces can all work together in safe and efficient ways.',
-      benefits: 'Technical Skills:',
-      benefitsDesc: 'MQTT, ZeroMQ, WebSockets, REST APIs, industrial protocols (Modbus, IEC104, Siemens S7), TCP/IP networking, secure API design (JWT)',
-      icon: 'mdi-access-point-network'
+      id: 'mcu-lab',
+      title: 'mcu-lab',
+      description:
+        'Containerized MCU workspace with DevContainer builds, VS Code tasks, and templates for ESP32, RP2040, STM32, and nRF.',
+      tags: ['C', 'C++', 'ESP-IDF', 'Pico SDK', 'Docker'],
+      link: 'https://github.com/Asura-Codes/mcu-lab',
     },
     {
-      id: 'systemIntegration',
-      title: 'System Integration',
-      description: 'Specialized in connecting old industrial systems with new technologies. As part of my integration work, I convert binary formats, translate protocols, and make middleware components that can work with each other.',
-      benefits: 'Technical Skills:',
-      benefitsDesc: 'C#/.NET integration with native code, multi-language systems (C++/Go/C#), binary deserialization, character encoding conversion, API gateway development',
-      icon: 'mdi-puzzle'
-    }
-  ]
+      id: 'go-zeromq-labs',
+      title: 'go-zeromq-labs',
+      description:
+        '24 standalone labs exploring distributed patterns with ZeroMQ and Go: XPUB/XSUB, ROUTER-DEALER, Curve25519, consensus, and failover.',
+      tags: ['Go', 'ZeroMQ', 'Docker', 'Networking'],
+      link: 'https://github.com/Asura-Codes/go-zeromq-labs',
+    },
+    {
+      id: 'nats-jetstream-laboratory',
+      title: 'nats-jetstream-laboratory',
+      description:
+        '30 experiments with NATS and JetStream: persistence, deduplication, sagas, event sourcing, stream mirroring, and observability.',
+      tags: ['Go', 'NATS', 'JetStream', 'Distributed Systems'],
+      link: 'https://github.com/Asura-Codes/nats-jetstream-laboratory',
+    },
+    {
+      id: 'mosquitto-go-explorations',
+      title: 'mosquitto-go-explorations',
+      description:
+        '18 labs for learning MQTT with Eclipse Mosquitto and Go: QoS, session persistence, bridging, TLS, WebSockets, and external authentication.',
+      tags: ['Go', 'MQTT', 'Mosquitto', 'Docker'],
+      link: 'https://github.com/Asura-Codes/mosquitto-go-explorations',
+    },
+    {
+      id: 'fluentbit-replication-lab',
+      title: 'fluentbit-replication-lab',
+      description:
+        'Containerized Fluent Bit pipeline lab with Go producers, syslog routing, and automated verification for log replication scenarios.',
+      tags: ['Go', 'Fluent Bit', 'Docker', 'Observability'],
+      link: 'https://github.com/Asura-Codes/fluentbit-replication-lab',
+    },
+    {
+      id: 'go-postgres-explorations',
+      title: 'go-postgres-explorations',
+      description:
+        '20 experiments mastering advanced PostgreSQL from the Go side: indexing, locking, partitioning, and replication.',
+      tags: ['Go', 'PostgreSQL', 'SQL', 'Docker'],
+      link: 'https://github.com/Asura-Codes/go-postgres-explorations',
+    },
+  ],
+
+  viewProject: 'View on GitHub',
+  moreProjects: 'See all projects',
+  moreProjectsLink: '/github',
 };

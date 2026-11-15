@@ -10,5 +10,5 @@ export default {
   language: 'Language',
   languageEnglish: 'English',
   languagePolish: 'Polski',
-  selectLanguage: 'Select language'
+  selectLanguage: 'Select language',
 };

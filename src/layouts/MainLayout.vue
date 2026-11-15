@@ -1,6 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated :class="$q.dark.isActive ? 'bg-grey-10 text-grey-2' : 'bg-grey-2 text-grey-10'">
+    <q-header
+      elevated
+      :class="$q.dark.isActive ? 'bg-grey-10 text-grey-2' : 'bg-grey-2 text-grey-10'"
+    >
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
@@ -28,35 +31,75 @@
             </q-item>
           </q-list>
         </q-btn-dropdown>
-        <q-btn flat dense round :icon="$q.dark.isActive ? 'dark_mode' : 'light_mode'" @click="toggleDarkMode"
-          :aria-label="$t('common.darkMode')" class="q-ml-sm" />
+        <q-btn
+          flat
+          dense
+          round
+          :icon="$q.dark.isActive ? 'dark_mode' : 'light_mode'"
+          @click="toggleDarkMode"
+          :aria-label="$t('common.darkMode')"
+          class="q-ml-sm"
+        />
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" :show-if-above="$q.screen.gt.md" :breakpoint="$q.screen.sizes.lg" bordered>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      :show-if-above="$q.screen.gt.md"
+      :breakpoint="$q.screen.sizes.lg"
+      bordered
+    >
       <q-list>
         <q-item-label header>{{ $t('nav.navigation') }}</q-item-label>
-        <q-item clickable to="/" tag="router-link" :active="$route.path === '/'" active-class="text-primary">
+        <q-item
+          clickable
+          to="/"
+          tag="router-link"
+          :active="$route.path === '/'"
+          active-class="text-primary"
+        >
           <q-item-section avatar><q-icon name="home" /></q-item-section>
           <q-item-section>{{ $t('nav.home') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/github" tag="router-link" :active="$route.path === '/github'"
-          active-class="text-primary">
+        <q-item
+          clickable
+          to="/github"
+          tag="router-link"
+          :active="$route.path === '/github'"
+          active-class="text-primary"
+        >
           <q-item-section avatar><q-icon name="mdi-github" /></q-item-section>
           <q-item-section>{{ $t('nav.github') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/work" tag="router-link" :active="$route.path === '/work'" active-class="text-primary">
+        <q-item
+          clickable
+          to="/work"
+          tag="router-link"
+          :active="$route.path === '/work'"
+          active-class="text-primary"
+        >
           <q-item-section avatar><q-icon name="work" /></q-item-section>
           <q-item-section>{{ $t('nav.work') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/stack" tag="router-link" :active="$route.path === '/stack'" active-class="text-primary">
+        <q-item
+          clickable
+          to="/stack"
+          tag="router-link"
+          :active="$route.path === '/stack'"
+          active-class="text-primary"
+        >
           <q-item-section avatar><q-icon name="layers" /></q-item-section>
           <q-item-section>{{ $t('nav.stack') }}</q-item-section>
         </q-item>
-        <q-item clickable to="/contact" tag="router-link" :active="$route.path === '/contact'"
-          active-class="text-primary">
-          <q-item-section avatar><q-icon name="contact_mail" /></q-item-section>
-          <q-item-section>{{ $t('nav.contact') }}</q-item-section>
+        <q-item
+          clickable
+          to="/about"
+          tag="router-link"
+          :active="$route.path === '/about'"
+          active-class="text-primary"
+        >
+          <q-item-section avatar><q-icon name="person" /></q-item-section>
+          <q-item-section>{{ $t('nav.about') }}</q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
@@ -64,7 +107,10 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    <q-footer :class="$q.dark.isActive ? 'bg-grey-10 text-grey-2' : 'bg-grey-2 text-grey-8'" class="q-pa-sm">
+    <q-footer
+      :class="$q.dark.isActive ? 'bg-grey-10 text-grey-2' : 'bg-grey-2 text-grey-8'"
+      class="q-pa-sm"
+    >
       <div class="row items-center justify-between">
         <div>
           {{ $t('footer.builtWith', { version: $q.version }) }}
@@ -86,11 +132,13 @@ const $route = useRoute();
 const leftDrawerOpen = ref(false);
 
 // Enable dark mode by default unless user has set a preference
-if (localStorage.getItem('darkMode') === null) {
-  $q.dark.set(true);
-  localStorage.setItem('darkMode', 'true');
-} else {
-  $q.dark.set(localStorage.getItem('darkMode') === 'true');
+if (typeof window !== 'undefined') {
+  if (localStorage.getItem('darkMode') === null) {
+    $q.dark.set(true);
+    localStorage.setItem('darkMode', 'true');
+  } else {
+    $q.dark.set(localStorage.getItem('darkMode') === 'true');
+  }
 }
 
 function toggleLeftDrawer() {
@@ -106,12 +154,16 @@ function changeLanguage(lang: string) {
   // Set the new language
   locale.value = lang;
   // Store the language preference in localStorage to persist it
-  localStorage.setItem('language', locale.value);
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('language', locale.value);
+  }
 }
 
 // Initialize language from localStorage if available
-const savedLanguage = localStorage.getItem('language');
-if (savedLanguage && (savedLanguage === 'en-US' || savedLanguage === 'pl-PL')) {
-  locale.value = savedLanguage;
+if (typeof window !== 'undefined') {
+  const savedLanguage = localStorage.getItem('language');
+  if (savedLanguage && (savedLanguage === 'en-US' || savedLanguage === 'pl-PL')) {
+    locale.value = savedLanguage;
+  }
 }
 </script>

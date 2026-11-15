@@ -1,1 +1,189 @@
 // app global css in SCSS form
+
+// ------------------------------------------------------------------
+// Shared page layout
+// ------------------------------------------------------------------
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+// ------------------------------------------------------------------
+// Shared cards
+// ------------------------------------------------------------------
+.content-card {
+  background: #fff;
+  color: #23272f;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid $primary;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.content-card:hover {
+  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.12);
+  transform: translateY(-2px);
+}
+
+.body--dark .content-card,
+.content-card.q-dark,
+.content-card.q-dark\:bg-dark {
+  background: #23272f !important;
+  color: #e3f2fd !important;
+  border-left-color: #90caf9;
+  box-shadow: 0 2px 8px rgba(144, 202, 249, 0.08);
+}
+
+.body--dark .content-card:hover {
+  box-shadow: 0 6px 20px rgba(144, 202, 249, 0.14);
+}
+
+// Variants
+.content-card--top {
+  border-left: none;
+  border-top: 4px solid $primary;
+}
+
+.body--dark .content-card--top {
+  border-top-color: #90caf9;
+}
+
+.content-card--flat {
+  border-left: none;
+}
+
+// ------------------------------------------------------------------
+// Card grids
+// ------------------------------------------------------------------
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.card-grid--two {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+// ------------------------------------------------------------------
+// Typography helpers
+// ------------------------------------------------------------------
+.prose {
+  line-height: 1.6;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.text-muted {
+  opacity: 0.75;
+}
+
+.signature {
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+// ------------------------------------------------------------------
+// Tags / chips used across pages
+// ------------------------------------------------------------------
+.tag-chip {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.body--dark .tag-chip {
+  background: #1565c0;
+  color: #bbdefb;
+}
+
+// ------------------------------------------------------------------
+// Social link styling
+// ------------------------------------------------------------------
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.social-link:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-left-color: $primary;
+}
+
+.body--dark .social-link {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.body--dark .social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: #90caf9;
+}
+
+// ------------------------------------------------------------------
+// Mobile adjustments
+// ------------------------------------------------------------------
+@media (max-width: 599px) {
+  .page-container {
+    padding: 8px;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .card-grid,
+  .card-grid--two {
+    grid-template-columns: 1fr;
+  }
+}

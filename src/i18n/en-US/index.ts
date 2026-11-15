@@ -6,7 +6,7 @@ import home from './home';
 import work from './work';
 import stack from './stack';
 import github from './github';
-import contact from './contact';
+import about from './about';
 
 export default {
   // Global messages
@@ -21,5 +21,5 @@ export default {
   work,
   stack,
   github,
-  contact
+  about,
 };
